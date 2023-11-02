@@ -6,6 +6,8 @@ class CPisteAtterissage
 private:
 
 public:
-
+	CPisteAtterissage();
+	CPisteAtterissage(CPisteAtterissage& PisteAtterissage1);
+	~CPisteAtterissage();
 };
 

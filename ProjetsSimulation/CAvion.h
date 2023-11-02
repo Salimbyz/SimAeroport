@@ -8,5 +8,8 @@ private:
 	int idAvion;
 	static int nbAvion;
 public:
+	CAvion();
+	CAvion(CAvion& Avion1);
+	~CAvion();
 
 };

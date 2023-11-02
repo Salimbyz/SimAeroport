@@ -3,13 +3,15 @@
 #include <stdio.h>
 #include "CAvion.h"
 
-class Ressource
+class CRessource
 {
 private:
 	bool occupé;
 	CAvion* listeAttente;
 
 public:
-
+	CRessource();
+	CRessource(CRessource& ressource1);
+	~CRessource();
 };
 
