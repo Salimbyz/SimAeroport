@@ -13,5 +13,7 @@ public:
 	CRessource();
 	CRessource(CRessource& ressource1);
 	~CRessource();
+
+
 };
 

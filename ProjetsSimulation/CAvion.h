@@ -5,11 +5,18 @@
 class CAvion
 {
 private:
-	int idAvion;
+	unsigned int idAvion;
 	static int nbAvion;
+
 public:
+
 	CAvion();
-	CAvion(CAvion& Avion1);
+	CAvion(CAvion& p_avion);
 	~CAvion();
 
+	void modifierIdAvion(int p_idAvion);
+	unsigned int lireIdAvion();
+
+	void modifierNbAvion(static int p_nbAvion);
+	static int lireNbAvion();
 };
