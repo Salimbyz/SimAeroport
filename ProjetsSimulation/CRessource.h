@@ -7,7 +7,6 @@ class CRessource
 {
 private:
 	bool occupe;
-	CAvion* listeAttente;
 
 public:
 	CRessource();
