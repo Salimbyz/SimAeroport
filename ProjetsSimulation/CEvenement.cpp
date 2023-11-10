@@ -9,6 +9,13 @@ CEvenement::CEvenement()
 	PisteDecollage = CPisteDecollage();
 }
 
+CEvenement::CEvenement(CEvenement& p_evenement)
+{
+	tempsDebut = p_evenement.lireTempsDebut();
+	tempsEvenement = p_evenement.lireTempsEvenement();
+
+}
+
 
 CEvenement::~CEvenement()
 {
