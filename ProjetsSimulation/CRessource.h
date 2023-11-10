@@ -6,14 +6,18 @@
 class CRessource
 {
 private:
-	bool occupé;
+	bool occupe;
 	CAvion* listeAttente;
 
 public:
 	CRessource();
-	CRessource(CRessource& ressource1);
+	CRessource(CRessource& p_ressource);
 	~CRessource();
 
+	void modifierOccupation(bool p_occupe);
+	bool lireOccupation();
 
+	void modifierListeAttente(CAvion* p_listeAttente);
+	CAvion* lireListeAttente();
 };
 
