@@ -15,7 +15,6 @@ class CAvion
 {
 private:
 	unsigned int idAvion;
-	static int nbAvion;
 	time_t heureArriveePrevue;
 	time_t heureDepartPrevue;
 	Etat etat;

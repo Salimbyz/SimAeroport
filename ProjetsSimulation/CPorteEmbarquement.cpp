@@ -23,3 +23,12 @@ unsigned int CPorteEmbarquement::lireIdPorteE()
 {
 	return idPorteE;
 }
+
+void CPorteEmbarquement::ecrireListeAttenteAvion(queue<CAvion*> p_listeAttenteAvion)
+{
+}
+
+queue<CAvion*> CPorteEmbarquement::lireListeAttenteAvion()
+{
+	return queue<CAvion*>();
+}

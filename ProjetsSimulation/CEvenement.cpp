@@ -4,16 +4,12 @@ CEvenement::CEvenement()
 {
 	tempsDebut = time(nullptr);
 	tempsEvenement = time(nullptr);
-	avion = CAvion();
-	PisteAtterissage = CPisteAtterissage();
-	PisteDecollage = CPisteDecollage();
 }
 
 CEvenement::CEvenement(CEvenement& p_evenement)
 {
 	tempsDebut = p_evenement.lireTempsDebut();
 	tempsEvenement = p_evenement.lireTempsEvenement();
-
 }
 
 
@@ -43,35 +39,6 @@ time_t CEvenement::lireTempsEvenement()
 	return tempsEvenement;
 }
 
-void CEvenement::ecrirePisteAtterissage(CPisteAtterissage p_pisteAtterissage)
-{
-	PisteAtterissage = CPisteAtterissage(p_pisteAtterissage);
-}
-
-CPisteAtterissage CEvenement::lirePisteAtterissage()
-{
-	return PisteAtterissage;
-}
-
-void CEvenement::ecrirePisteDecollage(CPisteDecollage p_pisteDecollage)
-{
-	PisteDecollage = CPisteDecollage(p_pisteDecollage);
-}
-
-CPisteDecollage CEvenement::lirePisteDecolalge()
-{
-	return PisteDecollage;
-}
-
-void CEvenement::ecrireAvion(CAvion p_avion)
-{
-	avion = CAvion(p_avion);
-}
-
-CAvion CEvenement::lireAvion()
-{
-	return avion;
-}
  void CEvenement::run()
  {
 	

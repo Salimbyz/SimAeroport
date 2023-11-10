@@ -23,3 +23,12 @@ unsigned int CPisteDecollage::lireIdPisteD()
 {
 	return idPisteD;
 }
+
+void CPisteDecollage::ecrireListeAttenteAvion(queue<CAvion*> p_listeAttenteAvion)
+{
+}
+
+queue<CAvion*> CPisteDecollage::lireListeAttenteAvion()
+{
+	return queue<CAvion*>();
+}
