@@ -65,3 +65,7 @@ CAvion CEvenement::lireAvion()
 {
 	return avion;
 }
+ void CEvenement::run()
+ {
+	
+ }

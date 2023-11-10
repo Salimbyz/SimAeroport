@@ -10,6 +10,8 @@ CAvion::CAvion(CAvion& p_avion)
 {
 	idAvion = p_avion.lireIdAvion();
 	nbAvion = p_avion.lireNbAvion();
+	heureArriveePrevue = time(NULL);
+	heureDepartPrevue = time(NULL);
 }
 
 CAvion::~CAvion()
@@ -34,4 +36,14 @@ void CAvion::modifierNbAvion(static int p_nbAvion)
 int CAvion::lireNbAvion()
 {
 	return nbAvion;
+}
+
+void CAvion::modifierEtat(Etat p_etat)
+{
+	etat = p_etat;
+}
+
+Etat CAvion::lireEtat()
+{
+	return etat;
 }
