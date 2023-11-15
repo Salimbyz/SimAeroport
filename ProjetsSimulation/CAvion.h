@@ -27,9 +27,6 @@ public:
 	void modifierIdAvion(int p_idAvion);
 	unsigned int lireIdAvion();
 
-	void modifierNbAvion(static int p_nbAvion);
-	static int lireNbAvion();
-
 	void modifierEtat(Etat p_etat);
 	Etat lireEtat();
 

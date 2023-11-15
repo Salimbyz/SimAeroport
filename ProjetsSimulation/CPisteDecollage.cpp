@@ -26,9 +26,14 @@ unsigned int CPisteDecollage::lireIdPisteD()
 
 void CPisteDecollage::ecrireListeAttenteAvion(queue<CAvion*> p_listeAttenteAvion)
 {
+	while (!p_listeAttenteAvion.empty()) {
+		CAvion* avionTMP = new CAvion(*p_listeAttenteAvion.front());
+		ListeAttenteAvion.push(avionTMP);
+		p_listeAttenteAvion.pop();
+	}
 }
 
 queue<CAvion*> CPisteDecollage::lireListeAttenteAvion()
 {
-	return queue<CAvion*>();
+	return move(ListeAttenteAvion);
 }

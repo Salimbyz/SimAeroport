@@ -3,15 +3,17 @@
 CAvion::CAvion()
 {
 	idAvion = 0;
-	nbAvion = 0;
+	heureArriveePrevue = 0;
+	heureDepartPrevue = 0;
+	etat = EN_VOL;
 }
 
 CAvion::CAvion(CAvion& p_avion)
 {
 	idAvion = p_avion.lireIdAvion();
-	nbAvion = p_avion.lireNbAvion();
-	heureArriveePrevue = time(NULL);
-	heureDepartPrevue = time(NULL);
+	heureArriveePrevue = p_avion.lireHeureArriveePrevue();
+	heureDepartPrevue = p_avion.lireHeureDepartPrevue();
+	etat = p_avion.lireEtat();
 }
 
 CAvion::~CAvion()
@@ -28,16 +30,6 @@ unsigned int CAvion::lireIdAvion()
 	return idAvion;
 }
 
-void CAvion::modifierNbAvion(static int p_nbAvion)
-{
-	nbAvion = p_nbAvion;
-}
-
-int CAvion::lireNbAvion()
-{
-	return nbAvion;
-}
-
 void CAvion::modifierEtat(Etat p_etat)
 {
 	etat = p_etat;
@@ -46,4 +38,24 @@ void CAvion::modifierEtat(Etat p_etat)
 Etat CAvion::lireEtat()
 {
 	return etat;
+}
+
+void CAvion::modifierHeureArriveePrevue(time_t p_heureArriveePrevue)
+{
+	heureArriveePrevue = p_heureArriveePrevue;
+}
+
+time_t CAvion::lireHeureArriveePrevue()
+{
+	return heureArriveePrevue;
+}
+
+void CAvion::modifierHeureDepartPrevue(time_t p_heureDepartPrevue)
+{
+	heureDepartPrevue = p_heureDepartPrevue;
+}
+
+time_t CAvion::lireHeureDepartPrevue()
+{
+	return heureDepartPrevue;
 }
