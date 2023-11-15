@@ -7,10 +7,10 @@ class CPisteDecollage
 {
 private: 
 	unsigned int idPisteD;
-	queue<CAvion*> ListeAttenteAvion;
+	queue<CAvion*> listeAttenteAvion;
 
 public :
-	CPisteDecollage();
+	CPisteDecollage() :idPisteD(0), listeAttenteAvion() {};
 	CPisteDecollage(CPisteDecollage& p_pisteD);
 	~CPisteDecollage();
 

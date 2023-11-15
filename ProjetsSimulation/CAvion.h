@@ -2,7 +2,7 @@
 #include <iostream>
 #include <time.h>
 
-enum Etat {
+enum class Etat {
 	EN_VOL,
 	ATTENTE_PORTE,
 	PARKING,

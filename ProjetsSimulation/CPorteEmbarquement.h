@@ -7,10 +7,10 @@ class CPorteEmbarquement
 {
 private :
 	unsigned int idPorteE;
-	queue<CAvion*> ListeAttenteAvion;
+	queue<CAvion*> listeAttenteAvion;
 
 public :
-	CPorteEmbarquement();
+	CPorteEmbarquement() :idPorteE(0), listeAttenteAvion() {};
 	CPorteEmbarquement(CPorteEmbarquement& p_porteE);
 	~CPorteEmbarquement();
 
