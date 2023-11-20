@@ -8,6 +8,9 @@ class CEvenement
 {
 private:
     time_t tempsDebut;
+    CPisteAtterissage PisteAtterissage;
+    CPisteDecollage PisteDecollage;
+    time_t tempsEvenement;
     
 
 public:
@@ -22,6 +25,14 @@ public:
     void ecrireTempsEvenement(time_t p_tempsEvenement);
     time_t lireTempsEvenement();
 
+    void ecrirePisteAtterissage(CPisteAtterissage p_pisteAtterissage);
+    CPisteAtterissage lirePisteAtterissage();
+
+    void ecrirePisteDecollage(CPisteDecollage p_pisteDecollage);
+    CPisteDecollage lirePisteDecolalge();
+
+    void ecrireAvion(CAvion p_avion);
+    CAvion lireAvion();
     void run();
 
 };

@@ -7,7 +7,6 @@ class CRessource
 {
 private:
 	bool occupe;
-	CAvion* listeAttente;
 
 public:
 	CRessource();
@@ -16,8 +15,5 @@ public:
 
 	void modifierOccupation(bool p_occupe);
 	bool lireOccupation();
-
-	void modifierListeAttente(CAvion* p_listeAttente);
-	CAvion* lireListeAttente();
 };
 

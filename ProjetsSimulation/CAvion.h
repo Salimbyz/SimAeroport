@@ -2,7 +2,7 @@
 #include <iostream>
 #include <time.h>
 
-enum Etat {
+enum class Etat {
 	EN_VOL,
 	ATTENTE_PORTE,
 	PARKING,
@@ -15,7 +15,6 @@ class CAvion
 {
 private:
 	unsigned int idAvion;
-	static int nbAvion;
 	time_t heureArriveePrevue;
 	time_t heureDepartPrevue;
 	Etat etat;
@@ -27,9 +26,6 @@ public:
 
 	void modifierIdAvion(int p_idAvion);
 	unsigned int lireIdAvion();
-
-	void modifierNbAvion(static int p_nbAvion);
-	static int lireNbAvion();
 
 	void modifierEtat(Etat p_etat);
 	Etat lireEtat();
