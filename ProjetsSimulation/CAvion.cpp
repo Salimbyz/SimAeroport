@@ -5,7 +5,15 @@ CAvion::CAvion()
 	idAvion = 0;
 	heureArriveePrevue = 0;
 	heureDepartPrevue = 0;
-	etat = EN_VOL;
+	etat = Etat::EN_VOL;
+}
+
+CAvion::CAvion(unsigned int p_idAvion, time_t p_heureArriveePrevue, time_t p_heureDepartPrevue, Etat p_etat)
+{
+	idAvion = p_idAvion;
+	heureArriveePrevue = p_heureArriveePrevue;
+	heureDepartPrevue = p_heureDepartPrevue;
+	etat = p_etat;
 }
 
 CAvion::CAvion(CAvion& p_avion)
@@ -58,4 +66,9 @@ void CAvion::modifierHeureDepartPrevue(time_t p_heureDepartPrevue)
 time_t CAvion::lireHeureDepartPrevue()
 {
 	return heureDepartPrevue;
+}
+
+void CAvion::lireAvion()
+{
+	cout << idAvion << " : " << heureArriveePrevue << " : " << heureDepartPrevue << " : " << enumToString(etat);
 }

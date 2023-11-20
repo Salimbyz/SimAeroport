@@ -23,8 +23,6 @@ public:
     void ecrireTempsEvenement(time_t p_tempsEvenement);
     time_t lireTempsEvenement();
 
-    void ecrireAvion(CAvion p_avion);
-    CAvion lireAvion();
     void run();
 
 };

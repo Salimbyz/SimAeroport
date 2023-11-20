@@ -1,10 +1,5 @@
 #include "CPorteEmbarquement.h"
 
-CPorteEmbarquement::CPorteEmbarquement()
-{
-	idPorteE = 0;
-}
-
 CPorteEmbarquement::CPorteEmbarquement(CPorteEmbarquement& p_porteE) : listeAttenteAvion()
 {
 	idPorteE = p_porteE.lireIdPorteE();

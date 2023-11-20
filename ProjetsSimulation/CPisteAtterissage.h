@@ -22,5 +22,8 @@ public:
 
 	void ecrireListeAttenteAvion(queue<CAvion*> p_listeAttenteAvion);
 	queue<CAvion*> lireListeAttenteAvion();
+
+	void ajouterAvionListeA(CAvion* p_avionAjout);
+	void lirePisteAtterissage();
 };
 

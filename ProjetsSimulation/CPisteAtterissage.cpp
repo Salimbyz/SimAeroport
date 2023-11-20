@@ -37,3 +37,26 @@ queue<CAvion*> CPisteAtterissage::lireListeAttenteAvion()
 {
 	return move(listeAttenteAvion);
 }
+
+void CPisteAtterissage::ajouterAvionListeA(CAvion* p_avionAjout)
+{
+	listeAttenteAvion.push(p_avionAjout);
+}
+
+void CPisteAtterissage::lirePisteAtterissage()
+{
+	queue<CAvion*> temp;
+	while (!listeAttenteAvion.empty()) {
+		CAvion* AvionTemp = listeAttenteAvion.front();
+		temp.push(AvionTemp);
+	}
+	cout << "avant print";
+	while (!temp.empty()) {
+		temp.front()->lireAvion();
+		temp.pop();
+	}
+	while (!temp.empty()) {
+		delete temp.front();
+		temp.pop();
+	}
+}
