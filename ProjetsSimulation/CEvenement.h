@@ -8,8 +8,6 @@ class CEvenement
 {
 private:
     time_t tempsDebut;
-    time_t tempsEvenement;
-    
 
 public:
 
@@ -19,9 +17,6 @@ public:
 
     void ecrireTempsDebut(time_t p_tempsDebut);
     time_t lireTempsDebut();
-
-    void ecrireTempsEvenement(time_t p_tempsEvenement);
-    time_t lireTempsEvenement();
 
     void run();
 
