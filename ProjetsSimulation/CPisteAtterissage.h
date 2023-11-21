@@ -24,6 +24,8 @@ public:
 	queue<CAvion*> lireListeAttenteAvion();
 
 	void ajouterAvionListeA(CAvion* p_avionAjout);
+	void retirerAvionListeA();
+
 	void lirePisteAtterissage();
 };
 
