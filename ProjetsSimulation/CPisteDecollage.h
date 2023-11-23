@@ -1,9 +1,11 @@
 #pragma once
+#include <iostream>
 #include <queue>
 #include "CAvion.h"
+#include "CRessource.h"
 
 using namespace std;
-class CPisteDecollage
+class CPisteDecollage : public CRessource
 {
 private: 
 	unsigned int idPisteD;
@@ -19,8 +21,10 @@ public :
 
 	void ecrireListeAttenteAvion(queue<CAvion*> p_listeAttenteAvion);
 	queue<CAvion*> lireListeAttenteAvion();
-	void lirePisteAtterissage();
+
 	void ajouterAvionListeA(CAvion* p_avionAjout);
 	void retirerAvionListeA();
+
+	void lirePisteAtterissage();
 };
 

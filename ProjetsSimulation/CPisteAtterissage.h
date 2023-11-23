@@ -3,10 +3,11 @@
 #include <time.h>
 #include <queue>
 #include "CAvion.h"
+#include "CRessource.h"
 
 using namespace std;
 
-class CPisteAtterissage
+class CPisteAtterissage : public CRessource 
 {
 private:
 	unsigned int idPisteA;
