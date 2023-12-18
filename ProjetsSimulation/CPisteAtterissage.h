@@ -3,10 +3,11 @@
 #include <time.h>
 #include <queue>
 #include "CAvion.h"
+#include "CRessource.h"
 
 using namespace std;
 
-class CPisteAtterissage
+class CPisteAtterissage : public CRessource 
 {
 private:
 	unsigned int idPisteA;
@@ -23,5 +24,9 @@ public:
 	void ecrireListeAttenteAvion(queue<CAvion*> p_listeAttenteAvion);
 	queue<CAvion*> lireListeAttenteAvion();
 
+	void ajouterAvionListeA(CAvion* p_avionAjout);
+	void retirerAvionListeA();
+
+	void lirePisteAtterissage();
 };
 

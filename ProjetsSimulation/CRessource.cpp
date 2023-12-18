@@ -11,6 +11,11 @@ CRessource::CRessource(CRessource& p_ressource)
 
 }
 
+CRessource::CRessource(bool p_occupe)
+{
+	occupe = p_occupe;
+}
+
 CRessource::~CRessource()
 {
 }

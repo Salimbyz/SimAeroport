@@ -7,10 +7,10 @@ class CRessource
 {
 private:
 	bool occupe;
-
 public:
 	CRessource();
 	CRessource(CRessource& p_ressource);
+	CRessource(bool p_occupe);
 	~CRessource();
 
 	void modifierOccupation(bool p_occupe);

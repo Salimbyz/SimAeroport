@@ -1,10 +1,5 @@
 #include "CPorteEmbarquement.h"
 
-CPorteEmbarquement::CPorteEmbarquement()
-{
-	idPorteE = 0;
-}
-
 CPorteEmbarquement::CPorteEmbarquement(CPorteEmbarquement& p_porteE) : listeAttenteAvion()
 {
 	idPorteE = p_porteE.lireIdPorteE();
@@ -40,4 +35,34 @@ void CPorteEmbarquement::ecrireListeAttenteAvion(queue<CAvion*> p_listeAttenteAv
 queue<CAvion*> CPorteEmbarquement::lireListeAttenteAvion()
 {
 	return move(listeAttenteAvion);
+}
+
+void CPorteEmbarquement::lirePisteAtterissage()
+{
+	queue<CAvion*> temp;
+	while (!listeAttenteAvion.empty()) {
+		CAvion* AvionTemp = listeAttenteAvion.front();
+		temp.push(AvionTemp);
+		listeAttenteAvion.pop();
+	}
+	cout << idPorteE << endl;
+	while (!temp.empty()) {
+		temp.front()->lireAvion();
+		cout << endl;
+		temp.pop();
+	}
+	while (!temp.empty()) {
+		delete temp.front();
+		temp.pop();
+	}
+}
+
+void CPorteEmbarquement::ajouterAvionListeA(CAvion* p_avionAjout)
+{
+	listeAttenteAvion.push(p_avionAjout);
+}
+
+void CPorteEmbarquement::retirerAvionListeA()
+{
+	listeAttenteAvion.pop();
 }
