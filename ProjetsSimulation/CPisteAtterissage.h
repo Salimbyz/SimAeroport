@@ -10,8 +10,8 @@ class CPisteAtterissage
 {
 private:
 	unsigned int idPisteA;
-	queue<CAvion*> listeAttenteAvion;
-
+	static queue<CAvion*> listeAttenteAvion;
+	
 public:
 	CPisteAtterissage() :idPisteA(0), listeAttenteAvion() {};
 	CPisteAtterissage(CPisteAtterissage& p_pisteA);
@@ -22,5 +22,6 @@ public:
 
 	void ecrireListeAttenteAvion(queue<CAvion*> p_listeAttenteAvion);
 	queue<CAvion*> lireListeAttenteAvion();
+
 };
 

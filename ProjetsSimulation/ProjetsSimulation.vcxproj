@@ -142,7 +142,11 @@
   <ItemGroup>
     <ClCompile Include="CAvion.cpp" />
     <ClCompile Include="CEntree.cpp" />
+    <ClCompile Include="CEVAvionQuitteGate.cpp" />
     <ClCompile Include="CEVAvionQuittePiste.cpp" />
+    <ClCompile Include="CEvAvionRentreGate.cpp" />
+    <ClCompile Include="CEVAvionVeutDebarquer.cpp" />
+    <ClCompile Include="CEVAvionVeutDecoller.cpp" />
     <ClCompile Include="CEVDebutAtterissage.cpp" />
     <ClCompile Include="CEvenement.cpp" />
     <ClCompile Include="CPisteAtterissage.cpp" />
@@ -155,7 +159,11 @@
   <ItemGroup>
     <ClInclude Include="CAvion.h" />
     <ClInclude Include="CEntree.h" />
+    <ClInclude Include="CEVAvionQuitteGate.h" />
     <ClInclude Include="CEVAvionQuittePiste.h" />
+    <ClInclude Include="CEvAvionRentreGate.h" />
+    <ClInclude Include="CEVAvionVeutDebarquer.h" />
+    <ClInclude Include="CEVAvionVeutDecoller.h" />
     <ClInclude Include="CEVDebutAtterissage.h" />
     <ClInclude Include="CEvenement.h" />
     <ClInclude Include="CPisteAtterissage.h" />

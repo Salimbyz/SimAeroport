@@ -5,7 +5,7 @@ CAvion::CAvion()
 	idAvion = 0;
 	heureArriveePrevue = 0;
 	heureDepartPrevue = 0;
-	etat = EN_VOL;
+	etat = Etat::EN_VOL;
 }
 
 CAvion::CAvion(CAvion& p_avion)
