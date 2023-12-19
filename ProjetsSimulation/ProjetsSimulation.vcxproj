@@ -150,7 +150,6 @@
     <ClCompile Include="CEVAvionVeutDecoller.cpp" />
     <ClCompile Include="CEVDebutAtterissage.cpp" />
     <ClCompile Include="CEvenement.cpp" />
-    <ClCompile Include="CExceptions.cpp" />
     <ClCompile Include="CPisteAtterissage.cpp" />
     <ClCompile Include="CPisteDecollage.cpp" />
     <ClCompile Include="CPorteEmbarquement.cpp" />
