@@ -1,1 +1,3 @@
 # SimAeroport
+## Valeurs d'exceptions :
+
