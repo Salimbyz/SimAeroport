@@ -37,5 +37,5 @@ void CEVAvionVeutAtt::ModifierPisteAtterissage(CPisteAtterissage p_pisteAtteriss
 }
 
 void CEVAvionVeutAtt::run() {
-	if()
+	
 }

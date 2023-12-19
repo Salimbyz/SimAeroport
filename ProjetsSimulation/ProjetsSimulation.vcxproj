@@ -145,10 +145,12 @@
     <ClCompile Include="CEVAvionQuitteGate.cpp" />
     <ClCompile Include="CEVAvionQuittePiste.cpp" />
     <ClCompile Include="CEvAvionRentreGate.cpp" />
+    <ClCompile Include="CEVAvionVaGate.cpp" />
     <ClCompile Include="CEVAvionVeutDebarquer.cpp" />
     <ClCompile Include="CEVAvionVeutDecoller.cpp" />
     <ClCompile Include="CEVDebutAtterissage.cpp" />
     <ClCompile Include="CEvenement.cpp" />
+    <ClCompile Include="CExceptions.cpp" />
     <ClCompile Include="CPisteAtterissage.cpp" />
     <ClCompile Include="CPisteDecollage.cpp" />
     <ClCompile Include="CPorteEmbarquement.cpp" />
@@ -162,10 +164,12 @@
     <ClInclude Include="CEVAvionQuitteGate.h" />
     <ClInclude Include="CEVAvionQuittePiste.h" />
     <ClInclude Include="CEvAvionRentreGate.h" />
+    <ClInclude Include="CEVAvionVaGate.h" />
     <ClInclude Include="CEVAvionVeutDebarquer.h" />
     <ClInclude Include="CEVAvionVeutDecoller.h" />
     <ClInclude Include="CEVDebutAtterissage.h" />
     <ClInclude Include="CEvenement.h" />
+    <ClInclude Include="CExceptions.h" />
     <ClInclude Include="CPisteAtterissage.h" />
     <ClInclude Include="CPisteDecollage.h" />
     <ClInclude Include="CPorteEmbarquement.h" />

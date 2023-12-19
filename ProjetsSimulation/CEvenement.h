@@ -2,6 +2,7 @@
 #include "CAvion.h"
 #include "CPisteAtterissage.h"
 #include "CPisteDecollage.h"
+#include "CPorteEmbarquement.h"
 #include <time.h>
 
 class CEvenement

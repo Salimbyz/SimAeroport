@@ -1,10 +1,15 @@
 #pragma once
 #include "CEvenement.h"
+#define TempsAtterisssage = 90;
+#ifndef CEVDebutAtterrissage 
+#define CEVDebutAtterrissage
+
+
 class CEVDebutAtterissage : public CEvenement
 {
 private:
-	CPisteAtterissage pisteAtterissage;
-	CAvion avion;
+	CPisteAtterissage* pisteAtterissage;
+	CAvion* avion;
 public:
 	CEVDebutAtterissage();
 	~CEVDebutAtterissage();
@@ -18,5 +23,6 @@ public:
 
 	void run();
 };
+#endif // !CEVDebutAtterrissage 
 
 
