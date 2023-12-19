@@ -1,7 +1,7 @@
 #pragma once
 #include "CEvenement.h"
 #ifndef CEVAvionVeutDEbarquer_H
-#define CEVAvionVeutDEbarquer_H;
+#define CEVAvionVeutDEbarquer_H
 
 class CEVAvionVeutDebarquer : public CEvenement
 {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CEvenement.h"
 #ifndef AvionVeutAtterir_H
-#define AvionVeutAtterir_H;
+#define AvionVeutAtterir_H
 class CEVAvionVeutAtt : public CEvenement
 {
 private:
