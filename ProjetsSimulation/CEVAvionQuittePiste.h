@@ -3,8 +3,8 @@
 class CEVAvionQuittePiste : public CEvenement
 {
 private:
-	CPisteAtterissage pisteAtterissage;
-	CAvion avion;
+	CPisteAtterissage* pisteAtterissage;
+	CAvion* avion;
 public:
 	CEVAvionQuittePiste();
 	~CEVAvionQuittePiste();

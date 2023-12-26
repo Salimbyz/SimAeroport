@@ -11,7 +11,7 @@ class CPisteAtterissage : public CRessource
 {
 private:
 	unsigned int idPisteA;
-	static queue<CAvion*> listeAttenteAvion;
+	queue<CAvion*> listeAttenteAvion;
 	
 public:
 	CPisteAtterissage() :idPisteA(0) {};

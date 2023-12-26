@@ -1,6 +1,6 @@
 #pragma once
 #include "CEvenement.h"
-#define TempsAtterisssage = 90;
+#define TempsAtterisssage = 90
 #ifndef CEVDebutAtterrissage 
 #define CEVDebutAtterrissage
 
