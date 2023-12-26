@@ -39,10 +39,10 @@
     <ClCompile Include="CRessource.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="CEVAvionVeutAtt.cpp">
+    <ClCompile Include="CEVAvionVeutAtterrir.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="CEVDebutAtterissage.cpp">
+    <ClCompile Include="CEVAvionAtterrit.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="CEVAvionQuittePiste.cpp">
@@ -64,6 +64,9 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="CExceptions.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CEVAvionDecolle.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -89,10 +92,10 @@
     <ClInclude Include="CRessource.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="CEVAvionVeutAtt.h">
+    <ClInclude Include="CEVAvionVeutAtterrir.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="CEVDebutAtterissage.h">
+    <ClInclude Include="CEVAvionAtterrit.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="CEVAvionQuittePiste.h">
@@ -114,6 +117,9 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="CExceptions.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CEVAvionDecolle.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

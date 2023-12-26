@@ -8,7 +8,7 @@ private:
 public:
 	CEVAvionQuittePiste();
 	~CEVAvionQuittePiste();
-	CEVAvionQuittePiste(CEVAvionQuittePiste& p_EVAvionVeutAtterir);
+	CEVAvionQuittePiste(CEVAvionQuittePiste& p_EVAvionQuittePiste);
 
 	CPisteAtterissage LirePisteAtterissage();
 	void ModifierPisteAtterissage(CPisteAtterissage p_pisteAtterissage);

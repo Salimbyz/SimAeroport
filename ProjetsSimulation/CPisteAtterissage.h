@@ -14,7 +14,7 @@ private:
 	static queue<CAvion*> listeAttenteAvion;
 	
 public:
-	CPisteAtterissage() :idPisteA(0), listeAttenteAvion() {};
+	CPisteAtterissage() :idPisteA(0) {};
 	CPisteAtterissage(CPisteAtterissage& p_pisteA);
 	~CPisteAtterissage();
 

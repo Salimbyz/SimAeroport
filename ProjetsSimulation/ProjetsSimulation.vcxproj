@@ -142,39 +142,41 @@
   <ItemGroup>
     <ClCompile Include="CAvion.cpp" />
     <ClCompile Include="CEntree.cpp" />
+    <ClCompile Include="CEVAvionDecolle.cpp" />
     <ClCompile Include="CEVAvionQuitteGate.cpp" />
     <ClCompile Include="CEVAvionQuittePiste.cpp" />
     <ClCompile Include="CEvAvionRentreGate.cpp" />
     <ClCompile Include="CEVAvionVaGate.cpp" />
     <ClCompile Include="CEVAvionVeutDebarquer.cpp" />
     <ClCompile Include="CEVAvionVeutDecoller.cpp" />
-    <ClCompile Include="CEVDebutAtterissage.cpp" />
+    <ClCompile Include="CEVAvionAtterrit.cpp" />
     <ClCompile Include="CEvenement.cpp" />
     <ClCompile Include="CExceptions.cpp" />
     <ClCompile Include="CPisteAtterissage.cpp" />
     <ClCompile Include="CPisteDecollage.cpp" />
     <ClCompile Include="CPorteEmbarquement.cpp" />
     <ClCompile Include="CRessource.cpp" />
-    <ClCompile Include="CEVAvionVeutAtt.cpp" />
+    <ClCompile Include="CEVAvionVeutAtterrir.cpp" />
     <ClCompile Include="ProjetsSimulation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CAvion.h" />
     <ClInclude Include="CEntree.h" />
+    <ClInclude Include="CEVAvionDecolle.h" />
     <ClInclude Include="CEVAvionQuitteGate.h" />
     <ClInclude Include="CEVAvionQuittePiste.h" />
     <ClInclude Include="CEvAvionRentreGate.h" />
     <ClInclude Include="CEVAvionVaGate.h" />
     <ClInclude Include="CEVAvionVeutDebarquer.h" />
     <ClInclude Include="CEVAvionVeutDecoller.h" />
-    <ClInclude Include="CEVDebutAtterissage.h" />
+    <ClInclude Include="CEVAvionAtterrit.h" />
     <ClInclude Include="CEvenement.h" />
     <ClInclude Include="CExceptions.h" />
     <ClInclude Include="CPisteAtterissage.h" />
     <ClInclude Include="CPisteDecollage.h" />
     <ClInclude Include="CPorteEmbarquement.h" />
     <ClInclude Include="CRessource.h" />
-    <ClInclude Include="CEVAvionVeutAtt.h" />
+    <ClInclude Include="CEVAvionVeutAtterrir.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
