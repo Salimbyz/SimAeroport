@@ -10,7 +10,6 @@
 class CEntree
 {
 private:
-
 public:
 	CEntree();
 	CEntree(CEntree& Entree1);

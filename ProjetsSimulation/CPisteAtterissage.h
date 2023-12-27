@@ -12,9 +12,9 @@ class CPisteAtterissage : public CRessource
 private:
 	unsigned int idPisteA;
 	queue<CAvion*> listeAttenteAvion;
-
+	
 public:
-	CPisteAtterissage() :idPisteA(0), listeAttenteAvion() {};
+	CPisteAtterissage() :idPisteA(0) {};
 	CPisteAtterissage(CPisteAtterissage& p_pisteA);
 	~CPisteAtterissage();
 
