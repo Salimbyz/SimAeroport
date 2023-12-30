@@ -7,15 +7,16 @@
 
 using namespace std;
 
-class CPisteAtterissage : public CRessource 
+class CPisteAtterissage : public CRessource
 {
 private:
 	unsigned int idPisteA;
 	queue<CAvion*> listeAttenteAvion;
-	
+
 public:
 	CPisteAtterissage() :idPisteA(0) {};
-	CPisteAtterissage(CPisteAtterissage& p_pisteA);
+	CPisteAtterissage(const CPisteAtterissage& p_pisteA);
+	CPisteAtterissage(unsigned int p_id);
 	~CPisteAtterissage();
 
 	void ecrireIdPisteA(unsigned int p_idPisteA);

@@ -25,8 +25,8 @@ private:
 public:
 
 	CAvion();
-	CAvion(unsigned int p_idAvion, time_t p_heureArriveePrevue, time_t heureDepartPrevue,Etat p_etat);
-	CAvion(CAvion& p_avion);
+	CAvion(unsigned int p_idAvion, time_t p_heureArriveePrevue, time_t heureDepartPrevue, Etat p_etat);
+	CAvion(const CAvion& p_avion);
 	~CAvion();
 
 	void modifierIdAvion(int p_idAvion);
@@ -43,7 +43,7 @@ public:
 
 	void lireAvion();
 
-	string enumToString(Etat value) {
+	static string enumToString(Etat value) {
 		switch (value) {
 		case Etat::EN_VOL:
 			return "En vol";
@@ -60,5 +60,15 @@ public:
 		default:
 			return "Unknown";
 		}
+	}
+
+	static Etat stringToEnum(string str) {
+		if (str == "En vol") return Etat::EN_VOL;
+		if (str == "Attente porte") return Etat::ATTENTE_PORTE;
+		if (str == "Parking") return Etat::PARKING;
+		if (str == "Porte") return Etat::PORTE;
+		if (str == "Attente piste") return Etat::ATTENTE_PISTE;
+		if (str == "Parti") return Etat::PARTI;
+		else throw std::invalid_argument("chaine de caractère invalide");
 	}
 };

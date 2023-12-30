@@ -1,6 +1,6 @@
 #include "CPisteDecollage.h"
 
-CPisteDecollage::CPisteDecollage(CPisteDecollage& p_pisteD)
+CPisteDecollage::CPisteDecollage(const CPisteDecollage& p_pisteD)
 {
 	idPisteD = p_pisteD.lireIdPisteD();
 	listeAttenteAvion = p_pisteD.lireListeAttenteAvion();

@@ -7,13 +7,13 @@
 using namespace std;
 class CPisteDecollage : public CRessource
 {
-private: 
+private:
 	unsigned int idPisteD;
 	queue<CAvion*> listeAttenteAvion;
 
-public :
+public:
 	CPisteDecollage() :idPisteD(0), listeAttenteAvion() {};
-	CPisteDecollage(CPisteDecollage& p_pisteD);
+	CPisteDecollage(const CPisteDecollage& p_pisteD);
 	~CPisteDecollage();
 
 	void ecrireIdPisteD(unsigned int p_idPisteD);

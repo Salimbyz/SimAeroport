@@ -5,9 +5,9 @@ CRessource::CRessource()
 	occupe = false;
 }
 
-CRessource::CRessource(CRessource& p_ressource)
+CRessource::CRessource(const CRessource& p_ressource)
 {
-	occupe = p_ressource.lireOccupation();
+	occupe = p_ressource.occupe;
 
 }
 

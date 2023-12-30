@@ -9,7 +9,7 @@ private:
 	bool occupe;
 public:
 	CRessource();
-	CRessource(CRessource& p_ressource);
+	CRessource(const CRessource& p_ressource);
 	CRessource(bool p_occupe);
 	~CRessource();
 

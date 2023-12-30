@@ -16,12 +16,12 @@ CAvion::CAvion(unsigned int p_idAvion, time_t p_heureArriveePrevue, time_t p_heu
 	etat = p_etat;
 }
 
-CAvion::CAvion(CAvion& p_avion)
+CAvion::CAvion(const CAvion& p_avion)
 {
-	idAvion = p_avion.lireIdAvion();
-	heureArriveePrevue = p_avion.lireHeureArriveePrevue();
-	heureDepartPrevue = p_avion.lireHeureDepartPrevue();
-	etat = p_avion.lireEtat();
+	idAvion = p_avion.idAvion;
+	heureArriveePrevue = p_avion.heureArriveePrevue;
+	heureDepartPrevue = p_avion.heureDepartPrevue;
+	etat = p_avion.etat;
 }
 
 CAvion::~CAvion()

@@ -1,9 +1,9 @@
 #include "CPisteAtterissage.h"
 
-CPisteAtterissage::CPisteAtterissage(CPisteAtterissage& p_pisteA)
+CPisteAtterissage::CPisteAtterissage(const CPisteAtterissage& p_pisteA)
 {
-	idPisteA = p_pisteA.lireIdPisteA();
-	listeAttenteAvion = p_pisteA.lireListeAttenteAvion();
+	idPisteA = p_pisteA.idPisteA;
+	listeAttenteAvion = p_pisteA.listeAttenteAvion;
 }
 
 CPisteAtterissage::~CPisteAtterissage()
