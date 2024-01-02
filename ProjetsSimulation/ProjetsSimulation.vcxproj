@@ -144,7 +144,6 @@
     <ClCompile Include="CEVAvionDecolle.cpp" />
     <ClCompile Include="CEVAvionQuitteGate.cpp" />
     <ClCompile Include="CEVAvionQuittePiste.cpp" />
-    <ClCompile Include="CEvAvionRentreGate.cpp" />
     <ClCompile Include="CEVAvionVaGate.cpp" />
     <ClCompile Include="CEVAvionVeutDebarquer.cpp" />
     <ClCompile Include="CEVAvionVeutDecoller.cpp" />
@@ -163,7 +162,6 @@
     <ClInclude Include="CEVAvionDecolle.h" />
     <ClInclude Include="CEVAvionQuitteGate.h" />
     <ClInclude Include="CEVAvionQuittePiste.h" />
-    <ClInclude Include="CEvAvionRentreGate.h" />
     <ClInclude Include="CEVAvionVaGate.h" />
     <ClInclude Include="CEVAvionVeutDebarquer.h" />
     <ClInclude Include="CEVAvionVeutDecoller.h" />

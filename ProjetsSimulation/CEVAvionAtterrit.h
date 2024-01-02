@@ -14,6 +14,7 @@ public:
 	CEVAvionAtterrit();
 	~CEVAvionAtterrit();
 	CEVAvionAtterrit(CEVAvionAtterrit& p_EVAvionVeutAtterir);
+	CEVAvionAtterrit(CAvion p_avion, CPisteAtterissage p_pisteAtt);
 	CPisteAtterissage LirePisteAtterissage();
 	void ModifierPisteAtterissage(CPisteAtterissage p_pisteAtterissage);
 

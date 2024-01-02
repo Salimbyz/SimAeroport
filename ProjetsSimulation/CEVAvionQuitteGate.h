@@ -12,6 +12,7 @@ public :
     CEVAvionQuitteGate(CAvion p_avion, CPorteEmbarquement p_gate);
     ~CEVAvionQuitteGate();
     CEVAvionQuitteGate(CEVAvionQuitteGate& p_EVQG);
+
     CAvion LireAvion() { return *avion; }
     CPorteEmbarquement LireGate() { return *gate; }
 
