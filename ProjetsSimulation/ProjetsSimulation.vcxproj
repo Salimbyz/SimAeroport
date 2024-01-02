@@ -141,7 +141,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CAvion.cpp" />
-    <ClCompile Include="CEntree.cpp" />
     <ClCompile Include="CEVAvionDecolle.cpp" />
     <ClCompile Include="CEVAvionQuitteGate.cpp" />
     <ClCompile Include="CEVAvionQuittePiste.cpp" />

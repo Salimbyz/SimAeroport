@@ -2,8 +2,8 @@
 
 CPisteDecollage::CPisteDecollage(const CPisteDecollage& p_pisteD)
 {
-	idPisteD = p_pisteD.lireIdPisteD();
-	listeAttenteAvion = p_pisteD.lireListeAttenteAvion();
+	idPisteD = p_pisteD.idPisteD;
+	listeAttenteAvion = p_pisteD.listeAttenteAvion;
 }
 
 CPisteDecollage::~CPisteDecollage()
