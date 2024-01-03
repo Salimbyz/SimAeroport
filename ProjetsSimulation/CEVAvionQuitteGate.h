@@ -14,7 +14,11 @@ public :
     CEVAvionQuitteGate(CEVAvionQuitteGate& p_EVQG);
 
     CAvion LireAvion() { return *avion; }
+    void ModifierAvion(CAvion p_avion) { *avion = p_avion; }
+
     CPorteEmbarquement LireGate() { return *gate; }
+    void ModifierPorteEmbarquement(CPorteEmbarquement p_gate) { *gate = p_gate; }
+
 
     
 };

@@ -5,15 +5,17 @@ class CEVAvionVaGate : public CEvenement
 {
 private:
 	CAvion* avion;
-	CPorteEmbarquement gate;
+	CPorteEmbarquement* gate;
 public :
 	CEVAvionVaGate();
 	CEVAvionVaGate(CEVAvionVaGate& p_evAvionVaGate);
 	~CEVAvionVaGate();
-	CAvion LireAvion();
-	CPisteAtterissage LirePisteAtterrissage();
-	void ModifierAvion(CAvion p_avion);
-	void ModifierGate(CPorteEmbarquement p_gate);
+
+	CAvion LireAvion() { return *avion; }
+	void ModifierAvion(CAvion p_avion) { *avion = p_avion; }
+
+	CPorteEmbarquement LirePisteAtterrissage() { return *gate; }
+	void ModifierGate(CPorteEmbarquement p_gate) { *gate = p_gate; }
 	void run();
 };
 

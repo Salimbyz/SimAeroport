@@ -20,20 +20,6 @@ CEVAvionQuittePiste::CEVAvionQuittePiste(CEVAvionQuittePiste& p_EVAvionVeutAtter
 	*pisteAtterissage = p_EVAvionVeutAtterir.LirePisteAtterissage();
 
 }
-CAvion CEVAvionQuittePiste::LireAvion() {
-	return *avion;
-}
-CPisteAtterissage CEVAvionQuittePiste::LirePisteAtterissage() {
-	return *pisteAtterissage;
-}
-
-void CEVAvionQuittePiste::ModifierAvion(CAvion p_avion) {
-	*avion = p_avion;
-}
-
-void CEVAvionQuittePiste::ModifierPisteAtterissage(CPisteAtterissage p_pisteAtterissage) {
-	*pisteAtterissage = p_pisteAtterissage;
-}
 
 void CEVAvionQuittePiste::run() {
 
