@@ -1,22 +1,19 @@
 #pragma once
 #include "CEvenement.h"
+#include <vector>
 #ifndef AvionVeutAtterrir_H
 #define AvionVeutAtterrir_H
 class CEVAvionVeutAtterrir : public CEvenement
 {
 private:
-	CPisteAtterissage *pisteAtterissage;
+	vector<CPisteAtterissage*> pisteAtterissage;
 	CAvion *avion;
 public :
 
 	CEVAvionVeutAtterrir();
 	~CEVAvionVeutAtterrir();
-	CEVAvionVeutAtterrir(CAvion p_avion);
-	CPisteAtterissage LirePisteAtterissage() { return *pisteAtterissage; }
-	void ModifierPisteAtterissage(CPisteAtterissage p_pisteAtterissage) {
-		*pisteAtterissage = p_pisteAtterissage;
-	}
-
+	CEVAvionVeutAtterrir(CAvion p_avion, vector<CPisteAtterissage> p_pistes, time_t p_temp);
+	vector<CPisteAtterissage*> LirePisteAtterissage() { return pisteAtterissage; }
 	CAvion LireAvion() { return *avion; }
 	void ModifierAvion(CAvion p_avion) {
 			*avion= p_avion;
