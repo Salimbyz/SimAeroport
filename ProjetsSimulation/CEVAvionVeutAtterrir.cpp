@@ -2,57 +2,40 @@
 #include "CEVAvionAtterrit.h"
 CEVAvionVeutAtterrir::CEVAvionVeutAtterrir()
 {
-	pisteAtterissage = new CPisteAtterissage();
+	pisteAtterissage = vector<CPisteAtterissage*>();
 	avion = new CAvion();
 }
-
+CEVAvionVeutAtterrir::CEVAvionVeutAtterrir(CAvion p_avion, vector<CPisteAtterissage> p_pistes, time_t p_temps) {
+	avion = new CAvion(p_avion);
+	pisteAtterissage.resize(p_pistes.size());
+	for (int i = 0; i < pisteAtterissage.size(); i++) {
+		*pisteAtterissage[i] = p_pistes[i];
+	}
+	this->ecrireTempsDebut(p_temps);
+}
 CEVAvionVeutAtterrir::~CEVAvionVeutAtterrir()
 {
-	delete avion;
-	delete pisteAtterissage;
-}
-
-CEVAvionVeutAtterrir::CEVAvionVeutAtterrir(CEVAvionVeutAtterrir& p_EVAvionVeutAtterir)
-{
-	avion = new CAvion();
-	pisteAtterissage = new CPisteAtterissage();
-
-	*avion = p_EVAvionVeutAtterir.LireAvion();
-	*pisteAtterissage = p_EVAvionVeutAtterir.LirePisteAtterissage();
-
-}
-CAvion CEVAvionVeutAtterrir::LireAvion() {
-	return *avion;
-}
-CPisteAtterissage CEVAvionVeutAtterrir::LirePisteAtterissage() {
-	return *pisteAtterissage;
-}
-
-void CEVAvionVeutAtterrir::ModifierAvion(CAvion p_avion) {
-	*avion = p_avion;
-}
-
-void CEVAvionVeutAtterrir::ModifierPisteAtterissage(CPisteAtterissage p_pisteAtterissage) {
-	*pisteAtterissage = p_pisteAtterissage;
-}
-
-void CEVAvionVeutAtterrir::run() {
-	//A remplacer par une liste de piste valables dans le main
-	const int n = 4;
-	CPisteAtterissage* ListePiste[n];
-	
-	for (int i = 0; i < n; i++) {
-		if (ListePiste[i]->lireOccupation() && ListePiste[i]->lireListeAttenteAvion().empty()) {
-			std::cout << "Debut atterrissage"
-			CEVAvionAtterrit* avionAtterrit = new CEVAvionAtterrit();
-			avionAtterrit->ecrireTempsDebut();
-			avionAtterrit->ModifierAvion(*avion);
-			avionAtterrit->ModifierPisteAtterissage(*pisteAtterissage);			
-		}
-		else if(ListePiste[i]->lireOccupation()) {
-			//CPisteAtterrissage.listeAttente.add(CAvion)
-			//
-		}
+	if (pisteAtterissage.size() != 0) {
+		pisteAtterissage.clear();
+	}
+	if (avion != NULL) {
+		delete(avion);
 	}
 
+}
+void CEVAvionVeutAtterrir::run() {
+	for (int i = 0; i < pisteAtterissage.size(); i++) {
+		if (!pisteAtterissage[i]->lireOccupation() && pisteAtterissage[i]->lireListeAttenteAvion().empty()) {
+			pisteAtterissage[i]->modifierOccupation(true);
+			CEVAvionAtterrit EVAA(*avion, *pisteAtterissage[i], this->lireTempsDebut());
+			EVAA.run();
+		}
+		else if (!pisteAtterissage[i]->lireListeAttenteAvion().empty()) {
+			pisteAtterissage[i]->modifierOccupation(true);
+			CEVAvionAtterrit EVAA(*(pisteAtterissage[i]->lireListeAttenteAvion().front()), *pisteAtterissage[i], this->lireTempsDebut());
+			pisteAtterissage[i]->retirerAvionListeA();
+			EVAA.run();
+		}
+
+	}
 }

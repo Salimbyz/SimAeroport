@@ -4,6 +4,9 @@
 #include "CPisteDecollage.h"
 #include "CPorteEmbarquement.h"
 #include <time.h>
+#ifndef CEvenement_H
+#define CEvenement_H
+
 
 class CEvenement
 {
@@ -22,3 +25,4 @@ public:
     void run();
 
 };
+#endif // !CEvenement_H

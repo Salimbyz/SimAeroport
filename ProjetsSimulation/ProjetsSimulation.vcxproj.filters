@@ -24,9 +24,6 @@
     <ClCompile Include="CAvion.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="CEntree.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="CPisteAtterissage.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -51,9 +48,6 @@
     <ClCompile Include="CEVAvionVeutDebarquer.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="CEvAvionRentreGate.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="CEVAvionQuitteGate.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -61,9 +55,6 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="CEVAvionVaGate.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="CExceptions.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="CEVAvionDecolle.cpp">
@@ -102,9 +93,6 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="CEVAvionVeutDebarquer.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="CEvAvionRentreGate.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="CEVAvionQuitteGate.h">
