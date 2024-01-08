@@ -41,6 +41,12 @@ public:
 	void modifierHeureDepartPrevue(time_t p_heureDepartPrevue);
 	time_t lireHeureDepartPrevue();
 
+	/**
+	* @fn lireAvion()
+	* @brief Constrcuteur par recopie de la classe CGraphe
+	*
+	* @
+	*/
 	void lireAvion();
 
 	static string enumToString(Etat value) {

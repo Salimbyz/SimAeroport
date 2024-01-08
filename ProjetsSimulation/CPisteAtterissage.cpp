@@ -1,17 +1,14 @@
 #include "CPisteAtterissage.h"
 
+queue<CAvion*> CPisteAtterissage::listeAttenteAvion;
+
 CPisteAtterissage::CPisteAtterissage(const CPisteAtterissage& p_pisteA)
 {
 	idPisteA = p_pisteA.idPisteA;
-	listeAttenteAvion = p_pisteA.listeAttenteAvion;
 }
 
 CPisteAtterissage::~CPisteAtterissage()
 {
-	while (!listeAttenteAvion.empty()) {
-		delete listeAttenteAvion.front();
-		listeAttenteAvion.pop();
-	}
 }
 
 void CPisteAtterissage::ecrireIdPisteA(unsigned int p_idPisteA)
@@ -35,7 +32,7 @@ void CPisteAtterissage::ecrireListeAttenteAvion(queue<CAvion*> p_listeAttenteAvi
 
 queue<CAvion*> CPisteAtterissage::lireListeAttenteAvion()
 {
-	return move(listeAttenteAvion);
+	return listeAttenteAvion;
 }
 
 void CPisteAtterissage::ajouterAvionListeA(CAvion* p_avionAjout)

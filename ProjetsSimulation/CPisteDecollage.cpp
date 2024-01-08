@@ -1,17 +1,14 @@
 #include "CPisteDecollage.h"
 
+queue<CAvion*> CPisteDecollage::listeAttenteAvion;
+
 CPisteDecollage::CPisteDecollage(const CPisteDecollage& p_pisteD)
 {
-	idPisteD = p_pisteD.lireIdPisteD();
-	listeAttenteAvion = p_pisteD.lireListeAttenteAvion();
+	idPisteD = p_pisteD.idPisteD;
 }
 
 CPisteDecollage::~CPisteDecollage()
 {
-	while (!listeAttenteAvion.empty()) {
-		delete listeAttenteAvion.front();
-		listeAttenteAvion.pop();
-	}
 }
 
 void CPisteDecollage::ecrireIdPisteD(unsigned int p_idPisteD)
@@ -35,7 +32,7 @@ void CPisteDecollage::ecrireListeAttenteAvion(queue<CAvion*> p_listeAttenteAvion
 
 queue<CAvion*> CPisteDecollage::lireListeAttenteAvion()
 {
-	return move(listeAttenteAvion);
+	return listeAttenteAvion;
 }
 
 void CPisteDecollage::lirePisteAtterissage()

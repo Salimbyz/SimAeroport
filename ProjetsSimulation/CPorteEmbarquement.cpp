@@ -1,16 +1,14 @@
 #include "CPorteEmbarquement.h"
 
-CPorteEmbarquement::CPorteEmbarquement(CPorteEmbarquement& p_porteE) : listeAttenteAvion()
+queue<CAvion*> CPorteEmbarquement::listeAttenteAvion;
+
+CPorteEmbarquement::CPorteEmbarquement(const CPorteEmbarquement& p_porteE)
 {
-	idPorteE = p_porteE.lireIdPorteE();
+	idPorteE = p_porteE.idPorteE;
 }
 
 CPorteEmbarquement::~CPorteEmbarquement()
 {
-	while (!listeAttenteAvion.empty()) {
-		delete listeAttenteAvion.front();
-		listeAttenteAvion.pop();
-	}
 }
 
 void CPorteEmbarquement::ecrireIdPorteE(unsigned int p_idPorteE)
@@ -34,7 +32,7 @@ void CPorteEmbarquement::ecrireListeAttenteAvion(queue<CAvion*> p_listeAttenteAv
 
 queue<CAvion*> CPorteEmbarquement::lireListeAttenteAvion()
 {
-	return move(listeAttenteAvion);
+	return listeAttenteAvion;
 }
 
 void CPorteEmbarquement::lirePisteAtterissage()
