@@ -9,7 +9,7 @@ private:
     CAvion* avion;
 public :
     CEVAvionQuitteGate();
-    CEVAvionQuitteGate(CAvion p_avion, CPorteEmbarquement p_gate);
+    CEVAvionQuitteGate(CAvion p_avion, CPorteEmbarquement p_gate, time_t p_temps);
     ~CEVAvionQuitteGate();
     CEVAvionQuitteGate(CEVAvionQuitteGate& p_EVQG);
 

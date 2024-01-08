@@ -8,7 +8,7 @@ private:
 	CPorteEmbarquement* gate;
 public :
 	CEVAvionVaGate();
-	CEVAvionVaGate(CEVAvionVaGate& p_evAvionVaGate);
+	CEVAvionVaGate(CAvion p_avion, CPorteEmbarquement p_porte, time_t p_temps);
 	~CEVAvionVaGate();
 
 	CAvion LireAvion() { return *avion; }

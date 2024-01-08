@@ -13,5 +13,8 @@ CEVAvionAtterrit::~CEVAvionAtterrit() {
 	delete avion;
 	delete pisteAtterissage;
 }
+//Suite de avion veut atterrir
 void CEVAvionAtterrit::run() {
+	CEVAvionQuittePiste AVQP (*avion, *pisteAtterissage, this->lireTempsDebut()+90);
+	AVQP.run();
 }

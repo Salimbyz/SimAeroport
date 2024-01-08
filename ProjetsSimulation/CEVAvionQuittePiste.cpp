@@ -1,8 +1,15 @@
 #include "CEVAvionQuittePiste.h"
+#include "CEVAvionVeutDebarquer.h"
 CEVAvionQuittePiste::CEVAvionQuittePiste()
 {
 	pisteAtterissage = new CPisteAtterissage();
 	avion = new CAvion();
+}
+CEVAvionQuittePiste::CEVAvionQuittePiste(CAvion p_avion, CPisteAtterissage p_pisteAtterrissage, time_t p_time)
+{
+	avion = new CAvion(p_avion);
+	pisteAtterissage = new CPisteAtterissage(p_pisteAtterrissage);
+	this->ecrireTempsDebut(p_time);
 }
 
 CEVAvionQuittePiste::~CEVAvionQuittePiste()
@@ -21,6 +28,8 @@ CEVAvionQuittePiste::CEVAvionQuittePiste(CEVAvionQuittePiste& p_EVAvionVeutAtter
 
 }
 
+
 void CEVAvionQuittePiste::run() {
+	pisteAtterissage->modifierOccupation(false);
 
 }

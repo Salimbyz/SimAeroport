@@ -26,7 +26,7 @@ CEVAvionVeutAtterrir::~CEVAvionVeutAtterrir()
 void CEVAvionVeutAtterrir::run() {
 	for (int i = 0; i < pisteAtterissage.size(); i++) {
 		if (!pisteAtterissage[i]->lireOccupation() && pisteAtterissage[i]->lireListeAttenteAvion().empty()) {
-			pisteAtterissage[i]->modifierOccupation(false);
+			pisteAtterissage[i]->modifierOccupation(true);
 			CEVAvionAtterrit EVAA(*avion, *pisteAtterissage[i], this->lireTempsDebut());
 			EVAA.run();
 		}

@@ -7,18 +7,18 @@ class CEVAvionVeutDebarquer : public CEvenement
 {
 private :
 	CAvion* avion;
-	CPorteEmbarquement* gate;
+	vector<CPorteEmbarquement*> gates;
 public :
 	CEVAvionVeutDebarquer();
-	CEVAvionVeutDebarquer(CAvion p_avion, CPisteAtterissage p_pisteAtterrissage);
+	CEVAvionVeutDebarquer(CAvion p_avion, vector<CPorteEmbarquement*>);
 	CEVAvionVeutDebarquer(CEVAvionVeutDebarquer& p_evAvionVeutDebarquer);
 	~CEVAvionVeutDebarquer();
 
 	CAvion LireAvion() { return *avion; }
 	void ModifierAvion(CAvion p_avion);
 
-	CPorteEmbarquement LireGate() { return *gate; }
-	void ModifierGate(CPorteEmbarquement p_gate) { *gate = p_gate; }
+	vector<CPorteEmbarquement*> LireGates() { return gates; }
+	void ModifierGates(vector<CPorteEmbarquement*> p_gate) { gates = p_gate; }
 
 	void run();
 
