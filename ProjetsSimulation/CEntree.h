@@ -13,11 +13,25 @@
 
 using namespace std;
 
+/**
+ * @class CEntree
+ * @brief Classe pour la lecture et le traitement des données d'entrée.
+ *
+ * Cette classe est responsable de la lecture des données à partir de fichiers
+ * et de la création de vecteurs d'objets correspondants.
+ */
 class CEntree
 {
 private:
 
 public:
+
+    /**
+     * @brief Lit les données des avions à partir d'un fichier et les stocke dans un vecteur.
+     * @param nomFichier Le nom du fichier à lire.
+     * @return Un vecteur contenant des objets CAvion.
+     * @throw std::invalid_argument si le fichier ne peut pas être ouvert.
+     */
     vector<CAvion> lireAvions(const string& nomFichier) {
         ifstream fichier;
         fichier.open(nomFichier, ifstream::in);
@@ -78,6 +92,12 @@ public:
         }
     }
 
+    /**
+     * @brief Lit les données des pistes d'atterrissage à partir d'un fichier et les stocke dans un vecteur.
+     * @param nomFichier Le nom du fichier à lire.
+     * @return Un vecteur contenant des objets CPisteAtterissage.
+     * @throw std::invalid_argument si le fichier ne peut pas être ouvert.
+     */
     vector<CPisteAtterissage> lirePisteAtterissage(const string& nomFichier)
     {
         ifstream fichier;
@@ -111,6 +131,12 @@ public:
         }
     }
 
+    /**
+    * @brief Lit les données des pistes de décollage à partir d'un fichier et les stocke dans un vecteur.
+    * @param nomFichier Le nom du fichier à lire.
+    * @return Un vecteur contenant des objets CPisteDecollage.
+    * @throw std::invalid_argument si le fichier ne peut pas être ouvert.
+    */
     vector<CPisteDecollage> lirePisteDecollage(const string& nomFichier)
     {
         ifstream fichier;
