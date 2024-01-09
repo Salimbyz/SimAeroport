@@ -6,10 +6,12 @@ using namespace std;
 
 enum class Etat {
 	EN_VOL,
+	ATTERRIT,
 	ATTENTE_PORTE,
 	PARKING,
 	PORTE,
 	ATTENTE_PISTE,
+	DECOLLE,
 	PARTI
 };
 
@@ -63,6 +65,10 @@ public:
 			return "attente piste";
 		case Etat::PARTI:
 			return "Parti";
+		case Etat::ATTERRIT:
+			return "Atterrit";
+		case Etat::DECOLLE:
+			return "Décolle";
 		default:
 			return "Unknown";
 		}
@@ -75,6 +81,8 @@ public:
 		if (str == "Porte") return Etat::PORTE;
 		if (str == "Attente piste") return Etat::ATTENTE_PISTE;
 		if (str == "Parti") return Etat::PARTI;
+		if (str == "Atterrit") return Etat::ATTERRIT;
+		if (str == "Décolle") return Etat::DECOLLE;
 		else throw std::invalid_argument("chaine de caractère invalide");
 	}
 };

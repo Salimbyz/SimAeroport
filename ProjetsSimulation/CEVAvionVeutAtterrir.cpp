@@ -7,6 +7,7 @@ CEVAvionVeutAtterrir::CEVAvionVeutAtterrir()
 }
 CEVAvionVeutAtterrir::CEVAvionVeutAtterrir(CAvion p_avion, vector<CPisteAtterissage> p_pistes, time_t p_temps) {
 	avion = new CAvion(p_avion);
+	pisteAtterissage = vector<CPisteAtterissage*>();
 	pisteAtterissage.resize(p_pistes.size());
 	for (int i = 0; i < pisteAtterissage.size(); i++) {
 		*pisteAtterissage[i] = p_pistes[i];
@@ -16,6 +17,9 @@ CEVAvionVeutAtterrir::CEVAvionVeutAtterrir(CAvion p_avion, vector<CPisteAtteriss
 CEVAvionVeutAtterrir::~CEVAvionVeutAtterrir()
 {
 	if (pisteAtterissage.size() != 0) {
+		for(int i = 0; i<pisteAtterissage.size();i++){
+			delete(pisteAtterissage[i]);
+		}
 		pisteAtterissage.clear();
 	}
 	if (avion != NULL) {

@@ -10,12 +10,11 @@ private :
 	vector<CPorteEmbarquement*> gates;
 public :
 	CEVAvionVeutDebarquer();
-	CEVAvionVeutDebarquer(CAvion p_avion, vector<CPorteEmbarquement*>);
-	CEVAvionVeutDebarquer(CEVAvionVeutDebarquer& p_evAvionVeutDebarquer);
+	CEVAvionVeutDebarquer(CAvion p_avion, vector<CPorteEmbarquement> p_gates, time_t p_temps);
 	~CEVAvionVeutDebarquer();
 
 	CAvion LireAvion() { return *avion; }
-	void ModifierAvion(CAvion p_avion);
+	void ModifierAvion(CAvion p_avion) { *avion = p_avion; }
 
 	vector<CPorteEmbarquement*> LireGates() { return gates; }
 	void ModifierGates(vector<CPorteEmbarquement*> p_gate) { gates = p_gate; }

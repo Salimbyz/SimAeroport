@@ -11,7 +11,6 @@ public :
     CEVAvionQuitteGate();
     CEVAvionQuitteGate(CAvion p_avion, CPorteEmbarquement p_gate, time_t p_temps);
     ~CEVAvionQuitteGate();
-    CEVAvionQuitteGate(CEVAvionQuitteGate& p_EVQG);
 
     CAvion LireAvion() { return *avion; }
     void ModifierAvion(CAvion p_avion) { *avion = p_avion; }
