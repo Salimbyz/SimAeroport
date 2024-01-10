@@ -144,6 +144,7 @@ public:
 		if (str == "Parti") return Etat::PARTI;
 		if (str == "Atterrit") return Etat::ATTERRIT;
 		if (str == "Décolle") return Etat::DECOLLE;
+		if (str == "ATTENTE_PORTE") return Etat::ATTENTE_PORTE;
 		else throw std::invalid_argument("chaine de caractère invalide");
 	}
 };

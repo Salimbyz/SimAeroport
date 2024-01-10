@@ -1,4 +1,5 @@
 #include "CEVAvionVaGate.h"
+#include "CEVAvionQuitteGate.h"
 CEVAvionVaGate::CEVAvionVaGate() {
 	avion = new CAvion();
 	gate = new CPorteEmbarquement();
@@ -13,4 +14,7 @@ CEVAvionVaGate::~CEVAvionVaGate() {
 	delete (gate);
 }
 void CEVAvionVaGate::run() {
+	CEVAvionQuitteGate AVQG(*avion, *gate, this->lireTempsDebut() + 90);
+	std::cout << "Avion numero " << avion->lireIdAvion() << " va a la porte d'embarquement numero " <<gate->lireIdPorteE() << std::endl;
+	AVQG.run();
 }

@@ -35,7 +35,7 @@ queue<CAvion*> CPorteEmbarquement::lireListeAttenteAvion()
 	return listeAttenteAvion;
 }
 
-void CPorteEmbarquement::lirePisteAtterissage()
+void CPorteEmbarquement::lirePorteEmbarquement()
 {
 	queue<CAvion*> temp;
 	while (!listeAttenteAvion.empty()) {
