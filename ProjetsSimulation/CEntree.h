@@ -95,7 +95,7 @@ public :
             return vecteurAvions;
         }
         else {
-            throw new invalid_argument("");
+            throw new invalid_argument("Le fichier n'a pas pu être ouvert");
         }
     }
 
@@ -134,7 +134,7 @@ public :
             return vecteurAtterissage;
         }
         else {
-            throw new invalid_argument("erreur");
+            throw new invalid_argument("Le fichier n'a pas pu être ouvert");
         }
     }
 
@@ -173,7 +173,7 @@ public :
             return vecteurDecollage;
         }
         else {
-            throw new invalid_argument("erreur");
+            throw new invalid_argument("Le fichier n'a pas pu être ouvert");
         }
     }
 };
