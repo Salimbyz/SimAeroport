@@ -24,7 +24,24 @@ class CEntree
 {
 private:
 
-public:
+public :
+
+    time_t stringToTimeT(const std::string& timeStr) {
+        tm tm = {};
+        istringstream ss(timeStr);
+        ss >> std::get_time(&tm, "%H:%M");
+        // Ajustement de la date à un point fixe (par exemple, le 1er janvier 1970)
+        tm.tm_year = 124; // Année depuis 1900
+        tm.tm_mon = 0;   // Janvier
+        tm.tm_mday = 15;  //Jour
+        return std::mktime(&tm);
+    }
+
+    void printTimeT(time_t time) {
+        tm tm;
+        localtime_s(&tm, &time);
+        cout << std::put_time(&tm, "%H:%M") << std::endl;
+    }
 
     /**
      * @brief Lit les données des avions à partir d'un fichier et les stocke dans un vecteur.
@@ -51,7 +68,6 @@ public:
                 time_t tempsArrivee, tempsDepart;
                 tempsArrivee = 0;
                 tempsDepart = 0;
-
                 //Identifiant
                 getline(ss, token, ',');
                 id = static_cast<unsigned int>(stoul(token));
@@ -59,18 +75,9 @@ public:
                 getline(ss, arrivee, ',');
                 getline(ss, depart, ',');
 
-                tm tmTempsArrivee = {};
-                tm tmTempsDepart = {};
-                istringstream ss1(arrivee);
-                ss1 >> get_time(&tmTempsArrivee, "%Hh%M");
-                if (!ss1.fail()) {
-                    tempsArrivee = mktime(&tmTempsArrivee);
-                }
-                istringstream ss2(depart);
-                ss2 >> get_time(&tmTempsDepart, "%Hh%M");
-                if (!ss2.fail()) {
-                    tempsDepart = mktime(&tmTempsDepart);
-                }
+
+                tempsArrivee = stringToTimeT(arrivee);
+                tempsDepart = stringToTimeT(depart);
 
                 //Etat de l'avion
                 getline(ss, etat, ',');
