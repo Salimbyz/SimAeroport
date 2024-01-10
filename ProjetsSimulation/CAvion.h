@@ -9,12 +9,14 @@ using namespace std;
  * @brief Énumération des différents états possibles d'un avion.
  */
 enum class Etat {
-	EN_VOL,          ///< L'avion est en vol.
-	ATTENTE_PORTE,   ///< L'avion attend à la porte.
-	PARKING,         ///< L'avion est a une place de parking.
-	PORTE,           ///< L'avion est à la porte.
-	ATTENTE_PISTE,   ///< L'avion attend sur la piste.
-	PARTI            ///< L'avion est parti.
+	EN_VOL,
+	ATTERRIT,
+	ATTENTE_PORTE,
+	PARKING,
+	PORTE,
+	ATTENTE_PISTE,
+	DECOLLE,
+	PARTI
 };
 
 /**
@@ -124,6 +126,10 @@ public:
 			return "attente piste";
 		case Etat::PARTI:
 			return "Parti";
+		case Etat::ATTERRIT:
+			return "Atterrit";
+		case Etat::DECOLLE:
+			return "Décolle";
 		default:
 			return "Unknown";
 		}
@@ -136,6 +142,8 @@ public:
 		if (str == "Porte") return Etat::PORTE;
 		if (str == "Attente piste") return Etat::ATTENTE_PISTE;
 		if (str == "Parti") return Etat::PARTI;
+		if (str == "Atterrit") return Etat::ATTERRIT;
+		if (str == "Décolle") return Etat::DECOLLE;
 		else throw std::invalid_argument("chaine de caractère invalide");
 	}
 };

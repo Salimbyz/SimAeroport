@@ -6,14 +6,14 @@
 class CEVAvionVeutAtterrir : public CEvenement
 {
 private:
-	vector<CPisteAtterissage*> pisteAtterissage;
+	vector<CPisteAtterissage> pisteAtterissage;
 	CAvion *avion;
 public :
 
 	CEVAvionVeutAtterrir();
 	~CEVAvionVeutAtterrir();
 	CEVAvionVeutAtterrir(CAvion p_avion, vector<CPisteAtterissage> p_pistes, time_t p_temp);
-	vector<CPisteAtterissage*> LirePisteAtterissage() { return pisteAtterissage; }
+	vector<CPisteAtterissage> LirePisteAtterissage() { return pisteAtterissage; }
 	CAvion LireAvion() { return *avion; }
 	void ModifierAvion(CAvion p_avion) {
 			*avion= p_avion;

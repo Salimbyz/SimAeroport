@@ -2,20 +2,13 @@
 
 CEVAvionVeutDecoller::CEVAvionVeutDecoller()
 {
-}
-
-CEVAvionVeutDecoller::CEVAvionVeutDecoller(CEVAvionVeutDecoller& p_EVAvionDecolle)
-{
+	avion = new CAvion();
+	pistesDecollage = vector<CPisteDecollage*>();
 }
 
 CEVAvionVeutDecoller::~CEVAvionVeutDecoller()
 {
+	delete(avion);
+
 }
 
-CEVAvionVeutDecoller::CEVAvionVeutDecoller(CAvion p_avion, CPisteDecollage p_pisteDecollage)
-{
-}
-
-void CEVAvionVeutDecoller::run()
-{
-}
