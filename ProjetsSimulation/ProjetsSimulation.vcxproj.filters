@@ -104,9 +104,6 @@
     <ClInclude Include="CEVAvionVaGate.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="CExceptions.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="CEVAvionDecolle.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>

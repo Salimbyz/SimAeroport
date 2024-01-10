@@ -15,7 +15,7 @@ CEVAvionAtterrit::~CEVAvionAtterrit() {
 }
 //Suite de avion veut atterrir
 void CEVAvionAtterrit::run() {
-	avion->modifierEtat(avion->stringToEnum("Atterrit"));
+	avion->modifierEtat(Etat::ATTERRIT);
 	CEVAvionQuittePiste AVQP (*avion, *pisteAtterissage, this->lireTempsDebut()+90);
 	AVQP.run();
 }

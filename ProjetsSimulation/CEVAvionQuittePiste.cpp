@@ -1,4 +1,5 @@
 #include "CEVAvionQuittePiste.h"
+#include "CEVAvionAtterrit.h"
 #include "CEVAvionVeutDebarquer.h"
 CEVAvionQuittePiste::CEVAvionQuittePiste()
 {
@@ -28,8 +29,29 @@ CEVAvionQuittePiste::CEVAvionQuittePiste(CEVAvionQuittePiste& p_EVAvionVeutAtter
 
 }
 
-
+//Il faut vérifier que la queue de la piste est vide avant de changer d'état
 void CEVAvionQuittePiste::run() {
-	pisteAtterissage->modifierOccupation(false);
+	
+	if (pisteAtterissage->lireListeAttenteAvion().empty()) {
+		std::cout << "Avion " << avion->lireIdAvion() << " quitte la piste " << pisteAtterissage->lireIdPisteA() << std::endl;
+		avion->modifierEtat(Etat::ATTENTE_PORTE);
+		pisteAtterissage->modifierOccupation(false);
+		CEVAvionVeutDebarquer EVAVD(*avion,this->lireTempsDebut());
+		EVAVD.run();
+	}
+	else if (!pisteAtterissage->lireListeAttenteAvion().empty()){
+		std::cout << "Avion " << avion->lireIdAvion() << " quitte la piste " << pisteAtterissage->lireIdPisteA() << std::endl;
+		avion->modifierEtat(Etat::ATTENTE_PORTE);
+		pisteAtterissage->modifierOccupation(false);
+		CEVAvionVeutDebarquer EVAVD(*avion, this->lireTempsDebut());
+		EVAVD.run();
+		/*
+		*avion = *pisteAtterissage->lireListeAttenteAvion().front();
+
+		//ERREUR ICI
+		CEVAvionAtterrit AVA(*avion, *pisteAtterissage, this->lireTempsDebut());
+		
+		AVA.run();*/
+	}
 
 }

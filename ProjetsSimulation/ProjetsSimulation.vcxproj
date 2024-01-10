@@ -167,7 +167,6 @@
     <ClInclude Include="CEVAvionVeutDecoller.h" />
     <ClInclude Include="CEVAvionAtterrit.h" />
     <ClInclude Include="CEvenement.h" />
-    <ClInclude Include="CExceptions.h" />
     <ClInclude Include="CPisteAtterissage.h" />
     <ClInclude Include="CPisteDecollage.h" />
     <ClInclude Include="CPorteEmbarquement.h" />

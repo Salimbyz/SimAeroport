@@ -18,6 +18,7 @@ public :
     CPorteEmbarquement LireGate() { return *gate; }
     void ModifierPorteEmbarquement(CPorteEmbarquement p_gate) { *gate = p_gate; }
 
+    void run();
 
     
 };

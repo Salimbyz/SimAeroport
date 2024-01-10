@@ -73,5 +73,5 @@ public:
 	/**
 	 * @brief Affiche les informations de la piste d'atterrissage.
 	 */
-	void lirePisteAtterissage();
+	void lirePorteEmbarquement();
 };

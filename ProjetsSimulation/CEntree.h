@@ -10,7 +10,7 @@
 #include "CAvion.h"
 #include "CPisteDecollage.h"
 #include "CPisteAtterissage.h"
-
+#include "CPorteEmbarquement.h"
 using namespace std;
 
 /**
@@ -174,6 +174,38 @@ public :
         }
         else {
             throw new invalid_argument("Le fichier n'a pas pu être ouvert");
+        }
+    }
+    vector<CPorteEmbarquement> lirePorteEmbarquement(const string& nomFichier)
+    {
+        ifstream fichier;
+        fichier.open(nomFichier, ifstream::in);
+        string ligne;
+        vector<CPorteEmbarquement> vecteurEmbarquement;
+        if (!fichier.fail()) {
+
+            // Sauter la ligne d'en-tête
+            getline(fichier, ligne);
+
+            while (getline(fichier, ligne)) {
+                istringstream ss(ligne);
+                string token;
+
+                unsigned int id;
+
+                //Identifiant
+                getline(ss, token, ',');
+                id = static_cast<unsigned int>(stoul(token));
+
+
+                CPorteEmbarquement porteEmbarquement;
+                porteEmbarquement.ecrireIdPorteE(id);
+                vecteurEmbarquement.push_back(porteEmbarquement);
+            }
+            return vecteurEmbarquement;
+        }
+        else {
+            throw new invalid_argument("erreur");
         }
     }
 };
