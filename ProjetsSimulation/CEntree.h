@@ -27,8 +27,8 @@ private:
 public :
 
     time_t stringToTimeT(const std::string& timeStr) {
-        std::tm tm = {};
-        std::istringstream ss(timeStr);
+        tm tm = {};
+        istringstream ss(timeStr);
         ss >> std::get_time(&tm, "%H:%M");
         // Ajustement de la date à un point fixe (par exemple, le 1er janvier 1970)
         tm.tm_year = 124; // Année depuis 1900
@@ -38,9 +38,9 @@ public :
     }
 
     void printTimeT(time_t time) {
-        std::tm tm;
+        tm tm;
         localtime_s(&tm, &time);
-        std::cout << std::put_time(&tm, "%H:%M") << std::endl;
+        cout << std::put_time(&tm, "%H:%M") << std::endl;
     }
 
     /**
