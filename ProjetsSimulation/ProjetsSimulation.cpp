@@ -22,66 +22,60 @@ int main(int argc, char* argv[]) {
 	
 	CPisteAtterissage Piste1;
 	Piste1.ecrireIdPisteA(1);
-	Piste1.ajouterAvionListeA(Avion1);
-	Piste1.ajouterAvionListeA(Avion2);
-	Piste1.ajouterAvionListeA(Avion3);
-	Piste1.ajouterAvionListeA(Avion4);
 	CPisteAtterissage Piste2;
 	CPisteAtterissage Piste3;
-	CPisteAtterissage Piste4;
-	CPisteAtterissage Piste5;
+
 	Piste2.ecrireIdPisteA(2);
 	Piste3.ecrireIdPisteA(3);
-	Piste4.ecrireIdPisteA(4);
-	Piste5.ecrireIdPisteA(5);
+
 	vector<CPisteAtterissage> pistes;
 	
-	pistes.push_back(Piste1);
-	pistes.push_back(Piste2);
-	pistes.push_back(Piste3);
-	pistes.push_back(Piste4);
-	pistes.push_back(Piste5);
+	
+
 	
 	CAvion avion(5, 5, 5, Etat::EN_VOL);
 	//Remplissage des gates
 	CPorteEmbarquement Porte1;
 	CPorteEmbarquement Porte2;
-	CPorteEmbarquement Porte3;
-	CPorteEmbarquement Porte4;
-	CPorteEmbarquement Porte5;
+
 
 	Porte1.ecrireIdPorteE(1);
 	Porte2.ecrireIdPorteE(2);
-	Porte3.ecrireIdPorteE(3);
-	Porte4.ecrireIdPorteE(4);
-	Porte5.ecrireIdPorteE(5);
+
 	CEVAvionVeutDebarquer::AjouterGate(Porte1);
 	CEVAvionVeutDebarquer::AjouterGate(Porte2);
-	CEVAvionVeutDebarquer::AjouterGate(Porte3);
-	CEVAvionVeutDebarquer::AjouterGate(Porte4);
-	CEVAvionVeutDebarquer::AjouterGate(Porte5);
+
 
 	CPisteDecollage PisteD1;
 	CPisteDecollage PisteD2;
 	CPisteDecollage PisteD3;
-	CPisteDecollage PisteD4;
-	CPisteDecollage PisteD5;
 
 	PisteD1.ecrireIdPisteD(1);
 	PisteD2.ecrireIdPisteD(2);
 	PisteD3.ecrireIdPisteD(3);
-	PisteD4.ecrireIdPisteD(4);
-	PisteD5.ecrireIdPisteD(5);
 
 	CEVAvionVeutDecoller::AjouterPiste(PisteD1);
 	CEVAvionVeutDecoller::AjouterPiste(PisteD2);
 	CEVAvionVeutDecoller::AjouterPiste(PisteD3);
-	CEVAvionVeutDecoller::AjouterPiste(PisteD4);
-	CEVAvionVeutDecoller::AjouterPiste(PisteD5);
 
-	CEVAvionVeutAtterrir EVAVA(*Avion1,pistes, Avion1->lireHeureArriveePrevue());
+	CEVAvionVeutAtterrir::AjouterPiste(Piste1);
+	CEVAvionVeutAtterrir::AjouterPiste(Piste2);
+	Avion1->modifierEtat(Etat::EN_VOL);
+	Avion2->modifierEtat(Etat::EN_VOL);
+	Avion3->modifierEtat(Etat::EN_VOL);
+	Avion4->modifierEtat(Etat::EN_VOL);
+
+	//A Modifier par une queue d'avions et un lancement en fonction
+	CEVAvionVeutAtterrir e;
+	CEVAvionVeutAtterrir EVAVA(*Avion1, Avion1->lireHeureArriveePrevue());
 	EVAVA.run();
-	//Piste1.lirePisteAtterissage();
-	//Porte1.lirePorteEmbarquement();
+
+	CEVAvionVeutAtterrir EVAVA2(*Avion2, Avion1->lireHeureArriveePrevue());
+	EVAVA2.run();
+	CEVAvionVeutAtterrir EVAVA3(*Avion3, Avion1->lireHeureArriveePrevue());
+	EVAVA3.run();
+	CEVAvionVeutAtterrir EVAVA4(*Avion4, Avion1->lireHeureArriveePrevue());
+	EVAVA4.run();
+
 	return 0;
 }

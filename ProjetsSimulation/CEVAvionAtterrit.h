@@ -13,7 +13,7 @@ private:
 public:
 	CEVAvionAtterrit();
 	~CEVAvionAtterrit();
-	CEVAvionAtterrit(CAvion p_avion, CPisteAtterissage p_pisteAtt, time_t p_temps);
+	CEVAvionAtterrit(CAvion p_avion, CPisteAtterissage* p_pisteAtt, time_t p_temps);
 	CPisteAtterissage LirePisteAtterissage() { return *pisteAtterissage; }
 	void ModifierPisteAtterissage(CPisteAtterissage p_pisteAtterissage) { *pisteAtterissage = p_pisteAtterissage; }
 
