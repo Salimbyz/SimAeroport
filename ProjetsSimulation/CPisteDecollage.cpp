@@ -23,10 +23,12 @@ unsigned int CPisteDecollage::lireIdPisteD()
 
 void CPisteDecollage::ecrireListeAttenteAvion(queue<CAvion*> p_listeAttenteAvion)
 {
+	//Boucle tant que qui s'arrêtera une fois que la liste d'attente passé en paramètre sera vidé
 	while (!p_listeAttenteAvion.empty()) {
-		CAvion* avionTMP = new CAvion(*p_listeAttenteAvion.front());
-		listeAttenteAvion.push(avionTMP);
-		p_listeAttenteAvion.pop();
+		CAvion* avionTMP = new CAvion(*p_listeAttenteAvion.front());// Création d'un objet CAvion temporaire correspondant au premier avion de la liste d'attente
+		listeAttenteAvion.push(avionTMP);//Ajout de l'avion dans la liste attente de notre objet
+		p_listeAttenteAvion.pop();//On supprime l'élément récupéré de la liste d'attente paramètre.
+		delete avionTMP;//Destruction de l'avion temporaire
 	}
 }
 
