@@ -20,7 +20,7 @@ CEVAvionVeutDebarquer::~CEVAvionVeutDebarquer()
 vector<CPorteEmbarquement*> CEVAvionVeutDebarquer::gates = vector<CPorteEmbarquement*>();
 void CEVAvionVeutDebarquer::run()
 {
-	for (int i = 0; i < gates.size() && avion->lireEtat() == Etat::ATTENTE_PORTE; i++) {
+	for (unsigned int i = 0; i < gates.size() && avion->lireEtat() == Etat::ATTENTE_PORTE; i++) {
 		//Liste attente vide, on peut faire débarquer l'avion
 		// ! Voir si possibilité de !
 		if (CPorteEmbarquement::lireListeAttenteAvion().empty() && !gates[i]->lireOccupation()) {

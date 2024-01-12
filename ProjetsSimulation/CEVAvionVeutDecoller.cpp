@@ -18,7 +18,7 @@ CEVAvionVeutDecoller::CEVAvionVeutDecoller(CAvion p_avion, time_t p_temps) {
 vector<CPisteDecollage*> CEVAvionVeutDecoller::pistesDecollage = vector<CPisteDecollage*>();
 void CEVAvionVeutDecoller::run() {
 	
-	for (int i = 0; i < pistesDecollage.size() && avion->lireEtat() == Etat::ATTENTE_PISTE; i++) {
+	for (unsigned int i = 0; i < pistesDecollage.size() && avion->lireEtat() == Etat::ATTENTE_PISTE; i++) {
 		//Liste attente vide, on peut faire débarquer l'avion
 		// ! Voir si possibilité de !
 		if (pistesDecollage[i]->lireListeAttenteAvion().empty() && !pistesDecollage[i]->lireOccupation()) {

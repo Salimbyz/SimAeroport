@@ -16,6 +16,7 @@ CEVAvionQuitteAeroport::CEVAvionQuitteAeroport(CAvion p_avion, CPisteDecollage* 
 CEVAvionQuitteAeroport::~CEVAvionQuitteAeroport()
 {
 	delete(avion);
+	delete(pisteD);
 }
 
 void CEVAvionQuitteAeroport::run()

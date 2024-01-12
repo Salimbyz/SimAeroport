@@ -30,9 +30,24 @@ void CEVAvionQuitteGate::run()
 	EVAVD.run();
 	if (!gate->lireListeAttenteAvion().empty()) {
 		*avion = *CPorteEmbarquement::lireListeAttenteAvion().front();
-		CEVAvionVaGate AVG(*avion, gate, this->lireTempsDebut()+144000);
+		CEVAvionVaGate AVG(*avion, gate, this->lireTempsDebut() + 144000);
 		AVG.run();
 		gate->retirerAvionListeA();
+		/*
+		if((difftime(this->lireTempsDebut(), avion->lireHeureArriveePrevue()) < 300)&&(this->lireTempsDebut()<avion->lireHeureArriveePrevue())){
+			*avion = *CPorteEmbarquement::lireListeAttenteAvion().front();
+			CEVAvionVaGate AVG(*avion, gate, this->lireTempsDebut() + 144000);
+			AVG.run();
+			gate->retirerAvionListeA();
+		}
+		else{
+			*avion = *CPorteEmbarquement::lireListeAttenteAvion().front();
+			CEVAvionVaGate AVG(*avion, gate, this->lireTempsDebut() + 144000);
+			AVG.run();
+			gate->retirerAvionListeA();
+		}
+		*/
+
 	}
 
 

@@ -14,7 +14,7 @@ CEVAvionVeutAtterrir::CEVAvionVeutAtterrir(CAvion p_avion, time_t p_temps) {
 	this->ecrireTempsDebut(p_temps);
 }
 void CEVAvionVeutAtterrir::run() {
-	for (int i = 0; i < pisteAtterissage.size() && avion->lireEtat() == Etat::EN_VOL; i++) {
+	for (unsigned int i = 0; i < pisteAtterissage.size() && avion->lireEtat() == Etat::EN_VOL; i++) {
 		if (!pisteAtterissage[i]->lireOccupation() && pisteAtterissage[i]->lireListeAttenteAvion().empty()) {
 			std::cout << "Avion" << avion->lireIdAvion() << " va atterrir sur " << pisteAtterissage[i]->lireIdPisteA() << " a " << this->lireTempsDebut() << "\n";
 			avion->modifierEtat(Etat::ATTERRIT);

@@ -54,6 +54,7 @@ void CEVAvionQuittePiste::run() {
 		}
 		else {
 			CEVAvionAtterrit AVA(*avion, pisteAtterissage, this->lireTempsDebut());
+			AVA.run();
 		}
 
 	}
