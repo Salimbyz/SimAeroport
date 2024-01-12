@@ -1,0 +1,26 @@
+\doxysection{CEVAvion\+Va\+Gate.\+h}
+\hypertarget{_c_e_v_avion_va_gate_8h_source}{}\label{_c_e_v_avion_va_gate_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}CEvenement.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CPorteEmbarquement.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_e_v_avion_va_gate}{CEVAvionVaGate}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_evenement}{CEvenement}}}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}*\ avion;}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}*\ gate;}
+\DoxyCodeLine{00009\ public\ :}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_va_gate}{CEVAvionVaGate}}();}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_va_gate}{CEVAvionVaGate}}(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion,\ \mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}*\ p\_porte,\ time\_t\ p\_temps);}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_va_gate}{\string~CEVAvionVaGate}}();}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}\ LireAvion()\ \{\ \textcolor{keywordflow}{return}\ *avion;\ \}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ ModifierAvion(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion)\ \{\ *avion\ =\ p\_avion;\ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}\ LirePisteAtterrissage()\ \{\ \textcolor{keywordflow}{return}\ *gate;\ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ ModifierGate(\mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}\ p\_gate)\ \{\ *gate\ =\ p\_gate;\ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+
+\end{DoxyCode}

@@ -1,0 +1,27 @@
+\doxysection{CEVAvion\+Veut\+Decoller.\+h}
+\hypertarget{_c_e_v_avion_veut_decoller_8h_source}{}\label{_c_e_v_avion_veut_decoller_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}CEvenement.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_e_v_avion_veut_decoller}{CEVAvionVeutDecoller}}\ :}
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_evenement}{CEvenement}}}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{static}\ vector<CPisteDecollage*>\ pistesDecollage;}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}*\ avion;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_veut_decoller}{CEVAvionVeutDecoller}}();}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_veut_decoller}{\string~CEVAvionVeutDecoller}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_veut_decoller}{CEVAvionVeutDecoller}}(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion,\ time\_t\ p\_temps);}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ ModifierAvion(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion)\ \{\ *avion\ =\ p\_avion;\ \}}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}\ LireAvion()\ \{\ \textcolor{keywordflow}{return}\ *avion;\ \}}
+\DoxyCodeLine{00015\ \ \ \ \ vector<CPisteDecollage*>\ LirePisteDecollage()\ \{\ \textcolor{keywordflow}{return}\ pistesDecollage;\ \}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ AjouterPiste(\mbox{\hyperlink{class_c_piste_decollage}{CPisteDecollage}}\ p\_pisteD)\ \{\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_piste_decollage}{CPisteDecollage}}*\ pisteD\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_c_piste_decollage}{CPisteDecollage}}(p\_pisteD);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ pistesDecollage.push\_back(pisteD);\ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+
+\end{DoxyCode}

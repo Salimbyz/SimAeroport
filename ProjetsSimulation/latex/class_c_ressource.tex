@@ -1,0 +1,109 @@
+\doxysection{CRessource Class Reference}
+\hypertarget{class_c_ressource}{}\label{class_c_ressource}\index{CRessource@{CRessource}}
+
+
+Classe représentant une ressource générale (pouvant être une piste, une porte, etc.).  
+
+
+
+
+{\ttfamily \#include $<$CRessource.\+h$>$}
+
+Inheritance diagram for CRessource\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_ressource}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_ressource_a14db37fcf8c12c3e7bf23c850686dd2e}\label{class_c_ressource_a14db37fcf8c12c3e7bf23c850686dd2e} 
+{\bfseries CRessource} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de \doxylink{class_c_ressource}{CRessource}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_ressource_aa8060026215e915b4e596ad150c8c66d}{CRessource}} (const \mbox{\hyperlink{class_c_ressource}{CRessource}} \&p\+\_\+ressource)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie de \doxylink{class_c_ressource}{CRessource}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_ressource_a8aaaed82d72752e8bc3d0cb3d5b6c989}{CRessource}} (bool p\+\_\+occupe)
+\begin{DoxyCompactList}\small\item\em Constructeur de \doxylink{class_c_ressource}{CRessource} avec état d\textquotesingle{}occupation. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_ressource_a1572a7ddd42b7ba656e0288a63d170f5}\label{class_c_ressource_a1572a7ddd42b7ba656e0288a63d170f5} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CRessource} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \doxylink{class_c_ressource}{CRessource}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_ressource_af1be98e3d7613561ed2a44a78bb226ac}{modifier\+Occupation}} (bool p\+\_\+occupe)
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}état d\textquotesingle{}occupation de la ressource. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_ressource_af5a49d57a51963bbfb14d4e64c5cbe76}{lire\+Occupation}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}état d\textquotesingle{}occupation de la ressource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant une ressource générale (pouvant être une piste, une porte, etc.). 
+
+Cette classe sert de base pour différentes ressources dans un aéroport, telles que les pistes d\textquotesingle{}atterrissage, de décollage ou les portes d\textquotesingle{}embarquement. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_ressource_aa8060026215e915b4e596ad150c8c66d}\label{class_c_ressource_aa8060026215e915b4e596ad150c8c66d} 
+\index{CRessource@{CRessource}!CRessource@{CRessource}}
+\index{CRessource@{CRessource}!CRessource@{CRessource}}
+\doxysubsubsection{\texorpdfstring{CRessource()}{CRessource()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CRessource\+::\+CRessource (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_ressource}{CRessource}} \&}]{p\+\_\+ressource }\end{DoxyParamCaption})}
+
+
+
+Constructeur de copie de \doxylink{class_c_ressource}{CRessource}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+ressource} & Objet \doxylink{class_c_ressource}{CRessource} à copier. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_ressource_a8aaaed82d72752e8bc3d0cb3d5b6c989}\label{class_c_ressource_a8aaaed82d72752e8bc3d0cb3d5b6c989} 
+\index{CRessource@{CRessource}!CRessource@{CRessource}}
+\index{CRessource@{CRessource}!CRessource@{CRessource}}
+\doxysubsubsection{\texorpdfstring{CRessource()}{CRessource()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CRessource\+::\+CRessource (\begin{DoxyParamCaption}\item[{bool}]{p\+\_\+occupe }\end{DoxyParamCaption})}
+
+
+
+Constructeur de \doxylink{class_c_ressource}{CRessource} avec état d\textquotesingle{}occupation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+occupe} & État initial d\textquotesingle{}occupation de la ressource. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_ressource_af5a49d57a51963bbfb14d4e64c5cbe76}\label{class_c_ressource_af5a49d57a51963bbfb14d4e64c5cbe76} 
+\index{CRessource@{CRessource}!lireOccupation@{lireOccupation}}
+\index{lireOccupation@{lireOccupation}!CRessource@{CRessource}}
+\doxysubsubsection{\texorpdfstring{lireOccupation()}{lireOccupation()}}
+{\footnotesize\ttfamily bool CRessource\+::lire\+Occupation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne l\textquotesingle{}état d\textquotesingle{}occupation de la ressource. 
+
+\begin{DoxyReturn}{Returns}
+État d\textquotesingle{}occupation actuel. 
+\end{DoxyReturn}
+\Hypertarget{class_c_ressource_af1be98e3d7613561ed2a44a78bb226ac}\label{class_c_ressource_af1be98e3d7613561ed2a44a78bb226ac} 
+\index{CRessource@{CRessource}!modifierOccupation@{modifierOccupation}}
+\index{modifierOccupation@{modifierOccupation}!CRessource@{CRessource}}
+\doxysubsubsection{\texorpdfstring{modifierOccupation()}{modifierOccupation()}}
+{\footnotesize\ttfamily void CRessource\+::modifier\+Occupation (\begin{DoxyParamCaption}\item[{bool}]{p\+\_\+occupe }\end{DoxyParamCaption})}
+
+
+
+Modifie l\textquotesingle{}état d\textquotesingle{}occupation de la ressource. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+occupe} & Nouvel état d\textquotesingle{}occupation. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CRessource.\+h\item 
+CRessource.\+cpp\end{DoxyCompactItemize}

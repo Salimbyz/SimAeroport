@@ -1,0 +1,179 @@
+\doxysection{CPiste\+Atterissage Class Reference}
+\hypertarget{class_c_piste_atterissage}{}\label{class_c_piste_atterissage}\index{CPisteAtterissage@{CPisteAtterissage}}
+
+
+Classe représentant une piste d\textquotesingle{}atterrissage.  
+
+
+
+
+{\ttfamily \#include $<$CPiste\+Atterissage.\+h$>$}
+
+Inheritance diagram for CPiste\+Atterissage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_piste_atterissage}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_piste_atterissage_a04a8a57bab23d84046fdbc709196e2d2}\label{class_c_piste_atterissage_a04a8a57bab23d84046fdbc709196e2d2} 
+{\bfseries CPiste\+Atterissage} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de \doxylink{class_c_piste_atterissage}{CPiste\+Atterissage}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_piste_atterissage_a396a752bd610129d9805ba7610c4a45f}{CPiste\+Atterissage}} (const \mbox{\hyperlink{class_c_piste_atterissage}{CPiste\+Atterissage}} \&p\+\_\+pisteA)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie de \doxylink{class_c_piste_atterissage}{CPiste\+Atterissage}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_piste_atterissage_af9ddb476f4c3b2dbb129086562815583}{CPiste\+Atterissage}} (unsigned int p\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Constructeur de \doxylink{class_c_piste_atterissage}{CPiste\+Atterissage} avec un identifiant spécifique. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_piste_atterissage_adcf983e7e729f24ce8f462deda7b8bea}\label{class_c_piste_atterissage_adcf983e7e729f24ce8f462deda7b8bea} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CPiste\+Atterissage} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \doxylink{class_c_piste_atterissage}{CPiste\+Atterissage}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_piste_atterissage_ad158c743dae4b6b94c77a667515b08c7}{ecrire\+Id\+PisteA}} (unsigned int p\+\_\+id\+PisteA)
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}identifiant de la piste d\textquotesingle{}atterrissage. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_c_piste_atterissage_a3f27c7ab3cd1b39a2f96f47c16cfb265}{lire\+Id\+PisteA}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}identifiant de la piste d\textquotesingle{}atterrissage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_piste_atterissage_aa92e8a5501dc3b5e0aa22d3533c53a64}{ajouter\+Avion\+ListeA}} (\mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*}p\+\_\+avion\+Ajout)
+\begin{DoxyCompactList}\small\item\em Ajoute un avion à la liste d\textquotesingle{}attente de la piste d\textquotesingle{}atterrissage. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_piste_atterissage_a507c914622a5b3b0ab681e11313fed2b}\label{class_c_piste_atterissage_a507c914622a5b3b0ab681e11313fed2b} 
+void {\bfseries retirer\+Avion\+ListeA} ()
+\begin{DoxyCompactList}\small\item\em Retire le premier avion de la liste d\textquotesingle{}attente de la piste d\textquotesingle{}atterrissage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_c_ressource}{CRessource}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries CRessource} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de \doxylink{class_c_ressource}{CRessource}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_ressource_aa8060026215e915b4e596ad150c8c66d}{CRessource}} (const \mbox{\hyperlink{class_c_ressource}{CRessource}} \&p\+\_\+ressource)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie de \doxylink{class_c_ressource}{CRessource}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_ressource_a8aaaed82d72752e8bc3d0cb3d5b6c989}{CRessource}} (bool p\+\_\+occupe)
+\begin{DoxyCompactList}\small\item\em Constructeur de \doxylink{class_c_ressource}{CRessource} avec état d\textquotesingle{}occupation. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CRessource} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \doxylink{class_c_ressource}{CRessource}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_ressource_af1be98e3d7613561ed2a44a78bb226ac}{modifier\+Occupation}} (bool p\+\_\+occupe)
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}état d\textquotesingle{}occupation de la ressource. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_ressource_af5a49d57a51963bbfb14d4e64c5cbe76}{lire\+Occupation}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}état d\textquotesingle{}occupation de la ressource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_c_piste_atterissage_a1e6958077ff30cd076f386918f72a702}{ecrire\+Liste\+Attente\+Avion}} (queue$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*} $>$ p\+\_\+liste\+Attente\+Avion)
+\begin{DoxyCompactList}\small\item\em Modifie la liste d\textquotesingle{}attente des avions pour la piste d\textquotesingle{}atterrissage. \end{DoxyCompactList}\item 
+static queue$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_c_piste_atterissage_a41e4d635e73f042f832253c008560b00}{lire\+Liste\+Attente\+Avion}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la liste d\textquotesingle{}attente des avions pour la piste d\textquotesingle{}atterrissage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant une piste d\textquotesingle{}atterrissage. 
+
+Cette classe gère les opérations liées à une piste d\textquotesingle{}atterrissage, y compris la gestion des avions en attente d\textquotesingle{}atterrissage. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_piste_atterissage_a396a752bd610129d9805ba7610c4a45f}\label{class_c_piste_atterissage_a396a752bd610129d9805ba7610c4a45f} 
+\index{CPisteAtterissage@{CPisteAtterissage}!CPisteAtterissage@{CPisteAtterissage}}
+\index{CPisteAtterissage@{CPisteAtterissage}!CPisteAtterissage@{CPisteAtterissage}}
+\doxysubsubsection{\texorpdfstring{CPisteAtterissage()}{CPisteAtterissage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CPiste\+Atterissage\+::\+CPiste\+Atterissage (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_piste_atterissage}{CPiste\+Atterissage}} \&}]{p\+\_\+pisteA }\end{DoxyParamCaption})}
+
+
+
+Constructeur de copie de \doxylink{class_c_piste_atterissage}{CPiste\+Atterissage}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+pisteA} & Objet \doxylink{class_c_piste_atterissage}{CPiste\+Atterissage} à copier. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_piste_atterissage_af9ddb476f4c3b2dbb129086562815583}\label{class_c_piste_atterissage_af9ddb476f4c3b2dbb129086562815583} 
+\index{CPisteAtterissage@{CPisteAtterissage}!CPisteAtterissage@{CPisteAtterissage}}
+\index{CPisteAtterissage@{CPisteAtterissage}!CPisteAtterissage@{CPisteAtterissage}}
+\doxysubsubsection{\texorpdfstring{CPisteAtterissage()}{CPisteAtterissage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CPiste\+Atterissage\+::\+CPiste\+Atterissage (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Constructeur de \doxylink{class_c_piste_atterissage}{CPiste\+Atterissage} avec un identifiant spécifique. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+id} & Identifiant de la piste d\textquotesingle{}atterrissage. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_piste_atterissage_aa92e8a5501dc3b5e0aa22d3533c53a64}\label{class_c_piste_atterissage_aa92e8a5501dc3b5e0aa22d3533c53a64} 
+\index{CPisteAtterissage@{CPisteAtterissage}!ajouterAvionListeA@{ajouterAvionListeA}}
+\index{ajouterAvionListeA@{ajouterAvionListeA}!CPisteAtterissage@{CPisteAtterissage}}
+\doxysubsubsection{\texorpdfstring{ajouterAvionListeA()}{ajouterAvionListeA()}}
+{\footnotesize\ttfamily void CPiste\+Atterissage\+::ajouter\+Avion\+ListeA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+avion\+Ajout }\end{DoxyParamCaption})}
+
+
+
+Ajoute un avion à la liste d\textquotesingle{}attente de la piste d\textquotesingle{}atterrissage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+avion\+Ajout} & Pointeur vers l\textquotesingle{}avion à ajouter à la liste d\textquotesingle{}attente. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_piste_atterissage_ad158c743dae4b6b94c77a667515b08c7}\label{class_c_piste_atterissage_ad158c743dae4b6b94c77a667515b08c7} 
+\index{CPisteAtterissage@{CPisteAtterissage}!ecrireIdPisteA@{ecrireIdPisteA}}
+\index{ecrireIdPisteA@{ecrireIdPisteA}!CPisteAtterissage@{CPisteAtterissage}}
+\doxysubsubsection{\texorpdfstring{ecrireIdPisteA()}{ecrireIdPisteA()}}
+{\footnotesize\ttfamily void CPiste\+Atterissage\+::ecrire\+Id\+PisteA (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+\_\+id\+PisteA }\end{DoxyParamCaption})}
+
+
+
+Modifie l\textquotesingle{}identifiant de la piste d\textquotesingle{}atterrissage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+id\+PisteA} & Nouvel identifiant de la piste. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_piste_atterissage_a1e6958077ff30cd076f386918f72a702}\label{class_c_piste_atterissage_a1e6958077ff30cd076f386918f72a702} 
+\index{CPisteAtterissage@{CPisteAtterissage}!ecrireListeAttenteAvion@{ecrireListeAttenteAvion}}
+\index{ecrireListeAttenteAvion@{ecrireListeAttenteAvion}!CPisteAtterissage@{CPisteAtterissage}}
+\doxysubsubsection{\texorpdfstring{ecrireListeAttenteAvion()}{ecrireListeAttenteAvion()}}
+{\footnotesize\ttfamily void CPiste\+Atterissage\+::ecrire\+Liste\+Attente\+Avion (\begin{DoxyParamCaption}\item[{queue$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*} $>$}]{p\+\_\+liste\+Attente\+Avion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Modifie la liste d\textquotesingle{}attente des avions pour la piste d\textquotesingle{}atterrissage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+liste\+Attente\+Avion} & Nouvelle liste d\textquotesingle{}attente des avions. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_piste_atterissage_a3f27c7ab3cd1b39a2f96f47c16cfb265}\label{class_c_piste_atterissage_a3f27c7ab3cd1b39a2f96f47c16cfb265} 
+\index{CPisteAtterissage@{CPisteAtterissage}!lireIdPisteA@{lireIdPisteA}}
+\index{lireIdPisteA@{lireIdPisteA}!CPisteAtterissage@{CPisteAtterissage}}
+\doxysubsubsection{\texorpdfstring{lireIdPisteA()}{lireIdPisteA()}}
+{\footnotesize\ttfamily unsigned int CPiste\+Atterissage\+::lire\+Id\+PisteA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne l\textquotesingle{}identifiant de la piste d\textquotesingle{}atterrissage. 
+
+\begin{DoxyReturn}{Returns}
+Identifiant de la piste. 
+\end{DoxyReturn}
+\Hypertarget{class_c_piste_atterissage_a41e4d635e73f042f832253c008560b00}\label{class_c_piste_atterissage_a41e4d635e73f042f832253c008560b00} 
+\index{CPisteAtterissage@{CPisteAtterissage}!lireListeAttenteAvion@{lireListeAttenteAvion}}
+\index{lireListeAttenteAvion@{lireListeAttenteAvion}!CPisteAtterissage@{CPisteAtterissage}}
+\doxysubsubsection{\texorpdfstring{lireListeAttenteAvion()}{lireListeAttenteAvion()}}
+{\footnotesize\ttfamily queue$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*} $>$ CPiste\+Atterissage\+::lire\+Liste\+Attente\+Avion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne la liste d\textquotesingle{}attente des avions pour la piste d\textquotesingle{}atterrissage. 
+
+\begin{DoxyReturn}{Returns}
+File d\textquotesingle{}attente des avions. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CPiste\+Atterissage.\+h\item 
+CPiste\+Atterissage.\+cpp\end{DoxyCompactItemize}

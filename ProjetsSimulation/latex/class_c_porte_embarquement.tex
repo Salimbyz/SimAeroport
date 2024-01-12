@@ -1,0 +1,162 @@
+\doxysection{CPorte\+Embarquement Class Reference}
+\hypertarget{class_c_porte_embarquement}{}\label{class_c_porte_embarquement}\index{CPorteEmbarquement@{CPorteEmbarquement}}
+
+
+Classe représentant une porte d\textquotesingle{}embarquement.  
+
+
+
+
+{\ttfamily \#include $<$CPorte\+Embarquement.\+h$>$}
+
+Inheritance diagram for CPorte\+Embarquement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_porte_embarquement}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_porte_embarquement_acf04de7040ece7d4d6140f8c95c4d811}\label{class_c_porte_embarquement_acf04de7040ece7d4d6140f8c95c4d811} 
+{\bfseries CPorte\+Embarquement} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de \doxylink{class_c_porte_embarquement}{CPorte\+Embarquement}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_porte_embarquement_a2046f2ce09c019f2989ee68a029adc31}{CPorte\+Embarquement}} (const \mbox{\hyperlink{class_c_porte_embarquement}{CPorte\+Embarquement}} \&p\+\_\+porteE)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie de \doxylink{class_c_porte_embarquement}{CPorte\+Embarquement}. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_porte_embarquement_add90049aa7e33adbfe98c75c7be32f2c}\label{class_c_porte_embarquement_add90049aa7e33adbfe98c75c7be32f2c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CPorte\+Embarquement} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \doxylink{class_c_porte_embarquement}{CPorte\+Embarquement}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_porte_embarquement_a3d4281f6f4155a6c2c720b0b2a17ee48}{ecrire\+Id\+PorteE}} (unsigned int p\+\_\+id\+PorteE)
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}identifiant de la porte d\textquotesingle{}embarquement. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_c_porte_embarquement_a873633682d14514edf317b4994a2a097}{lire\+Id\+PorteE}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}identifiant de la porte d\textquotesingle{}embarquement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_porte_embarquement_a644a12282f6a3f9c22b06e799f37cb2e}{ajouter\+Avion\+ListeA}} (\mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*}p\+\_\+avion\+Ajout)
+\begin{DoxyCompactList}\small\item\em Ajoute un avion à la liste d\textquotesingle{}attente de la porte d\textquotesingle{}embarquement. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_porte_embarquement_af2d8fc066b2de23e6f5972fab89f5e2c}\label{class_c_porte_embarquement_af2d8fc066b2de23e6f5972fab89f5e2c} 
+void {\bfseries retirer\+Avion\+ListeA} ()
+\begin{DoxyCompactList}\small\item\em Retire le premier avion de la liste d\textquotesingle{}attente de la porte d\textquotesingle{}embarquement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_c_ressource}{CRessource}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries CRessource} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de \doxylink{class_c_ressource}{CRessource}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_ressource_aa8060026215e915b4e596ad150c8c66d}{CRessource}} (const \mbox{\hyperlink{class_c_ressource}{CRessource}} \&p\+\_\+ressource)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie de \doxylink{class_c_ressource}{CRessource}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_ressource_a8aaaed82d72752e8bc3d0cb3d5b6c989}{CRessource}} (bool p\+\_\+occupe)
+\begin{DoxyCompactList}\small\item\em Constructeur de \doxylink{class_c_ressource}{CRessource} avec état d\textquotesingle{}occupation. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CRessource} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \doxylink{class_c_ressource}{CRessource}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_ressource_af1be98e3d7613561ed2a44a78bb226ac}{modifier\+Occupation}} (bool p\+\_\+occupe)
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}état d\textquotesingle{}occupation de la ressource. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_ressource_af5a49d57a51963bbfb14d4e64c5cbe76}{lire\+Occupation}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}état d\textquotesingle{}occupation de la ressource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_c_porte_embarquement_ab9c60dae3a06a7a176866fb030a4ac64}{ecrire\+Liste\+Attente\+Avion}} (queue$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*} $>$ p\+\_\+liste\+Attente\+Avion)
+\begin{DoxyCompactList}\small\item\em Modifie la liste d\textquotesingle{}attente des avions pour la porte d\textquotesingle{}embarquement. \end{DoxyCompactList}\item 
+static queue$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_c_porte_embarquement_a6f3a89f7e5bf23d6c448a2003074dfe9}{lire\+Liste\+Attente\+Avion}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la liste d\textquotesingle{}attente des avions pour la porte d\textquotesingle{}embarquement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant une porte d\textquotesingle{}embarquement. 
+
+Cette classe gère les opérations liées à une porte d\textquotesingle{}embarquement, y compris la gestion des avions en attente à cette porte. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_porte_embarquement_a2046f2ce09c019f2989ee68a029adc31}\label{class_c_porte_embarquement_a2046f2ce09c019f2989ee68a029adc31} 
+\index{CPorteEmbarquement@{CPorteEmbarquement}!CPorteEmbarquement@{CPorteEmbarquement}}
+\index{CPorteEmbarquement@{CPorteEmbarquement}!CPorteEmbarquement@{CPorteEmbarquement}}
+\doxysubsubsection{\texorpdfstring{CPorteEmbarquement()}{CPorteEmbarquement()}}
+{\footnotesize\ttfamily CPorte\+Embarquement\+::\+CPorte\+Embarquement (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_porte_embarquement}{CPorte\+Embarquement}} \&}]{p\+\_\+porteE }\end{DoxyParamCaption})}
+
+
+
+Constructeur de copie de \doxylink{class_c_porte_embarquement}{CPorte\+Embarquement}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+porteE} & Objet \doxylink{class_c_porte_embarquement}{CPorte\+Embarquement} à copier. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_porte_embarquement_a644a12282f6a3f9c22b06e799f37cb2e}\label{class_c_porte_embarquement_a644a12282f6a3f9c22b06e799f37cb2e} 
+\index{CPorteEmbarquement@{CPorteEmbarquement}!ajouterAvionListeA@{ajouterAvionListeA}}
+\index{ajouterAvionListeA@{ajouterAvionListeA}!CPorteEmbarquement@{CPorteEmbarquement}}
+\doxysubsubsection{\texorpdfstring{ajouterAvionListeA()}{ajouterAvionListeA()}}
+{\footnotesize\ttfamily void CPorte\+Embarquement\+::ajouter\+Avion\+ListeA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+avion\+Ajout }\end{DoxyParamCaption})}
+
+
+
+Ajoute un avion à la liste d\textquotesingle{}attente de la porte d\textquotesingle{}embarquement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+avion\+Ajout} & Pointeur vers l\textquotesingle{}avion à ajouter à la liste d\textquotesingle{}attente. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_porte_embarquement_a3d4281f6f4155a6c2c720b0b2a17ee48}\label{class_c_porte_embarquement_a3d4281f6f4155a6c2c720b0b2a17ee48} 
+\index{CPorteEmbarquement@{CPorteEmbarquement}!ecrireIdPorteE@{ecrireIdPorteE}}
+\index{ecrireIdPorteE@{ecrireIdPorteE}!CPorteEmbarquement@{CPorteEmbarquement}}
+\doxysubsubsection{\texorpdfstring{ecrireIdPorteE()}{ecrireIdPorteE()}}
+{\footnotesize\ttfamily void CPorte\+Embarquement\+::ecrire\+Id\+PorteE (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+\_\+id\+PorteE }\end{DoxyParamCaption})}
+
+
+
+Modifie l\textquotesingle{}identifiant de la porte d\textquotesingle{}embarquement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+id\+PorteE} & Nouvel identifiant de la porte. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_porte_embarquement_ab9c60dae3a06a7a176866fb030a4ac64}\label{class_c_porte_embarquement_ab9c60dae3a06a7a176866fb030a4ac64} 
+\index{CPorteEmbarquement@{CPorteEmbarquement}!ecrireListeAttenteAvion@{ecrireListeAttenteAvion}}
+\index{ecrireListeAttenteAvion@{ecrireListeAttenteAvion}!CPorteEmbarquement@{CPorteEmbarquement}}
+\doxysubsubsection{\texorpdfstring{ecrireListeAttenteAvion()}{ecrireListeAttenteAvion()}}
+{\footnotesize\ttfamily void CPorte\+Embarquement\+::ecrire\+Liste\+Attente\+Avion (\begin{DoxyParamCaption}\item[{queue$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*} $>$}]{p\+\_\+liste\+Attente\+Avion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Modifie la liste d\textquotesingle{}attente des avions pour la porte d\textquotesingle{}embarquement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+liste\+Attente\+Avion} & Nouvelle liste d\textquotesingle{}attente des avions. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_porte_embarquement_a873633682d14514edf317b4994a2a097}\label{class_c_porte_embarquement_a873633682d14514edf317b4994a2a097} 
+\index{CPorteEmbarquement@{CPorteEmbarquement}!lireIdPorteE@{lireIdPorteE}}
+\index{lireIdPorteE@{lireIdPorteE}!CPorteEmbarquement@{CPorteEmbarquement}}
+\doxysubsubsection{\texorpdfstring{lireIdPorteE()}{lireIdPorteE()}}
+{\footnotesize\ttfamily unsigned int CPorte\+Embarquement\+::lire\+Id\+PorteE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne l\textquotesingle{}identifiant de la porte d\textquotesingle{}embarquement. 
+
+\begin{DoxyReturn}{Returns}
+Identifiant de la porte. 
+\end{DoxyReturn}
+\Hypertarget{class_c_porte_embarquement_a6f3a89f7e5bf23d6c448a2003074dfe9}\label{class_c_porte_embarquement_a6f3a89f7e5bf23d6c448a2003074dfe9} 
+\index{CPorteEmbarquement@{CPorteEmbarquement}!lireListeAttenteAvion@{lireListeAttenteAvion}}
+\index{lireListeAttenteAvion@{lireListeAttenteAvion}!CPorteEmbarquement@{CPorteEmbarquement}}
+\doxysubsubsection{\texorpdfstring{lireListeAttenteAvion()}{lireListeAttenteAvion()}}
+{\footnotesize\ttfamily queue$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*} $>$ CPorte\+Embarquement\+::lire\+Liste\+Attente\+Avion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne la liste d\textquotesingle{}attente des avions pour la porte d\textquotesingle{}embarquement. 
+
+\begin{DoxyReturn}{Returns}
+File d\textquotesingle{}attente des avions. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CPorte\+Embarquement.\+h\item 
+CPorte\+Embarquement.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,39 @@
+\doxysection{CPorte\+Embarquement.\+h}
+\hypertarget{_c_porte_embarquement_8h_source}{}\label{_c_porte_embarquement_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include<queue>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}CAvion.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CRessource.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_ressource}{CRessource}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ idPorteE;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ queue<CAvion*>\ listeAttenteAvion;\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_c_porte_embarquement_acf04de7040ece7d4d6140f8c95c4d811}{CPorteEmbarquement}}()\ :idPorteE(0)\ \{\};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_c_porte_embarquement_acf04de7040ece7d4d6140f8c95c4d811}{CPorteEmbarquement}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}\&\ p\_porteE);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_c_porte_embarquement_add90049aa7e33adbfe98c75c7be32f2c}{\string~CPorteEmbarquement}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_porte_embarquement_a3d4281f6f4155a6c2c720b0b2a17ee48}{ecrireIdPorteE}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p\_idPorteE);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_porte_embarquement_a873633682d14514edf317b4994a2a097}{lireIdPorteE}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_porte_embarquement_ab9c60dae3a06a7a176866fb030a4ac64}{ecrireListeAttenteAvion}}(queue<CAvion*>\ p\_listeAttenteAvion);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{static}\ queue<CAvion*>\ \mbox{\hyperlink{class_c_porte_embarquement_a6f3a89f7e5bf23d6c448a2003074dfe9}{lireListeAttenteAvion}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_porte_embarquement_a644a12282f6a3f9c22b06e799f37cb2e}{ajouterAvionListeA}}(\mbox{\hyperlink{class_c_avion}{CAvion}}*\ p\_avionAjout);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_porte_embarquement_af2d8fc066b2de23e6f5972fab89f5e2c}{retirerAvionListeA}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,214 @@
+\doxysection{CAvion Class Reference}
+\hypertarget{class_c_avion}{}\label{class_c_avion}\index{CAvion@{CAvion}}
+
+
+Classe représentant un avion.  
+
+
+
+
+{\ttfamily \#include $<$CAvion.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_avion_a5808e9cdc88f5694fd0d3059215b4777}\label{class_c_avion_a5808e9cdc88f5694fd0d3059215b4777} 
+{\bfseries CAvion} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de \doxylink{class_c_avion}{CAvion}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_avion_aa2936d9caadc2efc35b7218faa264bca}{CAvion}} (unsigned int p\+\_\+id\+Avion, time\+\_\+t p\+\_\+heure\+Arrivee\+Prevue, time\+\_\+t heure\+Depart\+Prevue, Etat p\+\_\+etat)
+\begin{DoxyCompactList}\small\item\em Constructeur de \doxylink{class_c_avion}{CAvion} avec paramètres. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_avion_aac64528ae0ea1d942cb6b021d0d8c236}{CAvion}} (const \mbox{\hyperlink{class_c_avion}{CAvion}} \&p\+\_\+avion)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie de \doxylink{class_c_avion}{CAvion}. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_avion_a27eaca749a0dd84eb37579bf833dae0b}\label{class_c_avion_a27eaca749a0dd84eb37579bf833dae0b} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CAvion} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \doxylink{class_c_avion}{CAvion}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_avion_a459c4167dc3bb85d801154b04ffa5970}{modifier\+Id\+Avion}} (int p\+\_\+id\+Avion)
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}identifiant de l\textquotesingle{}avion. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_c_avion_a808928809ece1f2ab90e44578dfe6871}{lire\+Id\+Avion}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}identifiant de l\textquotesingle{}avion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_avion_a43bd84235e995543d07ba73ded9ae535}{modifier\+Etat}} (Etat p\+\_\+etat)
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}état de l\textquotesingle{}avion. \end{DoxyCompactList}\item 
+Etat \mbox{\hyperlink{class_c_avion_a42e9eaefb25e72571fad472e3b695a84}{lire\+Etat}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}état actuel de l\textquotesingle{}avion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_avion_a86fe2e04271652cf79cc778699185091}{modifier\+Heure\+Arrivee\+Prevue}} (time\+\_\+t p\+\_\+heure\+Arrivee\+Prevue)
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}heure d\textquotesingle{}arrivée prévue de l\textquotesingle{}avion. \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{class_c_avion_aceeff10976588e6ba129ea3abdd1d556}{lire\+Heure\+Arrivee\+Prevue}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}heure d\textquotesingle{}arrivée prévue de l\textquotesingle{}avion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_avion_a372742eb2770511a6842e2694c40762a}{modifier\+Heure\+Depart\+Prevue}} (time\+\_\+t p\+\_\+heure\+Depart\+Prevue)
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}heure de départ prévue de l\textquotesingle{}avion. \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{class_c_avion_a28a91de07300a937b513eaff597ab258}{lire\+Heure\+Depart\+Prevue}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}heure de départ prévue de l\textquotesingle{}avion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_avion_ac71ca0ec50bab4fb8f68150ec286942c}\label{class_c_avion_ac71ca0ec50bab4fb8f68150ec286942c} 
+static string {\bfseries enum\+To\+String} (Etat value)
+\item 
+\Hypertarget{class_c_avion_a3dfa3bc25de1869a4833694ae85519e2}\label{class_c_avion_a3dfa3bc25de1869a4833694ae85519e2} 
+static Etat {\bfseries string\+To\+Enum} (string str)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant un avion. 
+
+Cette classe gère les informations et les opérations liées à un avion. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_avion_aa2936d9caadc2efc35b7218faa264bca}\label{class_c_avion_aa2936d9caadc2efc35b7218faa264bca} 
+\index{CAvion@{CAvion}!CAvion@{CAvion}}
+\index{CAvion@{CAvion}!CAvion@{CAvion}}
+\doxysubsubsection{\texorpdfstring{CAvion()}{CAvion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CAvion\+::\+CAvion (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+\_\+id\+Avion,  }\item[{time\+\_\+t}]{p\+\_\+heure\+Arrivee\+Prevue,  }\item[{time\+\_\+t}]{heure\+Depart\+Prevue,  }\item[{Etat}]{p\+\_\+etat }\end{DoxyParamCaption})}
+
+
+
+Constructeur de \doxylink{class_c_avion}{CAvion} avec paramètres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+id\+Avion} & Identifiant de l\textquotesingle{}avion. \\
+\hline
+{\em p\+\_\+heure\+Arrivee\+Prevue} & Heure d\textquotesingle{}arrivée prévue de l\textquotesingle{}avion. \\
+\hline
+{\em heure\+Depart\+Prevue} & Heure de départ prévue de l\textquotesingle{}avion. \\
+\hline
+{\em p\+\_\+etat} & État initial de l\textquotesingle{}avion. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_avion_aac64528ae0ea1d942cb6b021d0d8c236}\label{class_c_avion_aac64528ae0ea1d942cb6b021d0d8c236} 
+\index{CAvion@{CAvion}!CAvion@{CAvion}}
+\index{CAvion@{CAvion}!CAvion@{CAvion}}
+\doxysubsubsection{\texorpdfstring{CAvion()}{CAvion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CAvion\+::\+CAvion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_avion}{CAvion}} \&}]{p\+\_\+avion }\end{DoxyParamCaption})}
+
+
+
+Constructeur de copie de \doxylink{class_c_avion}{CAvion}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+avion} & Objet \doxylink{class_c_avion}{CAvion} à copier. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_avion_a42e9eaefb25e72571fad472e3b695a84}\label{class_c_avion_a42e9eaefb25e72571fad472e3b695a84} 
+\index{CAvion@{CAvion}!lireEtat@{lireEtat}}
+\index{lireEtat@{lireEtat}!CAvion@{CAvion}}
+\doxysubsubsection{\texorpdfstring{lireEtat()}{lireEtat()}}
+{\footnotesize\ttfamily Etat CAvion\+::lire\+Etat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne l\textquotesingle{}état actuel de l\textquotesingle{}avion. 
+
+\begin{DoxyReturn}{Returns}
+État actuel de l\textquotesingle{}avion. 
+\end{DoxyReturn}
+\Hypertarget{class_c_avion_aceeff10976588e6ba129ea3abdd1d556}\label{class_c_avion_aceeff10976588e6ba129ea3abdd1d556} 
+\index{CAvion@{CAvion}!lireHeureArriveePrevue@{lireHeureArriveePrevue}}
+\index{lireHeureArriveePrevue@{lireHeureArriveePrevue}!CAvion@{CAvion}}
+\doxysubsubsection{\texorpdfstring{lireHeureArriveePrevue()}{lireHeureArriveePrevue()}}
+{\footnotesize\ttfamily time\+\_\+t CAvion\+::lire\+Heure\+Arrivee\+Prevue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne l\textquotesingle{}heure d\textquotesingle{}arrivée prévue de l\textquotesingle{}avion. 
+
+\begin{DoxyReturn}{Returns}
+Heure d\textquotesingle{}arrivée prévue. 
+\end{DoxyReturn}
+\Hypertarget{class_c_avion_a28a91de07300a937b513eaff597ab258}\label{class_c_avion_a28a91de07300a937b513eaff597ab258} 
+\index{CAvion@{CAvion}!lireHeureDepartPrevue@{lireHeureDepartPrevue}}
+\index{lireHeureDepartPrevue@{lireHeureDepartPrevue}!CAvion@{CAvion}}
+\doxysubsubsection{\texorpdfstring{lireHeureDepartPrevue()}{lireHeureDepartPrevue()}}
+{\footnotesize\ttfamily time\+\_\+t CAvion\+::lire\+Heure\+Depart\+Prevue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne l\textquotesingle{}heure de départ prévue de l\textquotesingle{}avion. 
+
+\begin{DoxyReturn}{Returns}
+Heure de départ prévue. 
+\end{DoxyReturn}
+\Hypertarget{class_c_avion_a808928809ece1f2ab90e44578dfe6871}\label{class_c_avion_a808928809ece1f2ab90e44578dfe6871} 
+\index{CAvion@{CAvion}!lireIdAvion@{lireIdAvion}}
+\index{lireIdAvion@{lireIdAvion}!CAvion@{CAvion}}
+\doxysubsubsection{\texorpdfstring{lireIdAvion()}{lireIdAvion()}}
+{\footnotesize\ttfamily unsigned int CAvion\+::lire\+Id\+Avion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne l\textquotesingle{}identifiant de l\textquotesingle{}avion. 
+
+\begin{DoxyReturn}{Returns}
+Identifiant de l\textquotesingle{}avion. 
+\end{DoxyReturn}
+\Hypertarget{class_c_avion_a43bd84235e995543d07ba73ded9ae535}\label{class_c_avion_a43bd84235e995543d07ba73ded9ae535} 
+\index{CAvion@{CAvion}!modifierEtat@{modifierEtat}}
+\index{modifierEtat@{modifierEtat}!CAvion@{CAvion}}
+\doxysubsubsection{\texorpdfstring{modifierEtat()}{modifierEtat()}}
+{\footnotesize\ttfamily void CAvion\+::modifier\+Etat (\begin{DoxyParamCaption}\item[{Etat}]{p\+\_\+etat }\end{DoxyParamCaption})}
+
+
+
+Modifie l\textquotesingle{}état de l\textquotesingle{}avion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+etat} & Nouvel état de l\textquotesingle{}avion. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_avion_a86fe2e04271652cf79cc778699185091}\label{class_c_avion_a86fe2e04271652cf79cc778699185091} 
+\index{CAvion@{CAvion}!modifierHeureArriveePrevue@{modifierHeureArriveePrevue}}
+\index{modifierHeureArriveePrevue@{modifierHeureArriveePrevue}!CAvion@{CAvion}}
+\doxysubsubsection{\texorpdfstring{modifierHeureArriveePrevue()}{modifierHeureArriveePrevue()}}
+{\footnotesize\ttfamily void CAvion\+::modifier\+Heure\+Arrivee\+Prevue (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{p\+\_\+heure\+Arrivee\+Prevue }\end{DoxyParamCaption})}
+
+
+
+Modifie l\textquotesingle{}heure d\textquotesingle{}arrivée prévue de l\textquotesingle{}avion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+heure\+Arrivee\+Prevue} & Nouvelle heure d\textquotesingle{}arrivée prévue. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_avion_a372742eb2770511a6842e2694c40762a}\label{class_c_avion_a372742eb2770511a6842e2694c40762a} 
+\index{CAvion@{CAvion}!modifierHeureDepartPrevue@{modifierHeureDepartPrevue}}
+\index{modifierHeureDepartPrevue@{modifierHeureDepartPrevue}!CAvion@{CAvion}}
+\doxysubsubsection{\texorpdfstring{modifierHeureDepartPrevue()}{modifierHeureDepartPrevue()}}
+{\footnotesize\ttfamily void CAvion\+::modifier\+Heure\+Depart\+Prevue (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{p\+\_\+heure\+Depart\+Prevue }\end{DoxyParamCaption})}
+
+
+
+Modifie l\textquotesingle{}heure de départ prévue de l\textquotesingle{}avion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+heure\+Depart\+Prevue} & Nouvelle heure de départ prévue. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_avion_a459c4167dc3bb85d801154b04ffa5970}\label{class_c_avion_a459c4167dc3bb85d801154b04ffa5970} 
+\index{CAvion@{CAvion}!modifierIdAvion@{modifierIdAvion}}
+\index{modifierIdAvion@{modifierIdAvion}!CAvion@{CAvion}}
+\doxysubsubsection{\texorpdfstring{modifierIdAvion()}{modifierIdAvion()}}
+{\footnotesize\ttfamily void CAvion\+::modifier\+Id\+Avion (\begin{DoxyParamCaption}\item[{int}]{p\+\_\+id\+Avion }\end{DoxyParamCaption})}
+
+
+
+Modifie l\textquotesingle{}identifiant de l\textquotesingle{}avion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+id\+Avion} & Nouvel identifiant de l\textquotesingle{}avion. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CAvion.\+h\item 
+CAvion.\+cpp\end{DoxyCompactItemize}

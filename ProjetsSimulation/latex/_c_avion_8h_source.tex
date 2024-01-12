@@ -1,0 +1,94 @@
+\doxysection{CAvion.\+h}
+\hypertarget{_c_avion_8h_source}{}\label{_c_avion_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ CAVION\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ CAVION\_H}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{enum\ class}\ Etat\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ EN\_VOL,}
+\DoxyCodeLine{00015\ \ \ \ \ ATTERRIT,}
+\DoxyCodeLine{00016\ \ \ \ \ ATTENTE\_PORTE,}
+\DoxyCodeLine{00017\ \ \ \ \ PARKING,}
+\DoxyCodeLine{00018\ \ \ \ \ PORTE,}
+\DoxyCodeLine{00019\ \ \ \ \ ATTENTE\_PISTE,}
+\DoxyCodeLine{00020\ \ \ \ \ DECOLLE,}
+\DoxyCodeLine{00021\ \ \ \ \ PARTI}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_avion}{CAvion}}}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ idAvion;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ time\_t\ heureArriveePrevue;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ time\_t\ heureDepartPrevue;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ Etat\ etat;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_c_avion_a5808e9cdc88f5694fd0d3059215b4777}{CAvion}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_c_avion_a5808e9cdc88f5694fd0d3059215b4777}{CAvion}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p\_idAvion,\ time\_t\ p\_heureArriveePrevue,\ time\_t\ heureDepartPrevue,\ Etat\ p\_etat);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_c_avion_a5808e9cdc88f5694fd0d3059215b4777}{CAvion}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_c_avion}{CAvion}}\&\ p\_avion);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_c_avion_a27eaca749a0dd84eb37579bf833dae0b}{\string~CAvion}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_avion_a459c4167dc3bb85d801154b04ffa5970}{modifierIdAvion}}(\textcolor{keywordtype}{int}\ p\_idAvion);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_avion_a808928809ece1f2ab90e44578dfe6871}{lireIdAvion}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_avion_a43bd84235e995543d07ba73ded9ae535}{modifierEtat}}(Etat\ p\_etat);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ Etat\ \mbox{\hyperlink{class_c_avion_a42e9eaefb25e72571fad472e3b695a84}{lireEtat}}();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_avion_a86fe2e04271652cf79cc778699185091}{modifierHeureArriveePrevue}}(time\_t\ p\_heureArriveePrevue);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \ \ \ \ time\_t\ \mbox{\hyperlink{class_c_avion_aceeff10976588e6ba129ea3abdd1d556}{lireHeureArriveePrevue}}();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_avion_a372742eb2770511a6842e2694c40762a}{modifierHeureDepartPrevue}}(time\_t\ p\_heureDepartPrevue);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00110\ \ \ \ \ time\_t\ \mbox{\hyperlink{class_c_avion_a28a91de07300a937b513eaff597ab258}{lireHeureDepartPrevue}}();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ enumToString(Etat\ value)\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (value)\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Etat::EN\_VOL:}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}En\ vol"{}};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Etat::ATTENTE\_PORTE:}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Attente\ porte"{}};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Etat::PARKING:}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Parking"{}};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Etat::PORTE:}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\textcolor{stringliteral}{"{}Porte"{}};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Etat::ATTENTE\_PISTE:}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}attente\ piste"{}};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Etat::PARTI:}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Parti"{}};}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Etat::ATTERRIT:}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Atterrit"{}};}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Etat::DECOLLE:}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Décolle"{}};}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Unknown"{}};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{static}\ Etat\ stringToEnum(\textcolor{keywordtype}{string}\ str)\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}En\ vol"{}})\ \textcolor{keywordflow}{return}\ Etat::EN\_VOL;}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Attente\ porte"{}})\ \textcolor{keywordflow}{return}\ Etat::ATTENTE\_PORTE;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Parking"{}})\ \textcolor{keywordflow}{return}\ Etat::PARKING;}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Porte"{}})\ \textcolor{keywordflow}{return}\ Etat::PORTE;}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Attente\ piste"{}})\ \textcolor{keywordflow}{return}\ Etat::ATTENTE\_PISTE;}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Parti"{}})\ \textcolor{keywordflow}{return}\ Etat::PARTI;}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Atterrit"{}})\ \textcolor{keywordflow}{return}\ Etat::ATTERRIT;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}Décolle"{}})\ \textcolor{keywordflow}{return}\ Etat::DECOLLE;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (str\ ==\ \textcolor{stringliteral}{"{}ATTENTE\_PORTE"{}})\ \textcolor{keywordflow}{return}\ Etat::ATTENTE\_PORTE;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}chaine\ de\ caractère\ invalide"{}});}
+\DoxyCodeLine{00146\ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \};}
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

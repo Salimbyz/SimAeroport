@@ -1,0 +1,33 @@
+\doxysection{CEVAvion\+Veut\+Atterrir.\+h}
+\hypertarget{_c_e_v_avion_veut_atterrir_8h_source}{}\label{_c_e_v_avion_veut_atterrir_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}CEvenement.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ AvionVeutAtterrir\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ AvionVeutAtterrir\_H}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_e_v_avion_veut_atterrir}{CEVAvionVeutAtterrir}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_evenement}{CEvenement}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{static}\ vector<CPisteAtterissage*>\ pisteAtterissage;}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}\ *avion;}
+\DoxyCodeLine{00011\ public\ :}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_veut_atterrir}{CEVAvionVeutAtterrir}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_veut_atterrir}{\string~CEVAvionVeutAtterrir}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_veut_atterrir}{CEVAvionVeutAtterrir}}(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion,\ time\_t\ p\_temp);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ AjouterPiste(\mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}\ p\_pisteA)\ \{\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}*\ p\_piste\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}(p\_pisteA);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ pisteAtterissage.push\_back(p\_piste);\ }
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ vector<CPisteAtterissage*>\ LirePisteAtterissage()\ \{\ \textcolor{keywordflow}{return}\ pisteAtterissage;\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}\ LireAvion()\ \{\ \textcolor{keywordflow}{return}\ *avion;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ ModifierAvion(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion)\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ *avion=\ p\_avion;}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//Si\ piste\ libre\ et\ liste\ d'attente\ vide\ peut\ atterir\ -\/>\ lance\ CEVAvionAtteris\ en\ mettant\ la\ piste\ libre\ occupée}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

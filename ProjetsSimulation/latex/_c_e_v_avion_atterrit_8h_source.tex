@@ -1,0 +1,34 @@
+\doxysection{CEVAvion\+Atterrit.\+h}
+\hypertarget{_c_e_v_avion_atterrit_8h_source}{}\label{_c_e_v_avion_atterrit_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}CEvenement.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ TempsAtterisssage\ =\ 90}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ CEVDebutAtterrissage\ }}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ CEVDebutAtterrissage}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_e_v_avion_atterrit}{CEVAvionAtterrit}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_evenement}{CEvenement}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}*\ pisteAtterissage;}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}*\ avion;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_atterrit}{CEVAvionAtterrit}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_atterrit}{\string~CEVAvionAtterrit}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_atterrit}{CEVAvionAtterrit}}(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion,\ \mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}*\ p\_pisteAtt,\ time\_t\ p\_temps);}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}\ LirePisteAtterissage()\ \{\ \textcolor{keywordflow}{return}\ *pisteAtterissage;\ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ ModifierPisteAtterissage(\mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}\ p\_pisteAtterissage)\ \{\ *pisteAtterissage\ =\ p\_pisteAtterissage;\ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}\ LireAvion()\ \{\ \textcolor{keywordflow}{return}\ *avion;\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ ModifierAvion(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion)\ \{\ *avion\ =\ p\_avion;\ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !CEVDebutAtterrissage\ }}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+
+\end{DoxyCode}

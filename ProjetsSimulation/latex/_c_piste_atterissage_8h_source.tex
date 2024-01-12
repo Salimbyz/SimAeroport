@@ -1,0 +1,41 @@
+\doxysection{CPiste\+Atterissage.\+h}
+\hypertarget{_c_piste_atterissage_8h_source}{}\label{_c_piste_atterissage_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CAvion.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}CRessource.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_ressource}{CRessource}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ idPisteA;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ queue<CAvion*>\ listeAttenteAvion;\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_c_piste_atterissage_a04a8a57bab23d84046fdbc709196e2d2}{CPisteAtterissage}}()\ :idPisteA(0)\ \{\};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_c_piste_atterissage_a04a8a57bab23d84046fdbc709196e2d2}{CPisteAtterissage}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}\&\ p\_pisteA);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_c_piste_atterissage_a04a8a57bab23d84046fdbc709196e2d2}{CPisteAtterissage}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p\_id);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_c_piste_atterissage_adcf983e7e729f24ce8f462deda7b8bea}{\string~CPisteAtterissage}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_piste_atterissage_ad158c743dae4b6b94c77a667515b08c7}{ecrireIdPisteA}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p\_idPisteA);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_c_piste_atterissage_a3f27c7ab3cd1b39a2f96f47c16cfb265}{lireIdPisteA}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_piste_atterissage_a1e6958077ff30cd076f386918f72a702}{ecrireListeAttenteAvion}}(queue<CAvion*>\ p\_listeAttenteAvion);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{static}\ queue<CAvion*>\ \mbox{\hyperlink{class_c_piste_atterissage_a41e4d635e73f042f832253c008560b00}{lireListeAttenteAvion}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_piste_atterissage_aa92e8a5501dc3b5e0aa22d3533c53a64}{ajouterAvionListeA}}(\mbox{\hyperlink{class_c_avion}{CAvion}}*\ p\_avionAjout);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_piste_atterissage_a507c914622a5b3b0ab681e11313fed2b}{retirerAvionListeA}}();}
+\DoxyCodeLine{00079\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,162 @@
+\doxysection{CPiste\+Decollage Class Reference}
+\hypertarget{class_c_piste_decollage}{}\label{class_c_piste_decollage}\index{CPisteDecollage@{CPisteDecollage}}
+
+
+Classe représentant une piste de décollage.  
+
+
+
+
+{\ttfamily \#include $<$CPiste\+Decollage.\+h$>$}
+
+Inheritance diagram for CPiste\+Decollage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_piste_decollage}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_piste_decollage_a0d3ad928128cc0821054e44cf1ca2c67}\label{class_c_piste_decollage_a0d3ad928128cc0821054e44cf1ca2c67} 
+{\bfseries CPiste\+Decollage} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de \doxylink{class_c_piste_decollage}{CPiste\+Decollage}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_piste_decollage_a5c4657d8ce12a195568785a763b4798e}{CPiste\+Decollage}} (const \mbox{\hyperlink{class_c_piste_decollage}{CPiste\+Decollage}} \&p\+\_\+pisteD)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie de \doxylink{class_c_piste_decollage}{CPiste\+Decollage}. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_piste_decollage_a5183b8ad67d392a2afca7999014f20ff}\label{class_c_piste_decollage_a5183b8ad67d392a2afca7999014f20ff} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CPiste\+Decollage} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \doxylink{class_c_piste_decollage}{CPiste\+Decollage}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_piste_decollage_a478d34e1c32c0e3afb160b1d0a281cf1}{ecrire\+Id\+PisteD}} (unsigned int p\+\_\+id\+PisteD)
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}identifiant de la piste de décollage. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_c_piste_decollage_a35d9b372a0664311d8cbc274cf05da15}{lire\+Id\+PisteD}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}identifiant de la piste de décollage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_piste_decollage_a1ee886570bb4898de162bfe382511b81}{ajouter\+Avion\+ListeA}} (\mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*}p\+\_\+avion\+Ajout)
+\begin{DoxyCompactList}\small\item\em Ajoute un avion à la liste d\textquotesingle{}attente de la piste de décollage. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_piste_decollage_a34e22a57dc4235b11507d5eb528bea85}\label{class_c_piste_decollage_a34e22a57dc4235b11507d5eb528bea85} 
+void {\bfseries retirer\+Avion\+ListeA} ()
+\begin{DoxyCompactList}\small\item\em Retire le premier avion de la liste d\textquotesingle{}attente de la piste de décollage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_c_ressource}{CRessource}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries CRessource} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de \doxylink{class_c_ressource}{CRessource}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_ressource_aa8060026215e915b4e596ad150c8c66d}{CRessource}} (const \mbox{\hyperlink{class_c_ressource}{CRessource}} \&p\+\_\+ressource)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie de \doxylink{class_c_ressource}{CRessource}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_ressource_a8aaaed82d72752e8bc3d0cb3d5b6c989}{CRessource}} (bool p\+\_\+occupe)
+\begin{DoxyCompactList}\small\item\em Constructeur de \doxylink{class_c_ressource}{CRessource} avec état d\textquotesingle{}occupation. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CRessource} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \doxylink{class_c_ressource}{CRessource}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_ressource_af1be98e3d7613561ed2a44a78bb226ac}{modifier\+Occupation}} (bool p\+\_\+occupe)
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}état d\textquotesingle{}occupation de la ressource. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_c_ressource_af5a49d57a51963bbfb14d4e64c5cbe76}{lire\+Occupation}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}état d\textquotesingle{}occupation de la ressource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_c_piste_decollage_a880a435faaf8f2216957df737a91667e}{ecrire\+Liste\+Attente\+Avion}} (queue$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*} $>$ p\+\_\+liste\+Attente\+Avion)
+\begin{DoxyCompactList}\small\item\em Modifie la liste d\textquotesingle{}attente des avions pour la piste de décollage. \end{DoxyCompactList}\item 
+static queue$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_c_piste_decollage_afd85d7ff56f00d4000fbce74d13efed9}{lire\+Liste\+Attente\+Avion}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la liste d\textquotesingle{}attente des avions pour la piste de décollage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant une piste de décollage. 
+
+Cette classe gère les opérations liées à une piste de décollage, y compris la gestion des avions en attente de décollage. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_piste_decollage_a5c4657d8ce12a195568785a763b4798e}\label{class_c_piste_decollage_a5c4657d8ce12a195568785a763b4798e} 
+\index{CPisteDecollage@{CPisteDecollage}!CPisteDecollage@{CPisteDecollage}}
+\index{CPisteDecollage@{CPisteDecollage}!CPisteDecollage@{CPisteDecollage}}
+\doxysubsubsection{\texorpdfstring{CPisteDecollage()}{CPisteDecollage()}}
+{\footnotesize\ttfamily CPiste\+Decollage\+::\+CPiste\+Decollage (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_piste_decollage}{CPiste\+Decollage}} \&}]{p\+\_\+pisteD }\end{DoxyParamCaption})}
+
+
+
+Constructeur de copie de \doxylink{class_c_piste_decollage}{CPiste\+Decollage}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+pisteD} & Objet \doxylink{class_c_piste_decollage}{CPiste\+Decollage} à copier. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_piste_decollage_a1ee886570bb4898de162bfe382511b81}\label{class_c_piste_decollage_a1ee886570bb4898de162bfe382511b81} 
+\index{CPisteDecollage@{CPisteDecollage}!ajouterAvionListeA@{ajouterAvionListeA}}
+\index{ajouterAvionListeA@{ajouterAvionListeA}!CPisteDecollage@{CPisteDecollage}}
+\doxysubsubsection{\texorpdfstring{ajouterAvionListeA()}{ajouterAvionListeA()}}
+{\footnotesize\ttfamily void CPiste\+Decollage\+::ajouter\+Avion\+ListeA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+avion\+Ajout }\end{DoxyParamCaption})}
+
+
+
+Ajoute un avion à la liste d\textquotesingle{}attente de la piste de décollage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+avion\+Ajout} & Pointeur vers l\textquotesingle{}avion à ajouter à la liste d\textquotesingle{}attente. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_piste_decollage_a478d34e1c32c0e3afb160b1d0a281cf1}\label{class_c_piste_decollage_a478d34e1c32c0e3afb160b1d0a281cf1} 
+\index{CPisteDecollage@{CPisteDecollage}!ecrireIdPisteD@{ecrireIdPisteD}}
+\index{ecrireIdPisteD@{ecrireIdPisteD}!CPisteDecollage@{CPisteDecollage}}
+\doxysubsubsection{\texorpdfstring{ecrireIdPisteD()}{ecrireIdPisteD()}}
+{\footnotesize\ttfamily void CPiste\+Decollage\+::ecrire\+Id\+PisteD (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+\_\+id\+PisteD }\end{DoxyParamCaption})}
+
+
+
+Modifie l\textquotesingle{}identifiant de la piste de décollage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+id\+PisteD} & Nouvel identifiant de la piste. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_piste_decollage_a880a435faaf8f2216957df737a91667e}\label{class_c_piste_decollage_a880a435faaf8f2216957df737a91667e} 
+\index{CPisteDecollage@{CPisteDecollage}!ecrireListeAttenteAvion@{ecrireListeAttenteAvion}}
+\index{ecrireListeAttenteAvion@{ecrireListeAttenteAvion}!CPisteDecollage@{CPisteDecollage}}
+\doxysubsubsection{\texorpdfstring{ecrireListeAttenteAvion()}{ecrireListeAttenteAvion()}}
+{\footnotesize\ttfamily void CPiste\+Decollage\+::ecrire\+Liste\+Attente\+Avion (\begin{DoxyParamCaption}\item[{queue$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*} $>$}]{p\+\_\+liste\+Attente\+Avion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Modifie la liste d\textquotesingle{}attente des avions pour la piste de décollage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+liste\+Attente\+Avion} & Nouvelle liste d\textquotesingle{}attente des avions. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_piste_decollage_a35d9b372a0664311d8cbc274cf05da15}\label{class_c_piste_decollage_a35d9b372a0664311d8cbc274cf05da15} 
+\index{CPisteDecollage@{CPisteDecollage}!lireIdPisteD@{lireIdPisteD}}
+\index{lireIdPisteD@{lireIdPisteD}!CPisteDecollage@{CPisteDecollage}}
+\doxysubsubsection{\texorpdfstring{lireIdPisteD()}{lireIdPisteD()}}
+{\footnotesize\ttfamily unsigned int CPiste\+Decollage\+::lire\+Id\+PisteD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retourne l\textquotesingle{}identifiant de la piste de décollage. 
+
+\begin{DoxyReturn}{Returns}
+Identifiant de la piste. 
+\end{DoxyReturn}
+\Hypertarget{class_c_piste_decollage_afd85d7ff56f00d4000fbce74d13efed9}\label{class_c_piste_decollage_afd85d7ff56f00d4000fbce74d13efed9} 
+\index{CPisteDecollage@{CPisteDecollage}!lireListeAttenteAvion@{lireListeAttenteAvion}}
+\index{lireListeAttenteAvion@{lireListeAttenteAvion}!CPisteDecollage@{CPisteDecollage}}
+\doxysubsubsection{\texorpdfstring{lireListeAttenteAvion()}{lireListeAttenteAvion()}}
+{\footnotesize\ttfamily queue$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} \texorpdfstring{$\ast$}{*} $>$ CPiste\+Decollage\+::lire\+Liste\+Attente\+Avion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retourne la liste d\textquotesingle{}attente des avions pour la piste de décollage. 
+
+\begin{DoxyReturn}{Returns}
+File d\textquotesingle{}attente des avions. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CPiste\+Decollage.\+h\item 
+CPiste\+Decollage.\+cpp\end{DoxyCompactItemize}

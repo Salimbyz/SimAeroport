@@ -15,7 +15,7 @@ using namespace std;
 class CPorteEmbarquement : public CRessource
 {
 private:
-	unsigned int idPorteE;             ///< Identifiant unique de la porte d'embarquement.
+	unsigned int idPorteE;             ///< Identifiant de la porte d'embarquement.
 	static queue<CAvion*> listeAttenteAvion; ///< File d'attente des avions à la porte d'embarquement.
 
 public:

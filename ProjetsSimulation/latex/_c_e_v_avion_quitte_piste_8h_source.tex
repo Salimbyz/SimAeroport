@@ -1,0 +1,26 @@
+\doxysection{CEVAvion\+Quitte\+Piste.\+h}
+\hypertarget{_c_e_v_avion_quitte_piste_8h_source}{}\label{_c_e_v_avion_quitte_piste_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}CEvenement.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_e_v_avion_quitte_piste}{CEVAvionQuittePiste}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_evenement}{CEvenement}}}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}*\ pisteAtterissage;}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}*\ avion;}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_quitte_piste}{CEVAvionQuittePiste}}();}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_quitte_piste}{\string~CEVAvionQuittePiste}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_quitte_piste}{CEVAvionQuittePiste}}(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion,\ \mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}*\ p\_pisteAtterrissage,\ time\_t\ p\_time);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}\ LirePisteAtterissage()\ \{\ \textcolor{keywordflow}{return}\ *pisteAtterissage;\ \}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ ModifierPisteAtterissage(\mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}\ p\_pisteAtterissage)\ \{\ *pisteAtterissage\ =\ p\_pisteAtterissage;\ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}\ LireAvion()\ \{\ \textcolor{keywordflow}{return}\ *avion;\ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ ModifierAvion(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion)\ \{\ *avion\ =\ p\_avion;\ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00021\ \};}
+
+\end{DoxyCode}

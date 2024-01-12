@@ -1,0 +1,118 @@
+\doxysection{CEntree Class Reference}
+\hypertarget{class_c_entree}{}\label{class_c_entree}\index{CEntree@{CEntree}}
+
+
+Classe pour la lecture et le traitement des données d\textquotesingle{}entrée.  
+
+
+
+
+{\ttfamily \#include $<$CEntree.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_entree_a0fa0f72c5a8133c5e8abd70a6ff2a34d}\label{class_c_entree_a0fa0f72c5a8133c5e8abd70a6ff2a34d} 
+time\+\_\+t {\bfseries string\+To\+TimeT} (const std\+::string \&time\+Str)
+\item 
+vector$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} $>$ \mbox{\hyperlink{class_c_entree_a7e9c156b1e70130cc0a691649bb40956}{lire\+Avions}} (const string \&nom\+Fichier)
+\begin{DoxyCompactList}\small\item\em Lit les données des avions à partir d\textquotesingle{}un fichier et les stocke dans un vecteur. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_c_piste_atterissage}{CPiste\+Atterissage}} $>$ \mbox{\hyperlink{class_c_entree_af1de34acc37cbf00b17510981c635f0f}{lire\+Piste\+Atterissage}} (const string \&nom\+Fichier)
+\begin{DoxyCompactList}\small\item\em Lit les données des pistes d\textquotesingle{}atterrissage à partir d\textquotesingle{}un fichier et les stocke dans un vecteur. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_c_piste_decollage}{CPiste\+Decollage}} $>$ \mbox{\hyperlink{class_c_entree_ab70e12db6f0efaa595cf9efc5b3c002e}{lire\+Piste\+Decollage}} (const string \&nom\+Fichier)
+\begin{DoxyCompactList}\small\item\em Lit les données des pistes de décollage à partir d\textquotesingle{}un fichier et les stocke dans un vecteur. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_entree_a082c73de236abebd434971b7713ec79d}\label{class_c_entree_a082c73de236abebd434971b7713ec79d} 
+vector$<$ \mbox{\hyperlink{class_c_porte_embarquement}{CPorte\+Embarquement}} $>$ {\bfseries lire\+Porte\+Embarquement} (const string \&nom\+Fichier)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_entree_a61228b1c2529c64efbd6e6a9a376309b}\label{class_c_entree_a61228b1c2529c64efbd6e6a9a376309b} 
+static vector$<$ int $>$ {\bfseries generer\+Retards\+Poisson} (int moyenne, int nombre, double proba\+Sans\+Retard)
+\item 
+\Hypertarget{class_c_entree_a3c0a6ac59eef5c388bcd9228499b2a52}\label{class_c_entree_a3c0a6ac59eef5c388bcd9228499b2a52} 
+static void {\bfseries print\+TimeT} (time\+\_\+t time)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe pour la lecture et le traitement des données d\textquotesingle{}entrée. 
+
+Cette classe est responsable de la lecture des données à partir de fichiers et de la création de vecteurs d\textquotesingle{}objets correspondants. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_entree_a7e9c156b1e70130cc0a691649bb40956}\label{class_c_entree_a7e9c156b1e70130cc0a691649bb40956} 
+\index{CEntree@{CEntree}!lireAvions@{lireAvions}}
+\index{lireAvions@{lireAvions}!CEntree@{CEntree}}
+\doxysubsubsection{\texorpdfstring{lireAvions()}{lireAvions()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} $>$ CEntree\+::lire\+Avions (\begin{DoxyParamCaption}\item[{const string \&}]{nom\+Fichier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lit les données des avions à partir d\textquotesingle{}un fichier et les stocke dans un vecteur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Fichier} & Le nom du fichier à lire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un vecteur contenant des objets \doxylink{class_c_avion}{CAvion}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & si le fichier ne peut pas être ouvert. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_c_entree_af1de34acc37cbf00b17510981c635f0f}\label{class_c_entree_af1de34acc37cbf00b17510981c635f0f} 
+\index{CEntree@{CEntree}!lirePisteAtterissage@{lirePisteAtterissage}}
+\index{lirePisteAtterissage@{lirePisteAtterissage}!CEntree@{CEntree}}
+\doxysubsubsection{\texorpdfstring{lirePisteAtterissage()}{lirePisteAtterissage()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_c_piste_atterissage}{CPiste\+Atterissage}} $>$ CEntree\+::lire\+Piste\+Atterissage (\begin{DoxyParamCaption}\item[{const string \&}]{nom\+Fichier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lit les données des pistes d\textquotesingle{}atterrissage à partir d\textquotesingle{}un fichier et les stocke dans un vecteur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Fichier} & Le nom du fichier à lire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un vecteur contenant des objets \doxylink{class_c_piste_atterissage}{CPiste\+Atterissage}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & si le fichier ne peut pas être ouvert. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_c_entree_ab70e12db6f0efaa595cf9efc5b3c002e}\label{class_c_entree_ab70e12db6f0efaa595cf9efc5b3c002e} 
+\index{CEntree@{CEntree}!lirePisteDecollage@{lirePisteDecollage}}
+\index{lirePisteDecollage@{lirePisteDecollage}!CEntree@{CEntree}}
+\doxysubsubsection{\texorpdfstring{lirePisteDecollage()}{lirePisteDecollage()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_c_piste_decollage}{CPiste\+Decollage}} $>$ CEntree\+::lire\+Piste\+Decollage (\begin{DoxyParamCaption}\item[{const string \&}]{nom\+Fichier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lit les données des pistes de décollage à partir d\textquotesingle{}un fichier et les stocke dans un vecteur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Fichier} & Le nom du fichier à lire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un vecteur contenant des objets \doxylink{class_c_piste_decollage}{CPiste\+Decollage}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & si le fichier ne peut pas être ouvert. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CEntree.\+h\item 
+CEntree.\+cpp\end{DoxyCompactItemize}

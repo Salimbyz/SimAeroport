@@ -1,0 +1,28 @@
+\doxysection{CEVAvion\+Quitte\+Aeroport.\+h}
+\hypertarget{_c_e_v_avion_quitte_aeroport_8h_source}{}\label{_c_e_v_avion_quitte_aeroport_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}CEvenement.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_e_v_avion_quitte_aeroport}{CEVAvionQuitteAeroport}}\ :}
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_evenement}{CEvenement}}}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{class_c_piste_decollage}{CPisteDecollage}}*\ pisteDecollage;}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}*\ avion;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_quitte_aeroport}{CEVAvionQuitteAeroport}}();}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_quitte_aeroport}{CEVAvionQuitteAeroport}}(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion,\ \mbox{\hyperlink{class_c_piste_decollage}{CPisteDecollage}}*\ p\_pisteD,\ time\_t\ p\_temps);}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_quitte_aeroport}{\string~CEVAvionQuitteAeroport}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_c_piste_decollage}{CPisteDecollage}}\&\ LirePisteDecollage()\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *pisteDecollage;}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ ModifierPisteDecollage(\mbox{\hyperlink{class_c_piste_decollage}{CPisteDecollage}}\&\ p\_pisteDecollage)\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ pisteDecollage\ =\ \&p\_pisteDecollage;}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}\ LireAvion()\ \{\ \textcolor{keywordflow}{return}\ *avion;\ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ ModifierAvion(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion)\ \{\ *avion\ =\ p\_avion;\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+
+\end{DoxyCode}
