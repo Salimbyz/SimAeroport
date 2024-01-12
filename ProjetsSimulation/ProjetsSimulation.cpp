@@ -48,7 +48,6 @@ int main(int argc, char* argv[]) {
 	while (!listeAvion.empty()) {
 		AVE.ModifierAvion(listeAvion.back());
 		AVE.ecrireTempsDebut(listeAvion.back().lireHeureArriveePrevue());
-
 		AVE.run();
 		listeAvion.pop_back();
 

@@ -29,6 +29,7 @@ void CEVAvionQuitteGate::run()
 	CEVAvionVeutDecoller EVAVD(*avion, this->lireTempsDebut()+1800);
 	EVAVD.run();
 	if (!gate->lireListeAttenteAvion().empty()) {
+
 		*avion = *CPorteEmbarquement::lireListeAttenteAvion().front();
 		CEVAvionVaGate AVG(*avion, gate, this->lireTempsDebut() + 144000);
 		AVG.run();

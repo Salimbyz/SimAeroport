@@ -26,7 +26,7 @@ private:
 
 public :
 
-    time_t stringToTimeT(const std::string& timeStr) {
+   static time_t stringToTimeT(const std::string& timeStr) {
         tm tm = {};
         istringstream ss(timeStr);
         ss >> std::get_time(&tm, "%H:%M");
@@ -37,7 +37,7 @@ public :
         return std::mktime(&tm);
     }
 
-    void printTimeT(time_t time) {
+    static void printTimeT(time_t time) {
         tm tm;
         localtime_s(&tm, &time);
         cout << std::put_time(&tm, "%H:%M") << std::endl;
