@@ -8,9 +8,7 @@ CEVAvionVeutDecoller::CEVAvionVeutDecoller()
 
 CEVAvionVeutDecoller::~CEVAvionVeutDecoller()
 {
-	if (!pistesDecollage.empty()) {
-		pistesDecollage.clear();
-	}
+
 	delete avion; // Ceci est sûr même si avion est NULL
 
 }
@@ -24,27 +22,22 @@ void CEVAvionVeutDecoller::run() {
 	for (unsigned int i = 0; i < pistesDecollage.size() && avion->lireEtat() == Etat::ATTENTE_PISTE; i++) {
 		//Liste attente vide, on peut faire débarquer l'avion
 		// ! Voir si possibilité de !
-		if (CPisteDecollage::lireListeAttenteAvion().empty() && !pistesDecollage[i]->lireOccupation()) {
-			pistesDecollage[i]->modifierOccupation(true);
+		if (!pistesDecollage[i]->lireOccupation() &&CPisteDecollage::lireListeAttenteAvion().empty() ) {
 			std::cout << "Avion numero " << avion->lireIdAvion() << " se prepare au decollage sur la piste numero " << pistesDecollage[i]->lireIdPisteD() << std::endl;
 			avion->modifierEtat(Etat::DECOLLE);
-			
-
+			pistesDecollage[i]->modifierOccupation(true);
 			CEVAvionDecolle EVAD(*avion, pistesDecollage[i], this->lireTempsDebut());
 			EVAD.run();
 		}
 		//Liste attente non vide, on fait décoller le premier avion de la queue
 		else if (!pistesDecollage[i]->lireOccupation()) {
 			std::cout << "Avion numero " << avion->lireIdAvion() << " se prepare au decollage sur la piste numero " << pistesDecollage[i]->lireIdPisteD() << std::endl;
-			pistesDecollage[i]->modifierOccupation(true);
 			pistesDecollage[i]->ajouterAvionListeA(avion);
-			pistesDecollage[i]->lireListeAttenteAvion().front()->modifierEtat(Etat::DECOLLE);
-
-
+			pistesDecollage[i]->modifierOccupation(true);
 			CEVAvionDecolle EVAD(*(pistesDecollage[i]->lireListeAttenteAvion().front()), pistesDecollage[i], this->lireTempsDebut());
+			pistesDecollage[i]->lireListeAttenteAvion().front()->modifierEtat(Etat::DECOLLE);
 			pistesDecollage[i]->retirerAvionListeA();
 			EVAD.run();
-
 		}
 	}
 }

@@ -5,24 +5,30 @@ using namespace std;
 class CGestionTemps
 {
 private:
-	static vector<int> tempsRetardArrivee;
-	static vector<int> tempsRetardDepart;
+	static double tempsRetardDepart;
+	static int nbretards;
+	static int nbavances;
 public:
-	static void AjouterTempsDepart(time_t p_temps) {
-		tempsRetardDepart.push_back(p_temps);
-	}
-	static void AfficherTempsDepart() {
-		for (unsigned int i = 0; i < tempsRetardDepart.size();i++) {
-			CEntree::printTimeT(tempsRetardDepart[i]);
+	static void AjouterTempsDepart(double tempsretard) {
+		if (tempsretard < 0) {
+			nbretards++;
 		}
-	}
-	static void AffecterTempsArrivee(vector<int> p_retardSecondes) {
-		tempsRetardArrivee.resize(p_retardSecondes.size());
-		for (unsigned int i = 0; i < tempsRetardDepart.size(); i++) {
-			tempsRetardArrivee[i] =  p_retardSecondes[i];
+		else {
+			nbretards++;
 		}
+		tempsRetardDepart+=tempsretard;
 
+	}
+	static void AfficherTempsRetardTotal() {
+		int heures = (int)(tempsRetardDepart / 3600);
+		int minutes = (int)((((int)tempsRetardDepart % 3600) / 60));
+		int secondes = (int)tempsRetardDepart % 60;
+		int tempsmoy =(int) tempsRetardDepart / 20;
+		int heuresmoy = (int)tempsmoy / 3600;
+		int minutesmoy = (int)((((int)tempsmoy % 3600) / 60));
+		int secondesmoy = (int)tempsmoy % 60;
+		std::cout << tempsRetardDepart << " secondes de retard soit : " << heures <<":" << minutes<<":"<<secondes<<" Soit en moyenne : "<< minutesmoy << "m" << secondesmoy << std::endl;
+		std::cout << nbretards << " Avions sortent en retard et " << nbavances <<" sortent en avance ou à l'heure";
 	}
 };
-
 

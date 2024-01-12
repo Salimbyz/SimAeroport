@@ -113,5 +113,8 @@
     <ClInclude Include="CEVAvionQuitteAeroport.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="CGestionTemps.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,6 +1,10 @@
 #include "CEVAvionQuitteAeroport.h"
 #include "CEVAvionDecolle.h"
 #include "CGestionTemps.h"
+#include <windows.h>
+double CGestionTemps::tempsRetardDepart = 0;
+int CGestionTemps::nbavances = 0;
+int CGestionTemps::nbretards = 0;
 CEVAvionQuitteAeroport::CEVAvionQuitteAeroport()
 {
 	pisteDecollage = new CPisteDecollage();
@@ -15,24 +19,30 @@ CEVAvionQuitteAeroport::CEVAvionQuitteAeroport(CAvion p_avion, CPisteDecollage* 
 CEVAvionQuitteAeroport::~CEVAvionQuitteAeroport()
 {
 	delete(avion);
-	delete(pisteDecollage);
 }
 
 void CEVAvionQuitteAeroport::run()
 {
 
 	if (!CPisteDecollage::lireListeAttenteAvion().empty()) {
-		std::cout << "Avion " << avion->lireIdAvion() << " quitte l'aeroport " << std::endl;
+		std::cout << "Avion " << avion->lireIdAvion() << " quitte l'aeroport " << std::endl << std::endl;
 		avion->modifierEtat(Etat::PARTI);
 		pisteDecollage->modifierOccupation(false);
+
 		*avion = *CPorteEmbarquement::lireListeAttenteAvion().front();
-		CEVAvionDecolle AVD(*avion, pisteDecollage, this->lireTempsDebut()+300);
+		CEVAvionDecolle AVD(*avion, pisteDecollage, this->lireTempsDebut());
+		CGestionTemps::AjouterTempsDepart(difftime(this->lireTempsDebut(), avion->lireHeureDepartPrevue()));
 		AVD.run();
 		pisteDecollage->retirerAvionListeA();
+
+		
 	}
 	else {
-		std::cout << "Avion " << avion->lireIdAvion() << " quitte l'aeroport " << std::endl;
+		std::cout << "Avion " << avion->lireIdAvion() << " quitte l'aeroport " << std::endl << std::endl;
 		avion->modifierEtat(Etat::PARTI);
 		pisteDecollage->modifierOccupation(false);
+		CGestionTemps::AjouterTempsDepart(difftime(this->lireTempsDebut(), avion->lireHeureDepartPrevue()));
+
 	}
+	
 }
