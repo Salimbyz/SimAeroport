@@ -7,6 +7,11 @@ CPisteAtterissage::CPisteAtterissage(const CPisteAtterissage& p_pisteA)
 	idPisteA = p_pisteA.idPisteA;
 }
 
+CPisteAtterissage::CPisteAtterissage(unsigned int p_id)
+{
+	idPisteA = p_id;
+}
+
 CPisteAtterissage::~CPisteAtterissage()
 {
 }
