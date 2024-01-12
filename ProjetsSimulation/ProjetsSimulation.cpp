@@ -16,9 +16,13 @@ int main(int argc, char* argv[]) {
 	CEntree entree;
 	//Lecture des entités et ressources par la création d'un
 	string fichierAvion;
-	vector<CAvion> listeAvion = entree.lireAvions("C:/Users/toro5/source/repos/SimAeroport/Avion.txt");
+	vector<CAvion> listeAvion = entree.lireAvions("C:/Users/benam/Documents/Projets/ProjetsSimulation/Avion.txt");
 
-	string fichierPisteA;
+	for (auto& avion : listeAvion) {
+		entree.printTimeT(avion.lireHeureArriveePrevue());
+		cout << endl;
+	}
+	/*string fichierPisteA;
 	vector<CPisteAtterissage> listePisteA = entree.lirePisteAtterissage("C:/Users/toro5/source/repos/SimAeroport/Piste Atterissage.txt");
 
 	string fichierPisteD;
@@ -51,7 +55,7 @@ int main(int argc, char* argv[]) {
 		AVE.run();
 		listeAvion.pop_back();
 
-	}
+	}*/
 	/*
 	//Creation des entités et ressources
 	CAvion* Avion1= new CAvion(2, 3, 4, Etat::EN_VOL);
