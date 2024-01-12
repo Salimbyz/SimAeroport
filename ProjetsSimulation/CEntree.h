@@ -28,12 +28,24 @@ private:
 public :
 
 
+    /**
+ * @brief Génère un vecteur de retards basé sur une distribution de Poisson.
+ *
+ * Cette fonction crée un vecteur de retards pour un nombre donné d'événements.
+ * Chaque retard est déterminé en utilisant une distribution de Poisson. Il existe également
+ * une probabilité qu'il n'y ait aucun retard.
+ *
+ * @param moyenne La moyenne de la distribution de Poisson.
+ * @param nombre Le nombre total d'événements pour lesquels générer des retards.
+ * @param probaSansRetard La probabilité qu'un événement n'ait pas de retard.
+ * @return std::vector<int> Un vecteur contenant les retards générés pour chaque événement.
+ */
     static vector<int> genererRetardsPoisson(int moyenne, int nombre, double probaSansRetard) {
-        std::random_device rd;
-        std::mt19937 gen(rd());
+        random_device  aleatoire;
+        mt19937 gen(aleatoire());
 
-        std::poisson_distribution<> d(moyenne);
-        std::uniform_real_distribution<> proba(0.0, 1.0);
+        poisson_distribution<> d(moyenne);
+        uniform_real_distribution<> proba(0.0, 1.0);
 
         std::vector<int> retards;
         for (int n = 0; n < nombre; ++n) {
@@ -50,9 +62,19 @@ public :
         return retards;
     }
 
-    time_t stringToTimeT(const std::string& timeStr) {
+    /**
+     * @brief Convertit une chaîne de caractères représentant une heure au format time_t.
+     *
+     * Cette fonction prend une chaîne de caractères représentant une heure au format HH:MM
+     * et la convertit en une valeur time_t. La date est fixée à un point arbitraire (par exemple, le 15 janvier 1970).
+     *
+     * @param tempsConvertir La chaîne de caractères à convertir au format HH:MM.
+     * @return time_t La représentation time_t de l'heure donnée.
+     */
+    time_t stringToTimeT(const std::string& tempsConvertir) {
         tm tm = {};
-        istringstream ss(timeStr);
+        istringstream ss(tempsConvertir);
+
         ss >> std::get_time(&tm, "%H:%M");
         // Ajustement de la date à un point fixe (par exemple, le 1er janvier 1970)
         tm.tm_year = 124; // Année depuis 1900
@@ -61,10 +83,19 @@ public :
         return std::mktime(&tm);
     }
 
+    /**
+     * @brief Affiche une valeur time_t en tant qu'heure au format HH:MM.
+     *
+     * Cette fonction prend une valeur time_t et l'affiche sous forme d'heure
+     * au format HH:MM. Cela peut être utilisé pour afficher des heures stockées dans des
+     * structures time_t.
+     *
+     * @param time La valeur time_t à afficher.
+     */
     static void printTimeT(time_t time) {
         tm tm;
         localtime_s(&tm, &time);
-        cout << std::put_time(&tm, "%H:%M") << std::endl;
+        cout << put_time(&tm, "%H:%M") << endl;
     }
 
     /**
