@@ -28,7 +28,7 @@ public:
 		int minutesmoy = (int)((((int)tempsmoy % 3600) / 60));
 		int secondesmoy = (int)tempsmoy % 60;
 		std::cout << tempsRetardDepart << " secondes de retard soit : " << heures <<":" << minutes<<":"<<secondes<<" Soit en moyenne : "<< minutesmoy << "m" << secondesmoy << std::endl;
-		std::cout << nbretards << " Avions sortent en retard et " << nbavances <<" sortent en avance ou à l'heure";
+		std::cout << nbretards << " Avions sortent en retard et " << nbavances <<" sortent en avance ou a l'heure";
 	}
 };
 
