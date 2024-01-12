@@ -1,5 +1,6 @@
 #include "CEVAvionAtterrit.h"
 #include "CEVAvionQuittePiste.h"
+#include "CEntree.h"
 CEVAvionAtterrit::CEVAvionAtterrit() {
 	avion = new CAvion();
 	pisteAtterissage = new CPisteAtterissage();
@@ -14,7 +15,8 @@ CEVAvionAtterrit::~CEVAvionAtterrit() {
 }
 //Suite de avion veut atterrir
 void CEVAvionAtterrit::run() {
-	std::cout << "Avion n " << avion->lireIdAvion()<<" atterris sur piste " << pisteAtterissage->lireIdPisteA() << std::endl;
+	std::cout << "Avion n " << avion->lireIdAvion() << " atterris sur piste " << pisteAtterissage->lireIdPisteA() << " a ";
+	CEntree::printTimeT(this->lireTempsDebut());
 	CEVAvionQuittePiste AVQP (*avion, pisteAtterissage, this->lireTempsDebut()+300);
 	AVQP.run();
 }

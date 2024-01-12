@@ -1,5 +1,5 @@
 #include "CEvenement.h"
-
+#include "CEntree.h"
 CEvenement::CEvenement()
 {
 	tempsDebut = time(nullptr);

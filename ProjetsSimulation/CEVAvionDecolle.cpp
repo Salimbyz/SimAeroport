@@ -1,6 +1,6 @@
 #include "CEVAvionDecolle.h"
 #include "CEVAvionQuitteAeroport.h"
-
+#include "CEntree.h"
 CEVAvionDecolle::CEVAvionDecolle()
 {
 	avion = new CAvion();
@@ -19,8 +19,10 @@ CEVAvionDecolle::CEVAvionDecolle(CAvion p_avion, CPisteDecollage* p_pisteDecolla
 	this->ecrireTempsDebut(p_temps);
 }
 void CEVAvionDecolle::run() {
-	avion->modifierEtat(Etat::DECOLLE);
-	std::cout << "avion n " << avion->lireIdAvion() << " decolle" << std::endl;
+	std::cout << "avion n " << avion->lireIdAvion() << " decolle a ";
+	CEntree::printTimeT(this->lireTempsDebut());
+	std::cout << "Au lieu de ";
+	CEntree::printTimeT(avion->lireHeureDepartPrevue());
 	CEVAvionQuitteAeroport EVAQA(*avion,pisteDecollage,this->lireTempsDebut()+300);
 	EVAQA.run();
 }

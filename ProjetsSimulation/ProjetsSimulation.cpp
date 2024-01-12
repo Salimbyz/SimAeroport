@@ -16,13 +16,9 @@ int main(int argc, char* argv[]) {
 	CEntree entree;
 	//Lecture des entités et ressources par la création d'un
 	string fichierAvion;
-	vector<CAvion> listeAvion = entree.lireAvions("C:/Users/benam/Documents/Projets/ProjetsSimulation/Avion.txt");
+	vector<CAvion> listeAvion = entree.lireAvions("C:/Users/toro5/source/repos/SimAeroport/Avion.txt");
 
-	for (auto& avion : listeAvion) {
-		entree.printTimeT(avion.lireHeureArriveePrevue());
-		cout << endl;
-	}
-	/*string fichierPisteA;
+	string fichierPisteA;
 	vector<CPisteAtterissage> listePisteA = entree.lirePisteAtterissage("C:/Users/toro5/source/repos/SimAeroport/Piste Atterissage.txt");
 
 	string fichierPisteD;
@@ -46,16 +42,25 @@ int main(int argc, char* argv[]) {
 		CEVAvionVeutDebarquer::AjouterGate(listePorteE.back());
 		listePorteE.pop_back();
 	}
-	CEVAvionVeutAtterrir AVE(listeAvion.back(), listeAvion.back().lireHeureArriveePrevue());
+	//Une moyenne de retard de 11 minutes (ministere des transports), pour 20 avions, 28.1% de retards
+	vector<int> retards = entree.genererRetardsPoisson(660, 20, 0.281);
+
+	CEVAvionVeutAtterrir AVE(listeAvion.back(), listeAvion.back().lireHeureArriveePrevue()+retards.back());
 	listeAvion.pop_back();
+
 	AVE.run();
+
+
 	while (!listeAvion.empty()) {
+
+		//génération retard arrivée
+
 		AVE.ModifierAvion(listeAvion.back());
-		AVE.ecrireTempsDebut(listeAvion.back().lireHeureArriveePrevue());
+		AVE.ecrireTempsDebut(listeAvion.back().lireHeureArriveePrevue()+retards.back());
 		AVE.run();
 		listeAvion.pop_back();
-
-	}*/
+		retards.pop_back();
+	}
 	/*
 	//Creation des entités et ressources
 	CAvion* Avion1= new CAvion(2, 3, 4, Etat::EN_VOL);

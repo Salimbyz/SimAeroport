@@ -1,6 +1,7 @@
 #include "CEVAvionQuittePiste.h"
 #include "CEVAvionAtterrit.h"
 #include "CEVAvionVeutDebarquer.h"
+#include "CEntree.h"
 CEVAvionQuittePiste::CEVAvionQuittePiste()
 {
 	pisteAtterissage = new CPisteAtterissage();
@@ -22,7 +23,8 @@ CEVAvionQuittePiste::~CEVAvionQuittePiste()
 void CEVAvionQuittePiste::run() {
 	
 	if (pisteAtterissage->lireListeAttenteAvion().empty()) {
-		std::cout << "Avion " << avion->lireIdAvion() << " quitte la piste " << pisteAtterissage->lireIdPisteA() << std::endl;
+		std::cout << "Avion " << avion->lireIdAvion() << " quitte la piste " << pisteAtterissage->lireIdPisteA() << " a ";
+		CEntree::printTimeT(this->lireTempsDebut());
 		avion->modifierEtat(Etat::ATTENTE_PORTE);
 		pisteAtterissage->modifierOccupation(false);
 		CEVAvionVeutDebarquer EVAVD(*avion,this->lireTempsDebut());
@@ -30,7 +32,8 @@ void CEVAvionQuittePiste::run() {
 	}
 	else
 	{
-		std::cout << "Avion " << avion->lireIdAvion() << " quitte la piste " << pisteAtterissage->lireIdPisteA() << std::endl;
+		std::cout << "Avion " << avion->lireIdAvion() << " quitte la piste " << pisteAtterissage->lireIdPisteA() << " a ";
+		CEntree::printTimeT(this->lireTempsDebut());
 		avion->modifierEtat(Etat::ATTENTE_PORTE);
 		pisteAtterissage->modifierOccupation(false);
 		CEVAvionVeutDebarquer EVAVD(*avion, this->lireTempsDebut());

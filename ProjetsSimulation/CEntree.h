@@ -28,7 +28,7 @@ private:
 public :
 
 
-    vector<int> genererRetardsPoisson(int moyenne, int nombre, double probaSansRetard) {
+    static vector<int> genererRetardsPoisson(int moyenne, int nombre, double probaSansRetard) {
         std::random_device rd;
         std::mt19937 gen(rd());
 
@@ -53,7 +53,6 @@ public :
     time_t stringToTimeT(const std::string& timeStr) {
         tm tm = {};
         istringstream ss(timeStr);
-        cout << timeStr;
         ss >> std::get_time(&tm, "%H:%M");
         // Ajustement de la date à un point fixe (par exemple, le 1er janvier 1970)
         tm.tm_year = 124; // Année depuis 1900

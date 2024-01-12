@@ -12,9 +12,13 @@ public :
     ~CEVAvionDecolle();
     CEVAvionDecolle(CAvion p_avion, CPisteDecollage* p_pisteDecollage, time_t p_temps);
     void ModifierAvion(CAvion p_avion) { *avion = p_avion; }
-    void ModifierPisteDecollage(CPisteDecollage p_pisteDecollage) { *pisteDecollage = p_pisteDecollage; }
+    void ModifierPisteDecollage(CPisteDecollage& p_pisteDecollage) {
+        pisteDecollage = &p_pisteDecollage;
+    }
     CAvion LireAvion() { return *avion; }
-    CPisteDecollage LirePisteDecollage() { return *pisteDecollage; }
+    CPisteDecollage& LirePisteDecollage() {
+        return *pisteDecollage;
+    }
     void run();
 
 };
