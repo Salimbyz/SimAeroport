@@ -11,6 +11,7 @@
 #include "CPisteDecollage.h"
 #include "CPisteAtterissage.h"
 #include "CPorteEmbarquement.h"
+#include <random>
 using namespace std;
 
 /**
@@ -26,9 +27,33 @@ private:
 
 public :
 
+
+    vector<int> genererRetardsPoisson(int moyenne, int nombre, double probaSansRetard) {
+        std::random_device rd;
+        std::mt19937 gen(rd());
+
+        std::poisson_distribution<> d(moyenne);
+        std::uniform_real_distribution<> proba(0.0, 1.0);
+
+        std::vector<int> retards;
+        for (int n = 0; n < nombre; ++n) {
+            if (proba(gen) > probaSansRetard) {
+                // Générer un retard
+                retards.push_back(d(gen));
+            }
+            else {
+                // Pas de retard ou retard minime
+                retards.push_back(0);
+            }
+        }
+
+        return retards;
+    }
+
     time_t stringToTimeT(const std::string& timeStr) {
         tm tm = {};
         istringstream ss(timeStr);
+        cout << timeStr;
         ss >> std::get_time(&tm, "%H:%M");
         // Ajustement de la date à un point fixe (par exemple, le 1er janvier 1970)
         tm.tm_year = 124; // Année depuis 1900
@@ -50,6 +75,7 @@ public :
      * @throw std::invalid_argument si le fichier ne peut pas être ouvert.
      */
     vector<CAvion> lireAvions(const string& nomFichier) {
+        CEntree entree;
         ifstream fichier;
         fichier.open(nomFichier, ifstream::in);
         string ligne;
@@ -75,9 +101,11 @@ public :
                 getline(ss, arrivee, ',');
                 getline(ss, depart, ',');
 
-
+                
                 tempsArrivee = stringToTimeT(arrivee);
                 tempsDepart = stringToTimeT(depart);
+
+                
 
                 //Etat de l'avion
                 getline(ss, etat, ',');
