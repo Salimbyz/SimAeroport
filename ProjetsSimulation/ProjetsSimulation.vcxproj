@@ -150,6 +150,7 @@
     <ClCompile Include="CEVAvionVeutDecoller.cpp" />
     <ClCompile Include="CEVAvionAtterrit.cpp" />
     <ClCompile Include="CEvenement.cpp" />
+    <ClCompile Include="CGestionTemps.cpp" />
     <ClCompile Include="CPisteAtterissage.cpp" />
     <ClCompile Include="CPisteDecollage.cpp" />
     <ClCompile Include="CPorteEmbarquement.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="CEVAvionVeutDecoller.h" />
     <ClInclude Include="CEVAvionAtterrit.h" />
     <ClInclude Include="CEvenement.h" />
+    <ClInclude Include="CGestionTemps.h" />
     <ClInclude Include="CPisteAtterissage.h" />
     <ClInclude Include="CPisteDecollage.h" />
     <ClInclude Include="CPorteEmbarquement.h" />
