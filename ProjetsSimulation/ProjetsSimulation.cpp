@@ -14,19 +14,46 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
 	CEntree entree;
-	
+	//Lecture des entités et ressources par la création d'un
 	string fichierAvion;
-	vector<CAvion> listeAvion = entree.lireAvions(fichierAvion);
+	vector<CAvion> listeAvion = entree.lireAvions("C:/Users/toro5/source/repos/SimAeroport/Avion.txt");
 
 	string fichierPisteA;
-	vector<CPisteAtterissage> listePisteA = entree.lirePisteAtterissage(fichierPisteA);
+	vector<CPisteAtterissage> listePisteA = entree.lirePisteAtterissage("C:/Users/toro5/source/repos/SimAeroport/Piste Atterissage.txt");
 
 	string fichierPisteD;
-	vector<CPisteDecollage> listePisteD = entree.lirePisteDecollage(fichierPisteD);
+	vector<CPisteDecollage> listePisteD = entree.lirePisteDecollage("C:/Users/toro5/source/repos/SimAeroport/Piste Décollage.txt");
 
 	string fichierPorteE;
-	vector<CPorteEmbarquement> listePorteE = entree.lirePorteEmbarquement(fichierPorteE);
+	vector<CPorteEmbarquement> listePorteE = entree.lirePorteEmbarquement("C:/Users/toro5/source/repos/SimAeroport/Porte Embarquement.txt");
+		
+	while (!listePisteA.empty()) {
 
+		CEVAvionVeutAtterrir::AjouterPiste(listePisteA.back());
+		listePisteA.pop_back();
+	}
+	while (!listePisteD.empty()) {
+
+		CEVAvionVeutDecoller::AjouterPiste(listePisteD.back());
+		listePisteD.pop_back();
+	}
+	while (!listePorteE.empty()) {
+
+		CEVAvionVeutDebarquer::AjouterGate(listePorteE.back());
+		listePorteE.pop_back();
+	}
+	CEVAvionVeutAtterrir AVE(listeAvion.back(), listeAvion.back().lireHeureArriveePrevue());
+	listeAvion.pop_back();
+	AVE.run();
+	while (!listeAvion.empty()) {
+		AVE.ModifierAvion(listeAvion.back());
+		AVE.ecrireTempsDebut(listeAvion.back().lireHeureArriveePrevue());
+
+		AVE.run();
+		listeAvion.pop_back();
+
+	}
+	/*
 	//Creation des entités et ressources
 	CAvion* Avion1= new CAvion(2, 3, 4, Etat::EN_VOL);
 	CAvion* Avion2 = new CAvion(4, 563, 8237, Etat::PARKING);
@@ -59,18 +86,6 @@ int main(int argc, char* argv[]) {
 
 	CEVAvionVeutDebarquer::AjouterGate(Porte1);
 	CEVAvionVeutDebarquer::AjouterGate(Porte2);
-
-
-	CPisteDecollage PisteD1;
-	CPisteDecollage PisteD2;
-	CPisteDecollage PisteD3;
-
-	PisteD1.ecrireIdPisteD(1);
-
-
-	CEVAvionVeutDecoller::AjouterPiste(PisteD1);
-
-	CEVAvionVeutAtterrir::AjouterPiste(Piste1);
 	Avion1->modifierEtat(Etat::EN_VOL);
 	Avion2->modifierEtat(Etat::EN_VOL);
 	Avion3->modifierEtat(Etat::EN_VOL);
@@ -87,6 +102,6 @@ int main(int argc, char* argv[]) {
 	EVAVA3.run();
 	CEVAvionVeutAtterrir EVAVA4(*Avion4, Avion1->lireHeureArriveePrevue());
 	EVAVA4.run();
-
+	*/
 	return 0;
 }
