@@ -62,8 +62,8 @@ void CAvion::modifierHeureDepartPrevue(time_t p_heureDepartPrevue)
 {
 	heureDepartPrevue = p_heureDepartPrevue;
 }
-
 time_t CAvion::lireHeureDepartPrevue()
 {
 	return heureDepartPrevue;
 }
+

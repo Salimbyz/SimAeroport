@@ -10,7 +10,6 @@ CEVAvionDecolle::CEVAvionDecolle()
 CEVAvionDecolle::~CEVAvionDecolle()
 {
 	delete(avion);
-	delete(pisteDecollage);
 }
 
 CEVAvionDecolle::CEVAvionDecolle(CAvion p_avion, CPisteDecollage* p_pisteDecollage, time_t p_temps)
@@ -20,6 +19,7 @@ CEVAvionDecolle::CEVAvionDecolle(CAvion p_avion, CPisteDecollage* p_pisteDecolla
 	this->ecrireTempsDebut(p_temps);
 }
 void CEVAvionDecolle::run() {
+	avion->modifierEtat(Etat::DECOLLE);
 	std::cout << "avion n " << avion->lireIdAvion() << " decolle" << std::endl;
 	CEVAvionQuitteAeroport EVAQA(*avion,pisteDecollage,this->lireTempsDebut()+300);
 	EVAQA.run();

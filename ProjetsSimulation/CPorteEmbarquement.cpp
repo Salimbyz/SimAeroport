@@ -37,26 +37,6 @@ queue<CAvion*> CPorteEmbarquement::lireListeAttenteAvion()
 	return listeAttenteAvion;
 }
 
-void CPorteEmbarquement::lirePorteEmbarquement()
-{
-	queue<CAvion*> temp;
-	while (!listeAttenteAvion.empty()) {
-		CAvion* AvionTemp = listeAttenteAvion.front();
-		temp.push(AvionTemp);
-		listeAttenteAvion.pop();
-	}
-	cout << idPorteE << endl;
-	while (!temp.empty()) {
-		temp.front()->lireAvion();
-		cout << endl;
-		temp.pop();
-	}
-	while (!temp.empty()) {
-		delete temp.front();
-		temp.pop();
-	}
-}
-
 void CPorteEmbarquement::ajouterAvionListeA(CAvion* p_avionAjout)
 {
 	listeAttenteAvion.push(p_avionAjout);

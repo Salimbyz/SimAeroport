@@ -69,9 +69,4 @@ public:
 	 * @brief Retire le premier avion de la liste d'attente de la piste de décollage.
 	 */
 	void retirerAvionListeA();
-
-	/**
-	 * @brief Affiche les informations de la piste d'atterrissage.
-	 */
-	void lirePisteAtterissage();
 };

@@ -44,26 +44,3 @@ void CEVAvionVeutDebarquer::run()
 		//La liste d'attente est actualisée à la sortie de chaque avion
 	}
 }
-/*
-:
-std::cout << "Avion " << avion->lireIdAvion() << " veut atterrir\n";
-for (int i = 0; i < pisteAtterissage.size() && avion->lireEtat() == Etat::EN_VOL && !CPisteAtterissage::lireListeAttenteAvion().empty(); i++) {
-	if (!pisteAtterissage[i].lireOccupation() && pisteAtterissage[i].lireListeAttenteAvion().empty()) {
-		std::cout << "Avion" << avion->lireIdAvion() << " va atterrir sur " << pisteAtterissage[i].lireIdPisteA() << " a " << this->lireTempsDebut() << "\n";
-		avion->modifierEtat(Etat::ATTERRIT);
-		pisteAtterissage[i].modifierOccupation(true);
-		CEVAvionAtterrit EVAA(*avion, pisteAtterissage[i], this->lireTempsDebut());
-		EVAA.run();
-	}
-	else if (!pisteAtterissage[i].lireOccupation()) {
-		pisteAtterissage[i].ajouterAvionListeA(avion);
-		pisteAtterissage[i].modifierOccupation(true);
-		CEVAvionAtterrit EVAA(*(pisteAtterissage[i].lireListeAttenteAvion().front()), pisteAtterissage[i], this->lireTempsDebut());
-		int n = pisteAtterissage[i].lireListeAttenteAvion().front()->lireIdAvion();
-		pisteAtterissage[i].lireListeAttenteAvion().front()->modifierEtat(Etat::ATTERRIT);
-		pisteAtterissage[i].retirerAvionListeA();
-		std::cout << "Avion " << n << " va atterrir sur " << pisteAtterissage[i].lireIdPisteA() << " a " << this->lireTempsDebut() << "\n";
-		EVAA.run();
-
-	}*/
-	//Ajout exception

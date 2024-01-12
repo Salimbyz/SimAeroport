@@ -51,23 +51,3 @@ void CPisteAtterissage::retirerAvionListeA()
 {
 	listeAttenteAvion.pop();
 }
-
-void CPisteAtterissage::lirePisteAtterissage()
-{
-	queue<CAvion*> temp;
-	while (!listeAttenteAvion.empty()) {
-		CAvion* AvionTemp = listeAttenteAvion.front();
-		temp.push(AvionTemp);
-		listeAttenteAvion.pop();
-	}
-	cout << idPisteA << endl;
-	while (!temp.empty()) {
-		temp.front()->lireAvion();
-		cout << endl;
-		temp.pop();
-	}
-	while (!temp.empty()) {
-		delete temp.front();
-		temp.pop();
-	}
-}

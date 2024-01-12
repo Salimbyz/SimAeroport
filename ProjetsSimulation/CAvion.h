@@ -2,6 +2,8 @@
 #include <iostream>
 #include <fstream>
 #include <time.h>
+#ifndef CAVION_H
+#define CAVION_H
 using namespace std;
 
 /**
@@ -107,11 +109,6 @@ public:
 	 */
 	time_t lireHeureDepartPrevue();
 
-	/**
-	 * @brief Affiche les informations de l'avion.
-	 */
-	void lireAvion();
-
 	static string enumToString(Etat value) {
 		switch (value) {
 		case Etat::EN_VOL:
@@ -148,3 +145,4 @@ public:
 		else throw std::invalid_argument("chaine de caractère invalide");
 	}
 };
+#endif

@@ -51,15 +51,11 @@ int main(int argc, char* argv[]) {
 	CPisteDecollage PisteD3;
 
 	PisteD1.ecrireIdPisteD(1);
-	PisteD2.ecrireIdPisteD(2);
-	PisteD3.ecrireIdPisteD(3);
+
 
 	CEVAvionVeutDecoller::AjouterPiste(PisteD1);
-	CEVAvionVeutDecoller::AjouterPiste(PisteD2);
-	CEVAvionVeutDecoller::AjouterPiste(PisteD3);
 
 	CEVAvionVeutAtterrir::AjouterPiste(Piste1);
-	CEVAvionVeutAtterrir::AjouterPiste(Piste2);
 	Avion1->modifierEtat(Etat::EN_VOL);
 	Avion2->modifierEtat(Etat::EN_VOL);
 	Avion3->modifierEtat(Etat::EN_VOL);

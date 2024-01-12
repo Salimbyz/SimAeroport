@@ -9,7 +9,6 @@ public:
 
 	CEVAvionQuittePiste();
 	~CEVAvionQuittePiste();
-	CEVAvionQuittePiste(CEVAvionQuittePiste& p_EVAvionQuittePiste);
 	CEVAvionQuittePiste(CAvion p_avion, CPisteAtterissage* p_pisteAtterrissage, time_t p_time);
 
 	CPisteAtterissage LirePisteAtterissage() { return *pisteAtterissage; }

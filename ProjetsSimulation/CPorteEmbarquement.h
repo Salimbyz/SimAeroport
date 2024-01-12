@@ -70,8 +70,4 @@ public:
 	 */
 	void retirerAvionListeA();
 
-	/**
-	 * @brief Affiche les informations de la piste d'atterrissage.
-	 */
-	void lirePorteEmbarquement();
 };
