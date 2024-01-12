@@ -8,9 +8,8 @@
 #include "CEVAvionVeutDebarquer.h"
 #include "CEVAvionVeutDecoller.h"
 #include "CEntree.h"
-
+#include "CGestionTemps.h"
 using namespace std;
-
 
 int main(int argc, char* argv[]) {
 	CEntree entree;
@@ -44,7 +43,15 @@ int main(int argc, char* argv[]) {
 	}
 	//Une moyenne de retard de 11 minutes (ministere des transports), pour 20 avions, 28.1% de retards
 	vector<int> retards = entree.genererRetardsPoisson(660, 20, 0.281);
-
+	int nbRetardsArrivee = 0;
+	long retard = 0;
+	for (int i = 0; i < retards.size(); i++) {
+		if (retards[i] > 0) {
+			nbRetardsArrivee++;
+		}
+		retard += retards[i];
+	}
+	std::cout << nbRetardsArrivee << " Avions arrivent en retard et " << 20-nbRetardsArrivee << " arrivent a l'heure, pour un total de " << retard << " secondes" << std::endl << std::endl;
 	CEVAvionVeutAtterrir AVE(listeAvion.back(), listeAvion.back().lireHeureArriveePrevue()+retards.back());
 	listeAvion.pop_back();
 
@@ -52,64 +59,15 @@ int main(int argc, char* argv[]) {
 
 
 	while (!listeAvion.empty()) {
-
 		//génération retard arrivée
 
 		AVE.ModifierAvion(listeAvion.back());
 		AVE.ecrireTempsDebut(listeAvion.back().lireHeureArriveePrevue()+retards.back());
+		retards.pop_back();
 		AVE.run();
 		listeAvion.pop_back();
-		retards.pop_back();
+
 	}
-	/*
-	//Creation des entités et ressources
-	CAvion* Avion1= new CAvion(2, 3, 4, Etat::EN_VOL);
-	CAvion* Avion2 = new CAvion(4, 563, 8237, Etat::PARKING);
-	CAvion* Avion3 = new CAvion(*Avion2);
-	CAvion* Avion4 = new CAvion(*Avion1);
-	Avion3->modifierIdAvion(3);
-	Avion4->modifierIdAvion(1);
-	
-	CPisteAtterissage Piste1;
-	Piste1.ecrireIdPisteA(1);
-	CPisteAtterissage Piste2;
-	CPisteAtterissage Piste3;
-
-	Piste2.ecrireIdPisteA(2);
-	Piste3.ecrireIdPisteA(3);
-
-	vector<CPisteAtterissage> pistes;
-	
-	
-
-	
-	CAvion avion(5, 5, 5, Etat::EN_VOL);
-	//Remplissage des gates
-	CPorteEmbarquement Porte1;
-	CPorteEmbarquement Porte2;
-
-
-	Porte1.ecrireIdPorteE(1);
-	Porte2.ecrireIdPorteE(2);
-
-	CEVAvionVeutDebarquer::AjouterGate(Porte1);
-	CEVAvionVeutDebarquer::AjouterGate(Porte2);
-	Avion1->modifierEtat(Etat::EN_VOL);
-	Avion2->modifierEtat(Etat::EN_VOL);
-	Avion3->modifierEtat(Etat::EN_VOL);
-	Avion4->modifierEtat(Etat::EN_VOL);
-
-	//A Modifier par une queue d'avions et un lancement en fonction
-	CEVAvionVeutAtterrir e;
-	CEVAvionVeutAtterrir EVAVA(*Avion1, Avion1->lireHeureArriveePrevue());
-	EVAVA.run();
-
-	CEVAvionVeutAtterrir EVAVA2(*Avion2, Avion1->lireHeureArriveePrevue());
-	EVAVA2.run();
-	CEVAvionVeutAtterrir EVAVA3(*Avion3, Avion1->lireHeureArriveePrevue());
-	EVAVA3.run();
-	CEVAvionVeutAtterrir EVAVA4(*Avion4, Avion1->lireHeureArriveePrevue());
-	EVAVA4.run();
-	*/
+	CGestionTemps::AfficherTempsRetardTotal();
 	return 0;
 }

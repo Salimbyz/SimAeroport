@@ -22,7 +22,7 @@ void CEVAvionDecolle::run() {
 	std::cout << "avion n " << avion->lireIdAvion() << " decolle a ";
 	CEntree::printTimeT(this->lireTempsDebut());
 	std::cout << "Au lieu de ";
-	CEntree::printTimeT(avion->lireHeureDepartPrevue());
+	CEntree::printTimeT(avion->lireHeureDepartPrevue()-300);
 	CEVAvionQuitteAeroport EVAQA(*avion,pisteDecollage,this->lireTempsDebut()+300);
 	EVAQA.run();
 }

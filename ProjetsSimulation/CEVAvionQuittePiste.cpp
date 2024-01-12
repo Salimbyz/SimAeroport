@@ -40,15 +40,9 @@ void CEVAvionQuittePiste::run() {
 		EVAVD.run();
 		
 		*avion = *pisteAtterissage->lireListeAttenteAvion().front();
-		if (difftime(this->lireTempsDebut(),avion->lireHeureArriveePrevue()) < 300) {
-			CEVAvionAtterrit AVA(*avion, pisteAtterissage, this->lireTempsDebut() + 300);
-			pisteAtterissage->retirerAvionListeA();
-			AVA.run();
-		}
-		else {
-			CEVAvionAtterrit AVA(*avion, pisteAtterissage, this->lireTempsDebut());
-			AVA.run();
-		}
+		CEVAvionAtterrit AVA(*avion, pisteAtterissage, this->lireTempsDebut());
+		pisteAtterissage->retirerAvionListeA();
+		AVA.run();
 
 	}
 
