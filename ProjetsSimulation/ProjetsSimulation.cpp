@@ -1,16 +1,31 @@
 #pragma once
 #include <stdio.h>
+#include <string>
 #include"CPisteAtterissage.h"
 #include "CAvion.h"
 #include "CEvenement.h"
 #include "CEVAvionVeutAtterrir.h"
 #include "CEVAvionVeutDebarquer.h"
 #include "CEVAvionVeutDecoller.h"
+#include "CEntree.h"
 
 using namespace std;
 
 
 int main(int argc, char* argv[]) {
+	CEntree entree;
+	
+	string fichierAvion;
+	vector<CAvion> listeAvion = entree.lireAvions(fichierAvion);
+
+	string fichierPisteA;
+	vector<CPisteAtterissage> listePisteA = entree.lirePisteAtterissage(fichierPisteA);
+
+	string fichierPisteD;
+	vector<CPisteDecollage> listePisteD = entree.lirePisteDecollage(fichierPisteD);
+
+	string fichierPorteE;
+	vector<CPorteEmbarquement> listePorteE = entree.lirePorteEmbarquement(fichierPorteE);
 
 	//Creation des entités et ressources
 	CAvion* Avion1= new CAvion(2, 3, 4, Etat::EN_VOL);
