@@ -24,8 +24,8 @@ public:
 	 * @param tempsretard Temps de retard (positif) ou d'avance (négatif) en secondes.
 	 */
 	static void AjouterTempsDepart(double tempsretard) {
-		if (tempsretard < 0) {
-			nbretards++;
+		if (tempsretard < 60) {
+			nbavances++;
 		}
 		else {
 			nbretards++;
