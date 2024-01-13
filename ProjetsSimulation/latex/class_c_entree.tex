@@ -12,9 +12,8 @@ Classe pour la lecture et le traitement des données d\textquotesingle{}entrée.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_c_entree_a0fa0f72c5a8133c5e8abd70a6ff2a34d}\label{class_c_entree_a0fa0f72c5a8133c5e8abd70a6ff2a34d} 
-time\+\_\+t {\bfseries string\+To\+TimeT} (const std\+::string \&time\+Str)
-\item 
+time\+\_\+t \mbox{\hyperlink{class_c_entree_a4e34c51f8491397976a72456a8bc3b7c}{string\+To\+TimeT}} (const std\+::string \&temps\+Convertir)
+\begin{DoxyCompactList}\small\item\em Convertit une chaîne de caractères représentant une heure au format time\+\_\+t. \end{DoxyCompactList}\item 
 vector$<$ \mbox{\hyperlink{class_c_avion}{CAvion}} $>$ \mbox{\hyperlink{class_c_entree_a7e9c156b1e70130cc0a691649bb40956}{lire\+Avions}} (const string \&nom\+Fichier)
 \begin{DoxyCompactList}\small\item\em Lit les données des avions à partir d\textquotesingle{}un fichier et les stocke dans un vecteur. \end{DoxyCompactList}\item 
 vector$<$ \mbox{\hyperlink{class_c_piste_atterissage}{CPiste\+Atterissage}} $>$ \mbox{\hyperlink{class_c_entree_af1de34acc37cbf00b17510981c635f0f}{lire\+Piste\+Atterissage}} (const string \&nom\+Fichier)
@@ -27,12 +26,10 @@ vector$<$ \mbox{\hyperlink{class_c_porte_embarquement}{CPorte\+Embarquement}} $>
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_c_entree_a61228b1c2529c64efbd6e6a9a376309b}\label{class_c_entree_a61228b1c2529c64efbd6e6a9a376309b} 
-static vector$<$ int $>$ {\bfseries generer\+Retards\+Poisson} (int moyenne, int nombre, double proba\+Sans\+Retard)
-\item 
-\Hypertarget{class_c_entree_a3c0a6ac59eef5c388bcd9228499b2a52}\label{class_c_entree_a3c0a6ac59eef5c388bcd9228499b2a52} 
-static void {\bfseries print\+TimeT} (time\+\_\+t time)
-\end{DoxyCompactItemize}
+static vector$<$ int $>$ \mbox{\hyperlink{class_c_entree_a61228b1c2529c64efbd6e6a9a376309b}{generer\+Retards\+Poisson}} (int moyenne, int nombre, double proba\+Sans\+Retard)
+\begin{DoxyCompactList}\small\item\em Génère un vecteur de retards basé sur une distribution de Poisson. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_c_entree_a3c0a6ac59eef5c388bcd9228499b2a52}{print\+TimeT}} (time\+\_\+t time)
+\begin{DoxyCompactList}\small\item\em Affiche une valeur time\+\_\+t en tant qu\textquotesingle{}heure au format HH\+:MM. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -41,6 +38,30 @@ Classe pour la lecture et le traitement des données d\textquotesingle{}entrée.
 Cette classe est responsable de la lecture des données à partir de fichiers et de la création de vecteurs d\textquotesingle{}objets correspondants. 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_entree_a61228b1c2529c64efbd6e6a9a376309b}\label{class_c_entree_a61228b1c2529c64efbd6e6a9a376309b} 
+\index{CEntree@{CEntree}!genererRetardsPoisson@{genererRetardsPoisson}}
+\index{genererRetardsPoisson@{genererRetardsPoisson}!CEntree@{CEntree}}
+\doxysubsubsection{\texorpdfstring{genererRetardsPoisson()}{genererRetardsPoisson()}}
+{\footnotesize\ttfamily static vector$<$ int $>$ CEntree\+::generer\+Retards\+Poisson (\begin{DoxyParamCaption}\item[{int}]{moyenne,  }\item[{int}]{nombre,  }\item[{double}]{proba\+Sans\+Retard }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Génère un vecteur de retards basé sur une distribution de Poisson. 
+
+Cette fonction crée un vecteur de retards pour un nombre donné d\textquotesingle{}événements. Chaque retard est déterminé en utilisant une distribution de Poisson. Il existe également une probabilité qu\textquotesingle{}il n\textquotesingle{}y ait aucun retard.
+
+
+\begin{DoxyParams}{Parameters}
+{\em moyenne} & La moyenne de la distribution de Poisson. \\
+\hline
+{\em nombre} & Le nombre total d\textquotesingle{}événements pour lesquels générer des retards. \\
+\hline
+{\em proba\+Sans\+Retard} & La probabilité qu\textquotesingle{}un événement n\textquotesingle{}ait pas de retard. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$int$>$ Un vecteur contenant les retards générés pour chaque événement. 
+\end{DoxyReturn}
 \Hypertarget{class_c_entree_a7e9c156b1e70130cc0a691649bb40956}\label{class_c_entree_a7e9c156b1e70130cc0a691649bb40956} 
 \index{CEntree@{CEntree}!lireAvions@{lireAvions}}
 \index{lireAvions@{lireAvions}!CEntree@{CEntree}}
@@ -110,6 +131,43 @@ Un vecteur contenant des objets \doxylink{class_c_piste_decollage}{CPiste\+Decol
 {\em std\+::invalid\+\_\+argument} & si le fichier ne peut pas être ouvert. \\
 \hline
 \end{DoxyExceptions}
+\Hypertarget{class_c_entree_a3c0a6ac59eef5c388bcd9228499b2a52}\label{class_c_entree_a3c0a6ac59eef5c388bcd9228499b2a52} 
+\index{CEntree@{CEntree}!printTimeT@{printTimeT}}
+\index{printTimeT@{printTimeT}!CEntree@{CEntree}}
+\doxysubsubsection{\texorpdfstring{printTimeT()}{printTimeT()}}
+{\footnotesize\ttfamily static void CEntree\+::print\+TimeT (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Affiche une valeur time\+\_\+t en tant qu\textquotesingle{}heure au format HH\+:MM. 
+
+Cette fonction prend une valeur time\+\_\+t et l\textquotesingle{}affiche sous forme d\textquotesingle{}heure au format HH\+:MM. Cela peut être utilisé pour afficher des heures stockées dans des structures time\+\_\+t.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & La valeur time\+\_\+t à afficher. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_entree_a4e34c51f8491397976a72456a8bc3b7c}\label{class_c_entree_a4e34c51f8491397976a72456a8bc3b7c} 
+\index{CEntree@{CEntree}!stringToTimeT@{stringToTimeT}}
+\index{stringToTimeT@{stringToTimeT}!CEntree@{CEntree}}
+\doxysubsubsection{\texorpdfstring{stringToTimeT()}{stringToTimeT()}}
+{\footnotesize\ttfamily time\+\_\+t CEntree\+::string\+To\+TimeT (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{temps\+Convertir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convertit une chaîne de caractères représentant une heure au format time\+\_\+t. 
+
+Cette fonction prend une chaîne de caractères représentant une heure au format HH\+:MM et la convertit en une valeur time\+\_\+t. La date est fixée à un point arbitraire (par exemple, le 15 janvier 1970).
+
+
+\begin{DoxyParams}{Parameters}
+{\em temps\+Convertir} & La chaîne de caractères à convertir au format HH\+:MM. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+time\+\_\+t La représentation time\+\_\+t de l\textquotesingle{}heure donnée. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

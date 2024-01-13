@@ -1,5 +1,14 @@
 \doxysection{CEVAvion\+Atterrit Class Reference}
 \hypertarget{class_c_e_v_avion_atterrit}{}\label{class_c_e_v_avion_atterrit}\index{CEVAvionAtterrit@{CEVAvionAtterrit}}
+
+
+Classe représentant un événement d\textquotesingle{}atterrissage d\textquotesingle{}un avion.  
+
+
+
+
+{\ttfamily \#include $<$CEVAvion\+Atterrit.\+h$>$}
+
 Inheritance diagram for CEVAvion\+Atterrit\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,35 +18,126 @@ Inheritance diagram for CEVAvion\+Atterrit\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_c_e_v_avion_atterrit_ae3786a340e8b5167c04f1c86f85a1c5b}\label{class_c_e_v_avion_atterrit_ae3786a340e8b5167c04f1c86f85a1c5b} 
-{\bfseries CEVAvion\+Atterrit} (\mbox{\hyperlink{class_c_avion}{CAvion}} p\+\_\+avion, \mbox{\hyperlink{class_c_piste_atterissage}{CPiste\+Atterissage}} \texorpdfstring{$\ast$}{*}p\+\_\+piste\+Att, time\+\_\+t p\+\_\+temps)
-\item 
-\Hypertarget{class_c_e_v_avion_atterrit_a341c230684c2cb06f7efa4d545bf3a45}\label{class_c_e_v_avion_atterrit_a341c230684c2cb06f7efa4d545bf3a45} 
-\mbox{\hyperlink{class_c_piste_atterissage}{CPiste\+Atterissage}} {\bfseries Lire\+Piste\+Atterissage} ()
-\item 
-\Hypertarget{class_c_e_v_avion_atterrit_a151ae0d26b3cfb3e482763837ccb39cd}\label{class_c_e_v_avion_atterrit_a151ae0d26b3cfb3e482763837ccb39cd} 
-void {\bfseries Modifier\+Piste\+Atterissage} (\mbox{\hyperlink{class_c_piste_atterissage}{CPiste\+Atterissage}} p\+\_\+piste\+Atterissage)
-\item 
-\Hypertarget{class_c_e_v_avion_atterrit_ab833f6015c908ab99d97462e565f382e}\label{class_c_e_v_avion_atterrit_ab833f6015c908ab99d97462e565f382e} 
-\mbox{\hyperlink{class_c_avion}{CAvion}} {\bfseries Lire\+Avion} ()
-\item 
-\Hypertarget{class_c_e_v_avion_atterrit_af353811a9ef4a75f93c0b5fdfac61fd9}\label{class_c_e_v_avion_atterrit_af353811a9ef4a75f93c0b5fdfac61fd9} 
-void {\bfseries Modifier\+Avion} (\mbox{\hyperlink{class_c_avion}{CAvion}} p\+\_\+avion)
-\item 
+\Hypertarget{class_c_e_v_avion_atterrit_a27a593f2265ce8b98193136d666c5d2e}\label{class_c_e_v_avion_atterrit_a27a593f2265ce8b98193136d666c5d2e} 
+{\bfseries CEVAvion\+Atterrit} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_e_v_avion_atterrit_a585a97522ffe65d08fcf65e2ee292ce6}\label{class_c_e_v_avion_atterrit_a585a97522ffe65d08fcf65e2ee292ce6} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CEVAvion\+Atterrit} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_e_v_avion_atterrit_ae3786a340e8b5167c04f1c86f85a1c5b}{CEVAvion\+Atterrit}} (\mbox{\hyperlink{class_c_avion}{CAvion}} p\+\_\+avion, \mbox{\hyperlink{class_c_piste_atterissage}{CPiste\+Atterissage}} \texorpdfstring{$\ast$}{*}p\+\_\+piste\+Att, time\+\_\+t p\+\_\+temps)
+\begin{DoxyCompactList}\small\item\em Constructeur avec paramètres. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_piste_atterissage}{CPiste\+Atterissage}} \mbox{\hyperlink{class_c_e_v_avion_atterrit_a341c230684c2cb06f7efa4d545bf3a45}{Lire\+Piste\+Atterissage}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la piste d\textquotesingle{}atterrissage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_e_v_avion_atterrit_a151ae0d26b3cfb3e482763837ccb39cd}{Modifier\+Piste\+Atterissage}} (\mbox{\hyperlink{class_c_piste_atterissage}{CPiste\+Atterissage}} p\+\_\+piste\+Atterissage)
+\begin{DoxyCompactList}\small\item\em Modifie la piste d\textquotesingle{}atterrissage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_avion}{CAvion}} \mbox{\hyperlink{class_c_e_v_avion_atterrit_ab833f6015c908ab99d97462e565f382e}{Lire\+Avion}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}avion concerné par l\textquotesingle{}événement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_e_v_avion_atterrit_af353811a9ef4a75f93c0b5fdfac61fd9}{Modifier\+Avion}} (\mbox{\hyperlink{class_c_avion}{CAvion}} p\+\_\+avion)
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}avion concerné par l\textquotesingle{}événement. \end{DoxyCompactList}\item 
 \Hypertarget{class_c_e_v_avion_atterrit_a5899b60c387420caa7487f5530307c9f}\label{class_c_e_v_avion_atterrit_a5899b60c387420caa7487f5530307c9f} 
 void {\bfseries run} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Exécute l\textquotesingle{}événement d\textquotesingle{}atterrissage. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_c_evenement}{CEvenement}}}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries CEvenement} (\mbox{\hyperlink{class_c_evenement}{CEvenement}} \&p\+\_\+evenement)
-\item 
-void {\bfseries ecrire\+Temps\+Debut} (time\+\_\+t p\+\_\+temps\+Debut)
-\item 
-time\+\_\+t {\bfseries lire\+Temps\+Debut} ()
-\item 
+{\bfseries CEvenement} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_evenement_ac8d4fba7f1c0681b10676857bea22c2f}{CEvenement}} (\mbox{\hyperlink{class_c_evenement}{CEvenement}} \&p\+\_\+evenement)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CEvenement} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_evenement_abc6b65300ddeede11983b91ec0358062}{ecrire\+Temps\+Debut}} (time\+\_\+t p\+\_\+temps\+Debut)
+\begin{DoxyCompactList}\small\item\em Écrit le temps de début de l\textquotesingle{}événement. \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{class_c_evenement_a1eebfb231d910edb791abb6774a285e6}{lire\+Temps\+Debut}} ()
+\begin{DoxyCompactList}\small\item\em Lit le temps de début de l\textquotesingle{}événement. \end{DoxyCompactList}\item 
 void {\bfseries run} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Exécute l\textquotesingle{}événement. Méthode à redéfinir dans les classes dérivées. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant un événement d\textquotesingle{}atterrissage d\textquotesingle{}un avion. 
+
+Cette classe dérive de \doxylink{class_c_evenement}{CEvenement} et gère les événements d\textquotesingle{}atterrissage d\textquotesingle{}avions sur une piste d\textquotesingle{}atterrissage spécifique. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_e_v_avion_atterrit_ae3786a340e8b5167c04f1c86f85a1c5b}\label{class_c_e_v_avion_atterrit_ae3786a340e8b5167c04f1c86f85a1c5b} 
+\index{CEVAvionAtterrit@{CEVAvionAtterrit}!CEVAvionAtterrit@{CEVAvionAtterrit}}
+\index{CEVAvionAtterrit@{CEVAvionAtterrit}!CEVAvionAtterrit@{CEVAvionAtterrit}}
+\doxysubsubsection{\texorpdfstring{CEVAvionAtterrit()}{CEVAvionAtterrit()}}
+{\footnotesize\ttfamily CEVAvion\+Atterrit\+::\+CEVAvion\+Atterrit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_avion}{CAvion}}}]{p\+\_\+avion,  }\item[{\mbox{\hyperlink{class_c_piste_atterissage}{CPiste\+Atterissage}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+piste\+Att,  }\item[{time\+\_\+t}]{p\+\_\+temps }\end{DoxyParamCaption})}
+
+
+
+Constructeur avec paramètres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+avion} & Avion devant atterrir. \\
+\hline
+{\em p\+\_\+piste\+Att} & Pointeur sur la piste d\textquotesingle{}atterrissage. \\
+\hline
+{\em p\+\_\+temps} & Temps de l\textquotesingle{}événement d\textquotesingle{}atterrissage. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_e_v_avion_atterrit_ab833f6015c908ab99d97462e565f382e}\label{class_c_e_v_avion_atterrit_ab833f6015c908ab99d97462e565f382e} 
+\index{CEVAvionAtterrit@{CEVAvionAtterrit}!LireAvion@{LireAvion}}
+\index{LireAvion@{LireAvion}!CEVAvionAtterrit@{CEVAvionAtterrit}}
+\doxysubsubsection{\texorpdfstring{LireAvion()}{LireAvion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_avion}{CAvion}} CEVAvion\+Atterrit\+::\+Lire\+Avion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne l\textquotesingle{}avion concerné par l\textquotesingle{}événement. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_c_avion}{CAvion} L\textquotesingle{}avion qui atterrit. 
+\end{DoxyReturn}
+\Hypertarget{class_c_e_v_avion_atterrit_a341c230684c2cb06f7efa4d545bf3a45}\label{class_c_e_v_avion_atterrit_a341c230684c2cb06f7efa4d545bf3a45} 
+\index{CEVAvionAtterrit@{CEVAvionAtterrit}!LirePisteAtterissage@{LirePisteAtterissage}}
+\index{LirePisteAtterissage@{LirePisteAtterissage}!CEVAvionAtterrit@{CEVAvionAtterrit}}
+\doxysubsubsection{\texorpdfstring{LirePisteAtterissage()}{LirePisteAtterissage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_piste_atterissage}{CPiste\+Atterissage}} CEVAvion\+Atterrit\+::\+Lire\+Piste\+Atterissage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne la piste d\textquotesingle{}atterrissage. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_c_piste_atterissage}{CPiste\+Atterissage} La piste d\textquotesingle{}atterrissage utilisée. 
+\end{DoxyReturn}
+\Hypertarget{class_c_e_v_avion_atterrit_af353811a9ef4a75f93c0b5fdfac61fd9}\label{class_c_e_v_avion_atterrit_af353811a9ef4a75f93c0b5fdfac61fd9} 
+\index{CEVAvionAtterrit@{CEVAvionAtterrit}!ModifierAvion@{ModifierAvion}}
+\index{ModifierAvion@{ModifierAvion}!CEVAvionAtterrit@{CEVAvionAtterrit}}
+\doxysubsubsection{\texorpdfstring{ModifierAvion()}{ModifierAvion()}}
+{\footnotesize\ttfamily void CEVAvion\+Atterrit\+::\+Modifier\+Avion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_avion}{CAvion}}}]{p\+\_\+avion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Modifie l\textquotesingle{}avion concerné par l\textquotesingle{}événement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+avion} & Nouvel avion à atterrir. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_e_v_avion_atterrit_a151ae0d26b3cfb3e482763837ccb39cd}\label{class_c_e_v_avion_atterrit_a151ae0d26b3cfb3e482763837ccb39cd} 
+\index{CEVAvionAtterrit@{CEVAvionAtterrit}!ModifierPisteAtterissage@{ModifierPisteAtterissage}}
+\index{ModifierPisteAtterissage@{ModifierPisteAtterissage}!CEVAvionAtterrit@{CEVAvionAtterrit}}
+\doxysubsubsection{\texorpdfstring{ModifierPisteAtterissage()}{ModifierPisteAtterissage()}}
+{\footnotesize\ttfamily void CEVAvion\+Atterrit\+::\+Modifier\+Piste\+Atterissage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_piste_atterissage}{CPiste\+Atterissage}}}]{p\+\_\+piste\+Atterissage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Modifie la piste d\textquotesingle{}atterrissage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+piste\+Atterissage} & Nouvelle piste d\textquotesingle{}atterrissage. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

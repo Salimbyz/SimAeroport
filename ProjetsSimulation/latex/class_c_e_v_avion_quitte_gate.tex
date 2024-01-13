@@ -1,5 +1,14 @@
 \doxysection{CEVAvion\+Quitte\+Gate Class Reference}
 \hypertarget{class_c_e_v_avion_quitte_gate}{}\label{class_c_e_v_avion_quitte_gate}\index{CEVAvionQuitteGate@{CEVAvionQuitteGate}}
+
+
+Classe représentant l\textquotesingle{}événement où un avion quitte la porte d\textquotesingle{}embarquement (gate).  
+
+
+
+
+{\ttfamily \#include $<$CEVAvion\+Quitte\+Gate.\+h$>$}
+
 Inheritance diagram for CEVAvion\+Quitte\+Gate\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,35 +18,126 @@ Inheritance diagram for CEVAvion\+Quitte\+Gate\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_c_e_v_avion_quitte_gate_a6e3fb74dc54d5ddc0494044c984252a5}\label{class_c_e_v_avion_quitte_gate_a6e3fb74dc54d5ddc0494044c984252a5} 
-{\bfseries CEVAvion\+Quitte\+Gate} (\mbox{\hyperlink{class_c_avion}{CAvion}} p\+\_\+avion, \mbox{\hyperlink{class_c_porte_embarquement}{CPorte\+Embarquement}} \texorpdfstring{$\ast$}{*}p\+\_\+gate, time\+\_\+t p\+\_\+temps)
-\item 
-\Hypertarget{class_c_e_v_avion_quitte_gate_accc12720c011ee45bf4b628565897efd}\label{class_c_e_v_avion_quitte_gate_accc12720c011ee45bf4b628565897efd} 
-\mbox{\hyperlink{class_c_avion}{CAvion}} {\bfseries Lire\+Avion} ()
-\item 
-\Hypertarget{class_c_e_v_avion_quitte_gate_ad53ec5566b92bf9c9344ffd29aabb218}\label{class_c_e_v_avion_quitte_gate_ad53ec5566b92bf9c9344ffd29aabb218} 
-void {\bfseries Modifier\+Avion} (\mbox{\hyperlink{class_c_avion}{CAvion}} p\+\_\+avion)
-\item 
-\Hypertarget{class_c_e_v_avion_quitte_gate_aab0e1bd21e1f5538c80627897b472d20}\label{class_c_e_v_avion_quitte_gate_aab0e1bd21e1f5538c80627897b472d20} 
-\mbox{\hyperlink{class_c_porte_embarquement}{CPorte\+Embarquement}} {\bfseries Lire\+Gate} ()
-\item 
-\Hypertarget{class_c_e_v_avion_quitte_gate_ae16dfc465b49eba31e911d653bc3de85}\label{class_c_e_v_avion_quitte_gate_ae16dfc465b49eba31e911d653bc3de85} 
-void {\bfseries Modifier\+Porte\+Embarquement} (\mbox{\hyperlink{class_c_porte_embarquement}{CPorte\+Embarquement}} p\+\_\+gate)
-\item 
+\Hypertarget{class_c_e_v_avion_quitte_gate_af9d911a147cb6ccba494be8271c2b569}\label{class_c_e_v_avion_quitte_gate_af9d911a147cb6ccba494be8271c2b569} 
+{\bfseries CEVAvion\+Quitte\+Gate} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_e_v_avion_quitte_gate_a6e3fb74dc54d5ddc0494044c984252a5}{CEVAvion\+Quitte\+Gate}} (\mbox{\hyperlink{class_c_avion}{CAvion}} p\+\_\+avion, \mbox{\hyperlink{class_c_porte_embarquement}{CPorte\+Embarquement}} \texorpdfstring{$\ast$}{*}p\+\_\+gate, time\+\_\+t p\+\_\+temps)
+\begin{DoxyCompactList}\small\item\em Constructeur avec paramètres. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_e_v_avion_quitte_gate_ae5fad10b81fdd0d69c75668c2357b454}\label{class_c_e_v_avion_quitte_gate_ae5fad10b81fdd0d69c75668c2357b454} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CEVAvion\+Quitte\+Gate} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_avion}{CAvion}} \mbox{\hyperlink{class_c_e_v_avion_quitte_gate_accc12720c011ee45bf4b628565897efd}{Lire\+Avion}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}avion concerné par l\textquotesingle{}événement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_e_v_avion_quitte_gate_ad53ec5566b92bf9c9344ffd29aabb218}{Modifier\+Avion}} (\mbox{\hyperlink{class_c_avion}{CAvion}} p\+\_\+avion)
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}avion concerné par l\textquotesingle{}événement. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_porte_embarquement}{CPorte\+Embarquement}} \mbox{\hyperlink{class_c_e_v_avion_quitte_gate_aab0e1bd21e1f5538c80627897b472d20}{Lire\+Gate}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la porte d\textquotesingle{}embarquement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_e_v_avion_quitte_gate_ae16dfc465b49eba31e911d653bc3de85}{Modifier\+Porte\+Embarquement}} (\mbox{\hyperlink{class_c_porte_embarquement}{CPorte\+Embarquement}} p\+\_\+gate)
+\begin{DoxyCompactList}\small\item\em Modifie la porte d\textquotesingle{}embarquement. \end{DoxyCompactList}\item 
 \Hypertarget{class_c_e_v_avion_quitte_gate_a08c7bdc3ff5d0f02226c5db877926dba}\label{class_c_e_v_avion_quitte_gate_a08c7bdc3ff5d0f02226c5db877926dba} 
 void {\bfseries run} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Exécute l\textquotesingle{}événement de départ de l\textquotesingle{}avion de la porte d\textquotesingle{}embarquement. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_c_evenement}{CEvenement}}}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries CEvenement} (\mbox{\hyperlink{class_c_evenement}{CEvenement}} \&p\+\_\+evenement)
-\item 
-void {\bfseries ecrire\+Temps\+Debut} (time\+\_\+t p\+\_\+temps\+Debut)
-\item 
-time\+\_\+t {\bfseries lire\+Temps\+Debut} ()
-\item 
+{\bfseries CEvenement} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_evenement_ac8d4fba7f1c0681b10676857bea22c2f}{CEvenement}} (\mbox{\hyperlink{class_c_evenement}{CEvenement}} \&p\+\_\+evenement)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CEvenement} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_evenement_abc6b65300ddeede11983b91ec0358062}{ecrire\+Temps\+Debut}} (time\+\_\+t p\+\_\+temps\+Debut)
+\begin{DoxyCompactList}\small\item\em Écrit le temps de début de l\textquotesingle{}événement. \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{class_c_evenement_a1eebfb231d910edb791abb6774a285e6}{lire\+Temps\+Debut}} ()
+\begin{DoxyCompactList}\small\item\em Lit le temps de début de l\textquotesingle{}événement. \end{DoxyCompactList}\item 
 void {\bfseries run} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Exécute l\textquotesingle{}événement. Méthode à redéfinir dans les classes dérivées. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant l\textquotesingle{}événement où un avion quitte la porte d\textquotesingle{}embarquement (gate). 
+
+Cette classe gère les événements liés au départ d\textquotesingle{}un avion depuis la porte d\textquotesingle{}embarquement. Elle conserve les informations sur l\textquotesingle{}avion et la porte d\textquotesingle{}embarquement concernés. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_e_v_avion_quitte_gate_a6e3fb74dc54d5ddc0494044c984252a5}\label{class_c_e_v_avion_quitte_gate_a6e3fb74dc54d5ddc0494044c984252a5} 
+\index{CEVAvionQuitteGate@{CEVAvionQuitteGate}!CEVAvionQuitteGate@{CEVAvionQuitteGate}}
+\index{CEVAvionQuitteGate@{CEVAvionQuitteGate}!CEVAvionQuitteGate@{CEVAvionQuitteGate}}
+\doxysubsubsection{\texorpdfstring{CEVAvionQuitteGate()}{CEVAvionQuitteGate()}}
+{\footnotesize\ttfamily CEVAvion\+Quitte\+Gate\+::\+CEVAvion\+Quitte\+Gate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_avion}{CAvion}}}]{p\+\_\+avion,  }\item[{\mbox{\hyperlink{class_c_porte_embarquement}{CPorte\+Embarquement}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+gate,  }\item[{time\+\_\+t}]{p\+\_\+temps }\end{DoxyParamCaption})}
+
+
+
+Constructeur avec paramètres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+avion} & Avion qui quitte la porte d\textquotesingle{}embarquement. \\
+\hline
+{\em p\+\_\+gate} & Pointeur sur la porte d\textquotesingle{}embarquement. \\
+\hline
+{\em p\+\_\+temps} & Temps de l\textquotesingle{}événement. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_e_v_avion_quitte_gate_accc12720c011ee45bf4b628565897efd}\label{class_c_e_v_avion_quitte_gate_accc12720c011ee45bf4b628565897efd} 
+\index{CEVAvionQuitteGate@{CEVAvionQuitteGate}!LireAvion@{LireAvion}}
+\index{LireAvion@{LireAvion}!CEVAvionQuitteGate@{CEVAvionQuitteGate}}
+\doxysubsubsection{\texorpdfstring{LireAvion()}{LireAvion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_avion}{CAvion}} CEVAvion\+Quitte\+Gate\+::\+Lire\+Avion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne l\textquotesingle{}avion concerné par l\textquotesingle{}événement. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_c_avion}{CAvion} L\textquotesingle{}avion qui quitte la porte d\textquotesingle{}embarquement. 
+\end{DoxyReturn}
+\Hypertarget{class_c_e_v_avion_quitte_gate_aab0e1bd21e1f5538c80627897b472d20}\label{class_c_e_v_avion_quitte_gate_aab0e1bd21e1f5538c80627897b472d20} 
+\index{CEVAvionQuitteGate@{CEVAvionQuitteGate}!LireGate@{LireGate}}
+\index{LireGate@{LireGate}!CEVAvionQuitteGate@{CEVAvionQuitteGate}}
+\doxysubsubsection{\texorpdfstring{LireGate()}{LireGate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_porte_embarquement}{CPorte\+Embarquement}} CEVAvion\+Quitte\+Gate\+::\+Lire\+Gate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne la porte d\textquotesingle{}embarquement. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_c_porte_embarquement}{CPorte\+Embarquement} La porte d\textquotesingle{}embarquement utilisée par l\textquotesingle{}avion. 
+\end{DoxyReturn}
+\Hypertarget{class_c_e_v_avion_quitte_gate_ad53ec5566b92bf9c9344ffd29aabb218}\label{class_c_e_v_avion_quitte_gate_ad53ec5566b92bf9c9344ffd29aabb218} 
+\index{CEVAvionQuitteGate@{CEVAvionQuitteGate}!ModifierAvion@{ModifierAvion}}
+\index{ModifierAvion@{ModifierAvion}!CEVAvionQuitteGate@{CEVAvionQuitteGate}}
+\doxysubsubsection{\texorpdfstring{ModifierAvion()}{ModifierAvion()}}
+{\footnotesize\ttfamily void CEVAvion\+Quitte\+Gate\+::\+Modifier\+Avion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_avion}{CAvion}}}]{p\+\_\+avion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Modifie l\textquotesingle{}avion concerné par l\textquotesingle{}événement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+avion} & Avion qui quitte la porte d\textquotesingle{}embarquement. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_e_v_avion_quitte_gate_ae16dfc465b49eba31e911d653bc3de85}\label{class_c_e_v_avion_quitte_gate_ae16dfc465b49eba31e911d653bc3de85} 
+\index{CEVAvionQuitteGate@{CEVAvionQuitteGate}!ModifierPorteEmbarquement@{ModifierPorteEmbarquement}}
+\index{ModifierPorteEmbarquement@{ModifierPorteEmbarquement}!CEVAvionQuitteGate@{CEVAvionQuitteGate}}
+\doxysubsubsection{\texorpdfstring{ModifierPorteEmbarquement()}{ModifierPorteEmbarquement()}}
+{\footnotesize\ttfamily void CEVAvion\+Quitte\+Gate\+::\+Modifier\+Porte\+Embarquement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_porte_embarquement}{CPorte\+Embarquement}}}]{p\+\_\+gate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Modifie la porte d\textquotesingle{}embarquement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+gate} & Nouvelle porte d\textquotesingle{}embarquement. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

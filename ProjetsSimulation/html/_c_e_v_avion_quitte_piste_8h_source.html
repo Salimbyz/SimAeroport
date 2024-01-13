@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: CEVAvionQuittePiste.h Source File</title>
+<title>Simulation Aeroport: CEVAvionQuittePiste.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Simulation Aeroport
    </div>
   </td>
  </tr>
@@ -79,32 +79,45 @@ $(function() { codefold.init(0); });
   <div class="headertitle"><div class="title">CEVAvionQuittePiste.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;CEvenement.h&quot;</span></div>
-<div class="foldopen" id="foldopen00003" data-start="{" data-end="};">
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_quitte_piste.html">    3</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_e_v_avion_quitte_piste.html">CEVAvionQuittePiste</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_c_evenement.html">CEvenement</a></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <a class="code hl_class" href="class_c_piste_atterissage.html">CPisteAtterissage</a>* pisteAtterissage;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <a class="code hl_class" href="class_c_avion.html">CAvion</a>* avion;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
+<a href="_c_e_v_avion_quitte_piste_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;CEvenement.h&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_class" href="class_c_e_v_avion_quitte_piste.html">CEVAvionQuittePiste</a>();</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_class" href="class_c_e_v_avion_quitte_piste.html">~CEVAvionQuittePiste</a>();</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_class" href="class_c_e_v_avion_quitte_piste.html">CEVAvionQuittePiste</a>(<a class="code hl_class" href="class_c_avion.html">CAvion</a> p_avion, <a class="code hl_class" href="class_c_piste_atterissage.html">CPisteAtterissage</a>* p_pisteAtterrissage, time_t p_time);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="class_c_piste_atterissage.html">CPisteAtterissage</a> LirePisteAtterissage() { <span class="keywordflow">return</span> *pisteAtterissage; }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">void</span> ModifierPisteAtterissage(<a class="code hl_class" href="class_c_piste_atterissage.html">CPisteAtterissage</a> p_pisteAtterissage) { *pisteAtterissage = p_pisteAtterissage; }</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_class" href="class_c_avion.html">CAvion</a> LireAvion() { <span class="keywordflow">return</span> *avion; }</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> ModifierAvion(<a class="code hl_class" href="class_c_avion.html">CAvion</a> p_avion) { *avion = p_avion; }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> run();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_quitte_piste.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_e_v_avion_quitte_piste.html">CEVAvionQuittePiste</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_c_evenement.html">CEvenement</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="class_c_piste_atterissage.html">CPisteAtterissage</a>* pisteAtterissage; </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_class" href="class_c_avion.html">CAvion</a>* avion; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="class_c_e_v_avion_quitte_piste.html#ab382f09ca072bf358fae3b313ccee5d2">CEVAvionQuittePiste</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="class_c_e_v_avion_quitte_piste.html#a344b7d55ab91c67ef4e954a48d3957ea">~CEVAvionQuittePiste</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="class_c_e_v_avion_quitte_piste.html#ab382f09ca072bf358fae3b313ccee5d2">CEVAvionQuittePiste</a>(<a class="code hl_class" href="class_c_avion.html">CAvion</a> p_avion, <a class="code hl_class" href="class_c_piste_atterissage.html">CPisteAtterissage</a>* p_pisteAtterrissage, time_t p_time);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_quitte_piste.html#a8519776293a1232d5258101af7fe041e">   42</a></span>    <a class="code hl_class" href="class_c_piste_atterissage.html">CPisteAtterissage</a> <a class="code hl_function" href="class_c_e_v_avion_quitte_piste.html#a8519776293a1232d5258101af7fe041e">LirePisteAtterissage</a>() { <span class="keywordflow">return</span> *pisteAtterissage; }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_quitte_piste.html#acbc266fbedfe751cb90e348d0008cab4">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_e_v_avion_quitte_piste.html#acbc266fbedfe751cb90e348d0008cab4">ModifierPisteAtterissage</a>(<a class="code hl_class" href="class_c_piste_atterissage.html">CPisteAtterissage</a> p_pisteAtterissage) { *pisteAtterissage = p_pisteAtterissage; }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_quitte_piste.html#a24f6e565e482358496853a1ba651b172">   54</a></span>    <a class="code hl_class" href="class_c_avion.html">CAvion</a> <a class="code hl_function" href="class_c_e_v_avion_quitte_piste.html#a24f6e565e482358496853a1ba651b172">LireAvion</a>() { <span class="keywordflow">return</span> *avion; }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_quitte_piste.html#a7b4b19261b8cce1528dc586b7cd9af90">   60</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_e_v_avion_quitte_piste.html#a7b4b19261b8cce1528dc586b7cd9af90">ModifierAvion</a>(<a class="code hl_class" href="class_c_avion.html">CAvion</a> p_avion) { *avion = p_avion; }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_e_v_avion_quitte_piste.html#a50da20e380cecb48f3f7736fd10ac335">run</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
 </div>
 <div class="ttc" id="aclass_c_avion_html"><div class="ttname"><a href="class_c_avion.html">CAvion</a></div><div class="ttdoc">Classe représentant un avion.</div><div class="ttdef"><b>Definition</b> CAvion.h:31</div></div>
-<div class="ttc" id="aclass_c_e_v_avion_quitte_piste_html"><div class="ttname"><a href="class_c_e_v_avion_quitte_piste.html">CEVAvionQuittePiste</a></div><div class="ttdef"><b>Definition</b> CEVAvionQuittePiste.h:4</div></div>
-<div class="ttc" id="aclass_c_evenement_html"><div class="ttname"><a href="class_c_evenement.html">CEvenement</a></div><div class="ttdef"><b>Definition</b> CEvenement.h:12</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_piste_html"><div class="ttname"><a href="class_c_e_v_avion_quitte_piste.html">CEVAvionQuittePiste</a></div><div class="ttdoc">Classe représentant un événement d'un avion quittant une piste d'atterrissage.</div><div class="ttdef"><b>Definition</b> CEVAvionQuittePiste.h:14</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_piste_html_a24f6e565e482358496853a1ba651b172"><div class="ttname"><a href="class_c_e_v_avion_quitte_piste.html#a24f6e565e482358496853a1ba651b172">CEVAvionQuittePiste::LireAvion</a></div><div class="ttdeci">CAvion LireAvion()</div><div class="ttdoc">Accesseur pour lire l'avion associé à l'événement.</div><div class="ttdef"><b>Definition</b> CEVAvionQuittePiste.h:54</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_piste_html_a344b7d55ab91c67ef4e954a48d3957ea"><div class="ttname"><a href="class_c_e_v_avion_quitte_piste.html#a344b7d55ab91c67ef4e954a48d3957ea">CEVAvionQuittePiste::~CEVAvionQuittePiste</a></div><div class="ttdeci">~CEVAvionQuittePiste()</div><div class="ttdoc">Destructeur de la classe CEVAvionQuittePiste.</div><div class="ttdef"><b>Definition</b> CEVAvionQuittePiste.cpp:17</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_piste_html_a50da20e380cecb48f3f7736fd10ac335"><div class="ttname"><a href="class_c_e_v_avion_quitte_piste.html#a50da20e380cecb48f3f7736fd10ac335">CEVAvionQuittePiste::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Méthode pour exécuter l'événement.</div><div class="ttdef"><b>Definition</b> CEVAvionQuittePiste.cpp:23</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_piste_html_a7b4b19261b8cce1528dc586b7cd9af90"><div class="ttname"><a href="class_c_e_v_avion_quitte_piste.html#a7b4b19261b8cce1528dc586b7cd9af90">CEVAvionQuittePiste::ModifierAvion</a></div><div class="ttdeci">void ModifierAvion(CAvion p_avion)</div><div class="ttdoc">Mutateur pour modifier l'avion associé à l'événement.</div><div class="ttdef"><b>Definition</b> CEVAvionQuittePiste.h:60</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_piste_html_a8519776293a1232d5258101af7fe041e"><div class="ttname"><a href="class_c_e_v_avion_quitte_piste.html#a8519776293a1232d5258101af7fe041e">CEVAvionQuittePiste::LirePisteAtterissage</a></div><div class="ttdeci">CPisteAtterissage LirePisteAtterissage()</div><div class="ttdoc">Accesseur pour lire la piste d'atterrissage associée à l'événement.</div><div class="ttdef"><b>Definition</b> CEVAvionQuittePiste.h:42</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_piste_html_ab382f09ca072bf358fae3b313ccee5d2"><div class="ttname"><a href="class_c_e_v_avion_quitte_piste.html#ab382f09ca072bf358fae3b313ccee5d2">CEVAvionQuittePiste::CEVAvionQuittePiste</a></div><div class="ttdeci">CEVAvionQuittePiste()</div><div class="ttdoc">Constructeur par défaut de la classe CEVAvionQuittePiste.</div><div class="ttdef"><b>Definition</b> CEVAvionQuittePiste.cpp:5</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_piste_html_acbc266fbedfe751cb90e348d0008cab4"><div class="ttname"><a href="class_c_e_v_avion_quitte_piste.html#acbc266fbedfe751cb90e348d0008cab4">CEVAvionQuittePiste::ModifierPisteAtterissage</a></div><div class="ttdeci">void ModifierPisteAtterissage(CPisteAtterissage p_pisteAtterissage)</div><div class="ttdoc">Mutateur pour modifier la piste d'atterrissage associée à l'événement.</div><div class="ttdef"><b>Definition</b> CEVAvionQuittePiste.h:48</div></div>
+<div class="ttc" id="aclass_c_evenement_html"><div class="ttname"><a href="class_c_evenement.html">CEvenement</a></div><div class="ttdoc">Classe de base pour la gestion des événements dans un aéroport.</div><div class="ttdef"><b>Definition</b> CEvenement.h:19</div></div>
 <div class="ttc" id="aclass_c_piste_atterissage_html"><div class="ttname"><a href="class_c_piste_atterissage.html">CPisteAtterissage</a></div><div class="ttdoc">Classe représentant une piste d'atterrissage.</div><div class="ttdef"><b>Definition</b> CPisteAtterissage.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

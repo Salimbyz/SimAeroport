@@ -1,19 +1,57 @@
 \doxysection{CGestion\+Temps Class Reference}
 \hypertarget{class_c_gestion_temps}{}\label{class_c_gestion_temps}\index{CGestionTemps@{CGestionTemps}}
+
+
+Classe pour la gestion des temps de retard et d\textquotesingle{}avance des départs d\textquotesingle{}avions.  
+
+
+
+
+{\ttfamily \#include $<$CGestion\+Temps.\+h$>$}
+
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_c_gestion_temps_a57f401832e7e3018ce893aed59cd936a}\label{class_c_gestion_temps_a57f401832e7e3018ce893aed59cd936a} 
-static void {\bfseries Ajouter\+Temps\+Depart} (time\+\_\+t p\+\_\+temps)
-\item 
-\Hypertarget{class_c_gestion_temps_a8206b027bf5d6dfbed5f04be69e409de}\label{class_c_gestion_temps_a8206b027bf5d6dfbed5f04be69e409de} 
-static void {\bfseries Afficher\+Temps\+Depart} ()
-\item 
-\Hypertarget{class_c_gestion_temps_ab3665b06470f36faf81e333e3c56e39e}\label{class_c_gestion_temps_ab3665b06470f36faf81e333e3c56e39e} 
-static void {\bfseries Affecter\+Temps\+Arrivee} (vector$<$ int $>$ p\+\_\+retard\+Secondes)
-\end{DoxyCompactItemize}
+static void \mbox{\hyperlink{class_c_gestion_temps_a25960ea9000c48bde1036b8d243c7f9c}{Ajouter\+Temps\+Depart}} (double tempsretard)
+\begin{DoxyCompactList}\small\item\em Ajoute un temps de retard ou d\textquotesingle{}avance au total. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_c_gestion_temps_a57d76c8fbfd740f29d139001aa34139c}{Afficher\+Temps\+Retard\+Total}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le temps total de retard et la moyenne par avion. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Detailed Description}
+Classe pour la gestion des temps de retard et d\textquotesingle{}avance des départs d\textquotesingle{}avions. 
+
+Cette classe fournit des méthodes statiques pour gérer et afficher les statistiques liées aux retards et aux avances des départs d\textquotesingle{}avions dans un aéroport. Elle permet d\textquotesingle{}ajouter des temps de retard et d\textquotesingle{}afficher le temps de retard total ainsi que la moyenne. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_gestion_temps_a57d76c8fbfd740f29d139001aa34139c}\label{class_c_gestion_temps_a57d76c8fbfd740f29d139001aa34139c} 
+\index{CGestionTemps@{CGestionTemps}!AfficherTempsRetardTotal@{AfficherTempsRetardTotal}}
+\index{AfficherTempsRetardTotal@{AfficherTempsRetardTotal}!CGestionTemps@{CGestionTemps}}
+\doxysubsubsection{\texorpdfstring{AfficherTempsRetardTotal()}{AfficherTempsRetardTotal()}}
+{\footnotesize\ttfamily static void CGestion\+Temps\+::\+Afficher\+Temps\+Retard\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Affiche le temps total de retard et la moyenne par avion. 
+
+Cette méthode calcule et affiche le temps total de retard en heures, minutes et secondes, ainsi que le temps moyen de retard par avion, et le nombre d\textquotesingle{}avions en retard ou en avance. \Hypertarget{class_c_gestion_temps_a25960ea9000c48bde1036b8d243c7f9c}\label{class_c_gestion_temps_a25960ea9000c48bde1036b8d243c7f9c} 
+\index{CGestionTemps@{CGestionTemps}!AjouterTempsDepart@{AjouterTempsDepart}}
+\index{AjouterTempsDepart@{AjouterTempsDepart}!CGestionTemps@{CGestionTemps}}
+\doxysubsubsection{\texorpdfstring{AjouterTempsDepart()}{AjouterTempsDepart()}}
+{\footnotesize\ttfamily static void CGestion\+Temps\+::\+Ajouter\+Temps\+Depart (\begin{DoxyParamCaption}\item[{double}]{tempsretard }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Ajoute un temps de retard ou d\textquotesingle{}avance au total. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tempsretard} & Temps de retard (positif) ou d\textquotesingle{}avance (négatif) en secondes. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-CGestion\+Temps.\+h\end{DoxyCompactItemize}
+CGestion\+Temps.\+h\item 
+CEVAvion\+Quitte\+Aeroport.\+cpp\end{DoxyCompactItemize}

@@ -5,29 +5,36 @@
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CEntree.h"{}}}
 \DoxyCodeLine{00004\ \textcolor{keyword}{using\ namespace\ }std;}
-\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_gestion_temps}{CGestionTemps}}}
-\DoxyCodeLine{00006\ \{}
-\DoxyCodeLine{00007\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{static}\ vector<int>\ tempsRetardArrivee;}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{static}\ vector<int>\ tempsRetardDepart;}
-\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ AjouterTempsDepart(time\_t\ p\_temps)\ \{}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ tempsRetardDepart.push\_back(p\_temps);}
-\DoxyCodeLine{00013\ \ \ \ \ \}}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ AfficherTempsDepart()\ \{}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ tempsRetardDepart.size();i++)\ \{}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ CEntree::printTimeT(tempsRetardDepart[i]);}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00018\ \ \ \ \ \}}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ AffecterTempsArrivee(vector<int>\ p\_retardSecondes)\ \{}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ tempsRetardArrivee.resize(p\_retardSecondes.size());}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ tempsRetardDepart.size();\ i++)\ \{}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ tempsRetardArrivee[i]\ =\ \ p\_retardSecondes[i];}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \}}
-\DoxyCodeLine{00026\ \};}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_gestion_temps}{CGestionTemps}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ tempsRetardDepart;\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ nbretards;\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ nbavances;\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_gestion_temps_a25960ea9000c48bde1036b8d243c7f9c}{AjouterTempsDepart}}(\textcolor{keywordtype}{double}\ tempsretard)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tempsretard\ <\ 0)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ nbretards++;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ nbretards++;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ tempsRetardDepart+=tempsretard;}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_gestion_temps_a57d76c8fbfd740f29d139001aa34139c}{AfficherTempsRetardTotal}}()\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ heures\ =\ (int)(tempsRetardDepart\ /\ 3600);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ minutes\ =\ (int)((((\textcolor{keywordtype}{int})tempsRetardDepart\ \%\ 3600)\ /\ 60));}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ secondes\ =\ (int)tempsRetardDepart\ \%\ 60;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tempsmoy\ =(int)\ tempsRetardDepart\ /\ 20;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ heuresmoy\ =\ (int)tempsmoy\ /\ 3600;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ minutesmoy\ =\ (int)((((\textcolor{keywordtype}{int})tempsmoy\ \%\ 3600)\ /\ 60));}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ secondesmoy\ =\ (int)tempsmoy\ \%\ 60;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ std::cout\ <<\ tempsRetardDepart\ <<\ \textcolor{stringliteral}{"{}\ secondes\ de\ retard\ soit\ :\ "{}}\ <<\ heures\ <<\textcolor{stringliteral}{"{}:"{}}\ <<\ minutes<<\textcolor{stringliteral}{"{}:"{}}<<secondes<<\textcolor{stringliteral}{"{}\ Soit\ en\ moyenne\ :\ "{}}<<\ minutesmoy\ <<\ \textcolor{stringliteral}{"{}m"{}}\ <<\ secondesmoy\ <<\ std::endl;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ std::cout\ <<\ nbretards\ <<\ \textcolor{stringliteral}{"{}\ Avions\ sortent\ en\ retard\ et\ "{}}\ <<\ nbavances\ <<\textcolor{stringliteral}{"{}\ sortent\ en\ avance\ ou\ a\ l'heure"{}};}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
 
 \end{DoxyCode}

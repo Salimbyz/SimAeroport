@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: CEVAvionDecolle.h Source File</title>
+<title>Simulation Aeroport: CEVAvionDecolle.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Simulation Aeroport
    </div>
   </td>
  </tr>
@@ -82,33 +82,51 @@ $(function() { codefold.init(0); });
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;CEvenement.h&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="foldopen" id="foldopen00004" data-start="{" data-end="};">
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_decolle.html">    4</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_e_v_avion_decolle.html">CEVAvionDecolle</a> :</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="keyword">public</span> <a class="code hl_class" href="class_c_evenement.html">CEvenement</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>private :</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_class" href="class_c_piste_decollage.html">CPisteDecollage</a>* pisteDecollage;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_class" href="class_c_avion.html">CAvion</a>* avion;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>public :</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_class" href="class_c_e_v_avion_decolle.html">CEVAvionDecolle</a>();</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_class" href="class_c_e_v_avion_decolle.html">~CEVAvionDecolle</a>();</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_class" href="class_c_e_v_avion_decolle.html">CEVAvionDecolle</a>(<a class="code hl_class" href="class_c_avion.html">CAvion</a> p_avion, <a class="code hl_class" href="class_c_piste_decollage.html">CPisteDecollage</a>* p_pisteDecollage, time_t p_temps);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> ModifierAvion(<a class="code hl_class" href="class_c_avion.html">CAvion</a> p_avion) { *avion = p_avion; }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">void</span> ModifierPisteDecollage(<a class="code hl_class" href="class_c_piste_decollage.html">CPisteDecollage</a>&amp; p_pisteDecollage) {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        pisteDecollage = &amp;p_pisteDecollage;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_class" href="class_c_avion.html">CAvion</a> LireAvion() { <span class="keywordflow">return</span> *avion; }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_class" href="class_c_piste_decollage.html">CPisteDecollage</a>&amp; LirePisteDecollage() {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">return</span> *pisteDecollage;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> run();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_decolle.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_e_v_avion_decolle.html">CEVAvionDecolle</a> :</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span> <a class="code hl_class" href="class_c_evenement.html">CEvenement</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>private :</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_class" href="class_c_piste_decollage.html">CPisteDecollage</a>* pisteDecollage; </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="class_c_avion.html">CAvion</a>* avion; </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>public :</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_function" href="class_c_e_v_avion_decolle.html#ab78a8d04b0e796c43b843724066939db">CEVAvionDecolle</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_function" href="class_c_e_v_avion_decolle.html#ab67c596dee62c5749f4ce674dcc3c383">~CEVAvionDecolle</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="class_c_e_v_avion_decolle.html#ab78a8d04b0e796c43b843724066939db">CEVAvionDecolle</a>(<a class="code hl_class" href="class_c_avion.html">CAvion</a> p_avion, <a class="code hl_class" href="class_c_piste_decollage.html">CPisteDecollage</a>* p_pisteDecollage, time_t p_temps);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_decolle.html#a86d06fdac107925fda8d63b45bb19298">   40</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_e_v_avion_decolle.html#a86d06fdac107925fda8d63b45bb19298">ModifierAvion</a>(<a class="code hl_class" href="class_c_avion.html">CAvion</a> p_avion) { *avion = p_avion; }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_decolle.html#af202388552b53eec498d486bfae169e3">   46</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_e_v_avion_decolle.html#af202388552b53eec498d486bfae169e3">ModifierPisteDecollage</a>(<a class="code hl_class" href="class_c_piste_decollage.html">CPisteDecollage</a>&amp; p_pisteDecollage) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        pisteDecollage = &amp;p_pisteDecollage;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
 </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_decolle.html#ae265b43bc200fdb4b87d7c46c5a49497">   54</a></span>    <a class="code hl_class" href="class_c_avion.html">CAvion</a> <a class="code hl_function" href="class_c_e_v_avion_decolle.html#ae265b43bc200fdb4b87d7c46c5a49497">LireAvion</a>() { <span class="keywordflow">return</span> *avion; }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_decolle.html#a8a99ce32e35b82ecc2b73d6321f1b8ae">   60</a></span>    <a class="code hl_class" href="class_c_piste_decollage.html">CPisteDecollage</a>&amp; <a class="code hl_function" href="class_c_e_v_avion_decolle.html#a8a99ce32e35b82ecc2b73d6321f1b8ae">LirePisteDecollage</a>() {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">return</span> *pisteDecollage;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_e_v_avion_decolle.html#a8c45cf8e5153fa3986aa8b110487b5e4">run</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>};</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="ttc" id="aclass_c_avion_html"><div class="ttname"><a href="class_c_avion.html">CAvion</a></div><div class="ttdoc">Classe représentant un avion.</div><div class="ttdef"><b>Definition</b> CAvion.h:31</div></div>
-<div class="ttc" id="aclass_c_e_v_avion_decolle_html"><div class="ttname"><a href="class_c_e_v_avion_decolle.html">CEVAvionDecolle</a></div><div class="ttdef"><b>Definition</b> CEVAvionDecolle.h:6</div></div>
-<div class="ttc" id="aclass_c_evenement_html"><div class="ttname"><a href="class_c_evenement.html">CEvenement</a></div><div class="ttdef"><b>Definition</b> CEvenement.h:12</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_decolle_html"><div class="ttname"><a href="class_c_e_v_avion_decolle.html">CEVAvionDecolle</a></div><div class="ttdoc">Classe représentant un événement de décollage d'un avion.</div><div class="ttdef"><b>Definition</b> CEVAvionDecolle.h:13</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_decolle_html_a86d06fdac107925fda8d63b45bb19298"><div class="ttname"><a href="class_c_e_v_avion_decolle.html#a86d06fdac107925fda8d63b45bb19298">CEVAvionDecolle::ModifierAvion</a></div><div class="ttdeci">void ModifierAvion(CAvion p_avion)</div><div class="ttdoc">Modifie l'avion concerné par l'événement.</div><div class="ttdef"><b>Definition</b> CEVAvionDecolle.h:40</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_decolle_html_a8a99ce32e35b82ecc2b73d6321f1b8ae"><div class="ttname"><a href="class_c_e_v_avion_decolle.html#a8a99ce32e35b82ecc2b73d6321f1b8ae">CEVAvionDecolle::LirePisteDecollage</a></div><div class="ttdeci">CPisteDecollage &amp; LirePisteDecollage()</div><div class="ttdoc">Retourne la piste de décollage.</div><div class="ttdef"><b>Definition</b> CEVAvionDecolle.h:60</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_decolle_html_a8c45cf8e5153fa3986aa8b110487b5e4"><div class="ttname"><a href="class_c_e_v_avion_decolle.html#a8c45cf8e5153fa3986aa8b110487b5e4">CEVAvionDecolle::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Exécute l'événement de décollage.</div><div class="ttdef"><b>Definition</b> CEVAvionDecolle.cpp:21</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_decolle_html_ab67c596dee62c5749f4ce674dcc3c383"><div class="ttname"><a href="class_c_e_v_avion_decolle.html#ab67c596dee62c5749f4ce674dcc3c383">CEVAvionDecolle::~CEVAvionDecolle</a></div><div class="ttdeci">~CEVAvionDecolle()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition</b> CEVAvionDecolle.cpp:10</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_decolle_html_ab78a8d04b0e796c43b843724066939db"><div class="ttname"><a href="class_c_e_v_avion_decolle.html#ab78a8d04b0e796c43b843724066939db">CEVAvionDecolle::CEVAvionDecolle</a></div><div class="ttdeci">CEVAvionDecolle()</div><div class="ttdoc">Constructeur par défaut.</div><div class="ttdef"><b>Definition</b> CEVAvionDecolle.cpp:4</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_decolle_html_ae265b43bc200fdb4b87d7c46c5a49497"><div class="ttname"><a href="class_c_e_v_avion_decolle.html#ae265b43bc200fdb4b87d7c46c5a49497">CEVAvionDecolle::LireAvion</a></div><div class="ttdeci">CAvion LireAvion()</div><div class="ttdoc">Retourne l'avion concerné par l'événement.</div><div class="ttdef"><b>Definition</b> CEVAvionDecolle.h:54</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_decolle_html_af202388552b53eec498d486bfae169e3"><div class="ttname"><a href="class_c_e_v_avion_decolle.html#af202388552b53eec498d486bfae169e3">CEVAvionDecolle::ModifierPisteDecollage</a></div><div class="ttdeci">void ModifierPisteDecollage(CPisteDecollage &amp;p_pisteDecollage)</div><div class="ttdoc">Modifie la piste de décollage.</div><div class="ttdef"><b>Definition</b> CEVAvionDecolle.h:46</div></div>
+<div class="ttc" id="aclass_c_evenement_html"><div class="ttname"><a href="class_c_evenement.html">CEvenement</a></div><div class="ttdoc">Classe de base pour la gestion des événements dans un aéroport.</div><div class="ttdef"><b>Definition</b> CEvenement.h:19</div></div>
 <div class="ttc" id="aclass_c_piste_decollage_html"><div class="ttname"><a href="class_c_piste_decollage.html">CPisteDecollage</a></div><div class="ttdoc">Classe représentant une piste de décollage.</div><div class="ttdef"><b>Definition</b> CPisteDecollage.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

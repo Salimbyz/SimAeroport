@@ -1,26 +1,33 @@
 \doxysection{CEVAvion\+Va\+Gate.\+h}
-\hypertarget{_c_e_v_avion_va_gate_8h_source}{}\label{_c_e_v_avion_va_gate_8h_source}
+\hypertarget{_c_e_v_avion_va_gate_8h_source}{}\label{_c_e_v_avion_va_gate_8h_source}\mbox{\hyperlink{_c_e_v_avion_va_gate_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}CEvenement.h"{}}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CPorteEmbarquement.h"{}}}
-\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_e_v_avion_va_gate}{CEVAvionVaGate}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_evenement}{CEvenement}}}
-\DoxyCodeLine{00005\ \{}
-\DoxyCodeLine{00006\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}*\ avion;}
-\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}*\ gate;}
-\DoxyCodeLine{00009\ public\ :}
-\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_va_gate}{CEVAvionVaGate}}();}
-\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_va_gate}{CEVAvionVaGate}}(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion,\ \mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}*\ p\_porte,\ time\_t\ p\_temps);}
-\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_va_gate}{\string~CEVAvionVaGate}}();}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}\ LireAvion()\ \{\ \textcolor{keywordflow}{return}\ *avion;\ \}}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ ModifierAvion(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion)\ \{\ *avion\ =\ p\_avion;\ \}}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}\ LirePisteAtterrissage()\ \{\ \textcolor{keywordflow}{return}\ *gate;\ \}}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ ModifierGate(\mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}\ p\_gate)\ \{\ *gate\ =\ p\_gate;\ \}}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ run();}
-\DoxyCodeLine{00020\ \};}
-\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}CEvenement.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}CPorteEmbarquement.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_c_e_v_avion_va_gate}{CEVAvionVaGate}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_c_evenement}{CEvenement}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}*\ avion;\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}*\ gate;\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_va_gate_aababac00994692b942800e49ed0d70c2}{CEVAvionVaGate}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_va_gate_aababac00994692b942800e49ed0d70c2}{CEVAvionVaGate}}(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion,\ \mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}*\ p\_porte,\ time\_t\ p\_temps);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_c_e_v_avion_va_gate_af8e95c806982624fbee5f248c9ef5761}{\string~CEVAvionVaGate}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}\ \mbox{\hyperlink{class_c_e_v_avion_va_gate_aef7cc7bd4a8d18becdcb7e0f494173a8}{LireAvion}}()\ \{\ \textcolor{keywordflow}{return}\ *avion;\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_v_avion_va_gate_acb6a30b9f4d49b7cc1f0146a5b2a9e8c}{ModifierAvion}}(\mbox{\hyperlink{class_c_avion}{CAvion}}\ p\_avion)\ \{\ *avion\ =\ p\_avion;\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}\ \mbox{\hyperlink{class_c_e_v_avion_va_gate_aaca6a2f31d9c3596a010d7a17d3260c6}{LirePisteAtterrissage}}()\ \{\ \textcolor{keywordflow}{return}\ *gate;\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_v_avion_va_gate_a4f8b5de73ac3095d7078bb0690024c22}{ModifierGate}}(\mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}\ p\_gate)\ \{\ *gate\ =\ p\_gate;\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_e_v_avion_va_gate_a5225d5f321a5623ff1d45521d12650f2}{run}}();}
+\DoxyCodeLine{00067\ \};}
 
 \end{DoxyCode}

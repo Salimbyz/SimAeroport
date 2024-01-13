@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: CEVAvionQuitteGate.h Source File</title>
+<title>Simulation Aeroport: CEVAvionQuitteGate.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Simulation Aeroport
    </div>
   </td>
  </tr>
@@ -82,33 +82,45 @@ $(function() { codefold.init(0); });
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;CEvenement.h&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;CPorteEmbarquement.h&quot;</span></div>
-<div class="foldopen" id="foldopen00004" data-start="{" data-end="};">
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_quitte_gate.html">    4</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_e_v_avion_quitte_gate.html">CEVAvionQuitteGate</a> :</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="keyword">public</span> <a class="code hl_class" href="class_c_evenement.html">CEvenement</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_class" href="class_c_porte_embarquement.html">CPorteEmbarquement</a>* gate;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_class" href="class_c_avion.html">CAvion</a>* avion;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>public :</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_class" href="class_c_e_v_avion_quitte_gate.html">CEVAvionQuitteGate</a>();</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_class" href="class_c_e_v_avion_quitte_gate.html">CEVAvionQuitteGate</a>(<a class="code hl_class" href="class_c_avion.html">CAvion</a> p_avion, <a class="code hl_class" href="class_c_porte_embarquement.html">CPorteEmbarquement</a>* p_gate, time_t p_temps);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_class" href="class_c_e_v_avion_quitte_gate.html">~CEVAvionQuitteGate</a>();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_class" href="class_c_avion.html">CAvion</a> LireAvion() { <span class="keywordflow">return</span> *avion; }</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> ModifierAvion(<a class="code hl_class" href="class_c_avion.html">CAvion</a> p_avion) { *avion = p_avion; }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_class" href="class_c_porte_embarquement.html">CPorteEmbarquement</a> LireGate() { <span class="keywordflow">return</span> *gate; }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> ModifierPorteEmbarquement(<a class="code hl_class" href="class_c_porte_embarquement.html">CPorteEmbarquement</a> p_gate) { *gate = p_gate; }</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> run();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_quitte_gate.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_c_e_v_avion_quitte_gate.html">CEVAvionQuitteGate</a> :</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span> <a class="code hl_class" href="class_c_evenement.html">CEvenement</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="class_c_porte_embarquement.html">CPorteEmbarquement</a>* gate; </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_class" href="class_c_avion.html">CAvion</a>* avion; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>public :</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_function" href="class_c_e_v_avion_quitte_gate.html#af9d911a147cb6ccba494be8271c2b569">CEVAvionQuitteGate</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="class_c_e_v_avion_quitte_gate.html#af9d911a147cb6ccba494be8271c2b569">CEVAvionQuitteGate</a>(<a class="code hl_class" href="class_c_avion.html">CAvion</a> p_avion, <a class="code hl_class" href="class_c_porte_embarquement.html">CPorteEmbarquement</a>* p_gate, time_t p_temps);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="class_c_e_v_avion_quitte_gate.html#ae5fad10b81fdd0d69c75668c2357b454">~CEVAvionQuitteGate</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_quitte_gate.html#accc12720c011ee45bf4b628565897efd">   43</a></span>    <a class="code hl_class" href="class_c_avion.html">CAvion</a> <a class="code hl_function" href="class_c_e_v_avion_quitte_gate.html#accc12720c011ee45bf4b628565897efd">LireAvion</a>() { <span class="keywordflow">return</span> *avion; }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_quitte_gate.html#ad53ec5566b92bf9c9344ffd29aabb218">   50</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_e_v_avion_quitte_gate.html#ad53ec5566b92bf9c9344ffd29aabb218">ModifierAvion</a>(<a class="code hl_class" href="class_c_avion.html">CAvion</a> p_avion) { *avion = p_avion; }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_quitte_gate.html#aab0e1bd21e1f5538c80627897b472d20">   57</a></span>    <a class="code hl_class" href="class_c_porte_embarquement.html">CPorteEmbarquement</a> <a class="code hl_function" href="class_c_e_v_avion_quitte_gate.html#aab0e1bd21e1f5538c80627897b472d20">LireGate</a>() { <span class="keywordflow">return</span> *gate; }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_c_e_v_avion_quitte_gate.html#ae16dfc465b49eba31e911d653bc3de85">   64</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_e_v_avion_quitte_gate.html#ae16dfc465b49eba31e911d653bc3de85">ModifierPorteEmbarquement</a>(<a class="code hl_class" href="class_c_porte_embarquement.html">CPorteEmbarquement</a> p_gate) { *gate = p_gate; }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_c_e_v_avion_quitte_gate.html#a08c7bdc3ff5d0f02226c5db877926dba">run</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>};</div>
 </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="ttc" id="aclass_c_avion_html"><div class="ttname"><a href="class_c_avion.html">CAvion</a></div><div class="ttdoc">Classe représentant un avion.</div><div class="ttdef"><b>Definition</b> CAvion.h:31</div></div>
-<div class="ttc" id="aclass_c_e_v_avion_quitte_gate_html"><div class="ttname"><a href="class_c_e_v_avion_quitte_gate.html">CEVAvionQuitteGate</a></div><div class="ttdef"><b>Definition</b> CEVAvionQuitteGate.h:6</div></div>
-<div class="ttc" id="aclass_c_evenement_html"><div class="ttname"><a href="class_c_evenement.html">CEvenement</a></div><div class="ttdef"><b>Definition</b> CEvenement.h:12</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_gate_html"><div class="ttname"><a href="class_c_e_v_avion_quitte_gate.html">CEVAvionQuitteGate</a></div><div class="ttdoc">Classe représentant l'événement où un avion quitte la porte d'embarquement (gate).</div><div class="ttdef"><b>Definition</b> CEVAvionQuitteGate.h:14</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_gate_html_a08c7bdc3ff5d0f02226c5db877926dba"><div class="ttname"><a href="class_c_e_v_avion_quitte_gate.html#a08c7bdc3ff5d0f02226c5db877926dba">CEVAvionQuitteGate::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Exécute l'événement de départ de l'avion de la porte d'embarquement.</div><div class="ttdef"><b>Definition</b> CEVAvionQuitteGate.cpp:23</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_gate_html_aab0e1bd21e1f5538c80627897b472d20"><div class="ttname"><a href="class_c_e_v_avion_quitte_gate.html#aab0e1bd21e1f5538c80627897b472d20">CEVAvionQuitteGate::LireGate</a></div><div class="ttdeci">CPorteEmbarquement LireGate()</div><div class="ttdoc">Retourne la porte d'embarquement.</div><div class="ttdef"><b>Definition</b> CEVAvionQuitteGate.h:57</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_gate_html_accc12720c011ee45bf4b628565897efd"><div class="ttname"><a href="class_c_e_v_avion_quitte_gate.html#accc12720c011ee45bf4b628565897efd">CEVAvionQuitteGate::LireAvion</a></div><div class="ttdeci">CAvion LireAvion()</div><div class="ttdoc">Retourne l'avion concerné par l'événement.</div><div class="ttdef"><b>Definition</b> CEVAvionQuitteGate.h:43</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_gate_html_ad53ec5566b92bf9c9344ffd29aabb218"><div class="ttname"><a href="class_c_e_v_avion_quitte_gate.html#ad53ec5566b92bf9c9344ffd29aabb218">CEVAvionQuitteGate::ModifierAvion</a></div><div class="ttdeci">void ModifierAvion(CAvion p_avion)</div><div class="ttdoc">Modifie l'avion concerné par l'événement.</div><div class="ttdef"><b>Definition</b> CEVAvionQuitteGate.h:50</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_gate_html_ae16dfc465b49eba31e911d653bc3de85"><div class="ttname"><a href="class_c_e_v_avion_quitte_gate.html#ae16dfc465b49eba31e911d653bc3de85">CEVAvionQuitteGate::ModifierPorteEmbarquement</a></div><div class="ttdeci">void ModifierPorteEmbarquement(CPorteEmbarquement p_gate)</div><div class="ttdoc">Modifie la porte d'embarquement.</div><div class="ttdef"><b>Definition</b> CEVAvionQuitteGate.h:64</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_gate_html_ae5fad10b81fdd0d69c75668c2357b454"><div class="ttname"><a href="class_c_e_v_avion_quitte_gate.html#ae5fad10b81fdd0d69c75668c2357b454">CEVAvionQuitteGate::~CEVAvionQuitteGate</a></div><div class="ttdeci">~CEVAvionQuitteGate()</div><div class="ttdoc">Destructeur.</div><div class="ttdef"><b>Definition</b> CEVAvionQuitteGate.cpp:18</div></div>
+<div class="ttc" id="aclass_c_e_v_avion_quitte_gate_html_af9d911a147cb6ccba494be8271c2b569"><div class="ttname"><a href="class_c_e_v_avion_quitte_gate.html#af9d911a147cb6ccba494be8271c2b569">CEVAvionQuitteGate::CEVAvionQuitteGate</a></div><div class="ttdeci">CEVAvionQuitteGate()</div><div class="ttdoc">Constructeur par défaut.</div><div class="ttdef"><b>Definition</b> CEVAvionQuitteGate.cpp:5</div></div>
+<div class="ttc" id="aclass_c_evenement_html"><div class="ttname"><a href="class_c_evenement.html">CEvenement</a></div><div class="ttdoc">Classe de base pour la gestion des événements dans un aéroport.</div><div class="ttdef"><b>Definition</b> CEvenement.h:19</div></div>
 <div class="ttc" id="aclass_c_porte_embarquement_html"><div class="ttname"><a href="class_c_porte_embarquement.html">CPorteEmbarquement</a></div><div class="ttdoc">Classe représentant une porte d'embarquement.</div><div class="ttdef"><b>Definition</b> CPorteEmbarquement.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

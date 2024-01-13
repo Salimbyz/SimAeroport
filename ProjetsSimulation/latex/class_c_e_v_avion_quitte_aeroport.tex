@@ -1,5 +1,14 @@
 \doxysection{CEVAvion\+Quitte\+Aeroport Class Reference}
 \hypertarget{class_c_e_v_avion_quitte_aeroport}{}\label{class_c_e_v_avion_quitte_aeroport}\index{CEVAvionQuitteAeroport@{CEVAvionQuitteAeroport}}
+
+
+Classe représentant l\textquotesingle{}événement où un avion quitte l\textquotesingle{}aéroport.  
+
+
+
+
+{\ttfamily \#include $<$CEVAvion\+Quitte\+Aeroport.\+h$>$}
+
 Inheritance diagram for CEVAvion\+Quitte\+Aeroport\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,35 +18,126 @@ Inheritance diagram for CEVAvion\+Quitte\+Aeroport\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_c_e_v_avion_quitte_aeroport_a8f99145be94a8c4c7749a9651a5c2ccb}\label{class_c_e_v_avion_quitte_aeroport_a8f99145be94a8c4c7749a9651a5c2ccb} 
-{\bfseries CEVAvion\+Quitte\+Aeroport} (\mbox{\hyperlink{class_c_avion}{CAvion}} p\+\_\+avion, \mbox{\hyperlink{class_c_piste_decollage}{CPiste\+Decollage}} \texorpdfstring{$\ast$}{*}p\+\_\+pisteD, time\+\_\+t p\+\_\+temps)
-\item 
-\Hypertarget{class_c_e_v_avion_quitte_aeroport_ab1ad6ce6147c8e5f875917a6a1c18b7c}\label{class_c_e_v_avion_quitte_aeroport_ab1ad6ce6147c8e5f875917a6a1c18b7c} 
-\mbox{\hyperlink{class_c_piste_decollage}{CPiste\+Decollage}} \& {\bfseries Lire\+Piste\+Decollage} ()
-\item 
-\Hypertarget{class_c_e_v_avion_quitte_aeroport_a2c9f30480e04a60f22133dacf1fb1eca}\label{class_c_e_v_avion_quitte_aeroport_a2c9f30480e04a60f22133dacf1fb1eca} 
-void {\bfseries Modifier\+Piste\+Decollage} (\mbox{\hyperlink{class_c_piste_decollage}{CPiste\+Decollage}} \&p\+\_\+piste\+Decollage)
-\item 
-\Hypertarget{class_c_e_v_avion_quitte_aeroport_ad10eb87f394e3bc5d65e817b2b586fd6}\label{class_c_e_v_avion_quitte_aeroport_ad10eb87f394e3bc5d65e817b2b586fd6} 
-\mbox{\hyperlink{class_c_avion}{CAvion}} {\bfseries Lire\+Avion} ()
-\item 
-\Hypertarget{class_c_e_v_avion_quitte_aeroport_ae026fbe60685ff61d551abd546ebb0db}\label{class_c_e_v_avion_quitte_aeroport_ae026fbe60685ff61d551abd546ebb0db} 
-void {\bfseries Modifier\+Avion} (\mbox{\hyperlink{class_c_avion}{CAvion}} p\+\_\+avion)
-\item 
+\Hypertarget{class_c_e_v_avion_quitte_aeroport_ae292ffcc0ba79de534ffb3a09644a856}\label{class_c_e_v_avion_quitte_aeroport_ae292ffcc0ba79de534ffb3a09644a856} 
+{\bfseries CEVAvion\+Quitte\+Aeroport} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_e_v_avion_quitte_aeroport_a8f99145be94a8c4c7749a9651a5c2ccb}{CEVAvion\+Quitte\+Aeroport}} (\mbox{\hyperlink{class_c_avion}{CAvion}} p\+\_\+avion, \mbox{\hyperlink{class_c_piste_decollage}{CPiste\+Decollage}} \texorpdfstring{$\ast$}{*}p\+\_\+pisteD, time\+\_\+t p\+\_\+temps)
+\begin{DoxyCompactList}\small\item\em Constructeur avec paramètres. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_e_v_avion_quitte_aeroport_ae0b93a22d75de513bfdd5b3ec61b8c90}\label{class_c_e_v_avion_quitte_aeroport_ae0b93a22d75de513bfdd5b3ec61b8c90} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CEVAvion\+Quitte\+Aeroport} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_piste_decollage}{CPiste\+Decollage}} \& \mbox{\hyperlink{class_c_e_v_avion_quitte_aeroport_ab1ad6ce6147c8e5f875917a6a1c18b7c}{Lire\+Piste\+Decollage}} ()
+\begin{DoxyCompactList}\small\item\em Retourne la piste de décollage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_e_v_avion_quitte_aeroport_a2c9f30480e04a60f22133dacf1fb1eca}{Modifier\+Piste\+Decollage}} (\mbox{\hyperlink{class_c_piste_decollage}{CPiste\+Decollage}} \&p\+\_\+piste\+Decollage)
+\begin{DoxyCompactList}\small\item\em Modifie la piste de décollage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_avion}{CAvion}} \mbox{\hyperlink{class_c_e_v_avion_quitte_aeroport_ad10eb87f394e3bc5d65e817b2b586fd6}{Lire\+Avion}} ()
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}avion concerné par l\textquotesingle{}événement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_e_v_avion_quitte_aeroport_ae026fbe60685ff61d551abd546ebb0db}{Modifier\+Avion}} (\mbox{\hyperlink{class_c_avion}{CAvion}} p\+\_\+avion)
+\begin{DoxyCompactList}\small\item\em Modifie l\textquotesingle{}avion concerné par l\textquotesingle{}événement. \end{DoxyCompactList}\item 
 \Hypertarget{class_c_e_v_avion_quitte_aeroport_a8f0d8566cef9d8c0e6be76d9faff6313}\label{class_c_e_v_avion_quitte_aeroport_a8f0d8566cef9d8c0e6be76d9faff6313} 
 void {\bfseries run} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Exécute l\textquotesingle{}événement de départ de l\textquotesingle{}avion. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_c_evenement}{CEvenement}}}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries CEvenement} (\mbox{\hyperlink{class_c_evenement}{CEvenement}} \&p\+\_\+evenement)
-\item 
-void {\bfseries ecrire\+Temps\+Debut} (time\+\_\+t p\+\_\+temps\+Debut)
-\item 
-time\+\_\+t {\bfseries lire\+Temps\+Debut} ()
-\item 
+{\bfseries CEvenement} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_evenement_ac8d4fba7f1c0681b10676857bea22c2f}{CEvenement}} (\mbox{\hyperlink{class_c_evenement}{CEvenement}} \&p\+\_\+evenement)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CEvenement} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_evenement_abc6b65300ddeede11983b91ec0358062}{ecrire\+Temps\+Debut}} (time\+\_\+t p\+\_\+temps\+Debut)
+\begin{DoxyCompactList}\small\item\em Écrit le temps de début de l\textquotesingle{}événement. \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{class_c_evenement_a1eebfb231d910edb791abb6774a285e6}{lire\+Temps\+Debut}} ()
+\begin{DoxyCompactList}\small\item\em Lit le temps de début de l\textquotesingle{}événement. \end{DoxyCompactList}\item 
 void {\bfseries run} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Exécute l\textquotesingle{}événement. Méthode à redéfinir dans les classes dérivées. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant l\textquotesingle{}événement où un avion quitte l\textquotesingle{}aéroport. 
+
+Cette classe gère les événements liés au départ d\textquotesingle{}un avion de l\textquotesingle{}aéroport. Elle conserve les informations sur l\textquotesingle{}avion et la piste de décollage concernés. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_e_v_avion_quitte_aeroport_a8f99145be94a8c4c7749a9651a5c2ccb}\label{class_c_e_v_avion_quitte_aeroport_a8f99145be94a8c4c7749a9651a5c2ccb} 
+\index{CEVAvionQuitteAeroport@{CEVAvionQuitteAeroport}!CEVAvionQuitteAeroport@{CEVAvionQuitteAeroport}}
+\index{CEVAvionQuitteAeroport@{CEVAvionQuitteAeroport}!CEVAvionQuitteAeroport@{CEVAvionQuitteAeroport}}
+\doxysubsubsection{\texorpdfstring{CEVAvionQuitteAeroport()}{CEVAvionQuitteAeroport()}}
+{\footnotesize\ttfamily CEVAvion\+Quitte\+Aeroport\+::\+CEVAvion\+Quitte\+Aeroport (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_avion}{CAvion}}}]{p\+\_\+avion,  }\item[{\mbox{\hyperlink{class_c_piste_decollage}{CPiste\+Decollage}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+pisteD,  }\item[{time\+\_\+t}]{p\+\_\+temps }\end{DoxyParamCaption})}
+
+
+
+Constructeur avec paramètres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+avion} & Avion qui quitte l\textquotesingle{}aéroport. \\
+\hline
+{\em p\+\_\+pisteD} & Pointeur sur la piste de décollage. \\
+\hline
+{\em p\+\_\+temps} & Temps de l\textquotesingle{}événement. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_e_v_avion_quitte_aeroport_ad10eb87f394e3bc5d65e817b2b586fd6}\label{class_c_e_v_avion_quitte_aeroport_ad10eb87f394e3bc5d65e817b2b586fd6} 
+\index{CEVAvionQuitteAeroport@{CEVAvionQuitteAeroport}!LireAvion@{LireAvion}}
+\index{LireAvion@{LireAvion}!CEVAvionQuitteAeroport@{CEVAvionQuitteAeroport}}
+\doxysubsubsection{\texorpdfstring{LireAvion()}{LireAvion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_avion}{CAvion}} CEVAvion\+Quitte\+Aeroport\+::\+Lire\+Avion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne l\textquotesingle{}avion concerné par l\textquotesingle{}événement. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_c_avion}{CAvion} L\textquotesingle{}avion qui quitte l\textquotesingle{}aéroport. 
+\end{DoxyReturn}
+\Hypertarget{class_c_e_v_avion_quitte_aeroport_ab1ad6ce6147c8e5f875917a6a1c18b7c}\label{class_c_e_v_avion_quitte_aeroport_ab1ad6ce6147c8e5f875917a6a1c18b7c} 
+\index{CEVAvionQuitteAeroport@{CEVAvionQuitteAeroport}!LirePisteDecollage@{LirePisteDecollage}}
+\index{LirePisteDecollage@{LirePisteDecollage}!CEVAvionQuitteAeroport@{CEVAvionQuitteAeroport}}
+\doxysubsubsection{\texorpdfstring{LirePisteDecollage()}{LirePisteDecollage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_piste_decollage}{CPiste\+Decollage}} \& CEVAvion\+Quitte\+Aeroport\+::\+Lire\+Piste\+Decollage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retourne la piste de décollage. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_c_piste_decollage}{CPiste\+Decollage}\& Référence à la piste de décollage. 
+\end{DoxyReturn}
+\Hypertarget{class_c_e_v_avion_quitte_aeroport_ae026fbe60685ff61d551abd546ebb0db}\label{class_c_e_v_avion_quitte_aeroport_ae026fbe60685ff61d551abd546ebb0db} 
+\index{CEVAvionQuitteAeroport@{CEVAvionQuitteAeroport}!ModifierAvion@{ModifierAvion}}
+\index{ModifierAvion@{ModifierAvion}!CEVAvionQuitteAeroport@{CEVAvionQuitteAeroport}}
+\doxysubsubsection{\texorpdfstring{ModifierAvion()}{ModifierAvion()}}
+{\footnotesize\ttfamily void CEVAvion\+Quitte\+Aeroport\+::\+Modifier\+Avion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_avion}{CAvion}}}]{p\+\_\+avion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Modifie l\textquotesingle{}avion concerné par l\textquotesingle{}événement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+avion} & Avion qui quitte l\textquotesingle{}aéroport. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_e_v_avion_quitte_aeroport_a2c9f30480e04a60f22133dacf1fb1eca}\label{class_c_e_v_avion_quitte_aeroport_a2c9f30480e04a60f22133dacf1fb1eca} 
+\index{CEVAvionQuitteAeroport@{CEVAvionQuitteAeroport}!ModifierPisteDecollage@{ModifierPisteDecollage}}
+\index{ModifierPisteDecollage@{ModifierPisteDecollage}!CEVAvionQuitteAeroport@{CEVAvionQuitteAeroport}}
+\doxysubsubsection{\texorpdfstring{ModifierPisteDecollage()}{ModifierPisteDecollage()}}
+{\footnotesize\ttfamily void CEVAvion\+Quitte\+Aeroport\+::\+Modifier\+Piste\+Decollage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_piste_decollage}{CPiste\+Decollage}} \&}]{p\+\_\+piste\+Decollage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Modifie la piste de décollage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+piste\+Decollage} & Référence à la nouvelle piste de décollage. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

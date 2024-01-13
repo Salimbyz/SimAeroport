@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: CGestionTemps Class Reference</title>
+<title>Simulation Aeroport: CGestionTemps Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Simulation Aeroport
    </div>
   </td>
  </tr>
@@ -77,21 +77,89 @@ $(function() {
   <div class="headertitle"><div class="title">CGestionTemps Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe pour la gestion des temps de retard et d'avance des départs d'avions.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_c_gestion_temps_8h_source.html">CGestionTemps.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a57f401832e7e3018ce893aed59cd936a" id="r_a57f401832e7e3018ce893aed59cd936a"><td class="memItemLeft" align="right" valign="top"><a id="a57f401832e7e3018ce893aed59cd936a" name="a57f401832e7e3018ce893aed59cd936a"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>AjouterTempsDepart</b> (time_t p_temps)</td></tr>
-<tr class="separator:a57f401832e7e3018ce893aed59cd936a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8206b027bf5d6dfbed5f04be69e409de" id="r_a8206b027bf5d6dfbed5f04be69e409de"><td class="memItemLeft" align="right" valign="top"><a id="a8206b027bf5d6dfbed5f04be69e409de" name="a8206b027bf5d6dfbed5f04be69e409de"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>AfficherTempsDepart</b> ()</td></tr>
-<tr class="separator:a8206b027bf5d6dfbed5f04be69e409de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3665b06470f36faf81e333e3c56e39e" id="r_ab3665b06470f36faf81e333e3c56e39e"><td class="memItemLeft" align="right" valign="top"><a id="ab3665b06470f36faf81e333e3c56e39e" name="ab3665b06470f36faf81e333e3c56e39e"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>AffecterTempsArrivee</b> (vector&lt; int &gt; p_retardSecondes)</td></tr>
-<tr class="separator:ab3665b06470f36faf81e333e3c56e39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25960ea9000c48bde1036b8d243c7f9c" id="r_a25960ea9000c48bde1036b8d243c7f9c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25960ea9000c48bde1036b8d243c7f9c">AjouterTempsDepart</a> (double tempsretard)</td></tr>
+<tr class="memdesc:a25960ea9000c48bde1036b8d243c7f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute un temps de retard ou d'avance au total.  <br /></td></tr>
+<tr class="separator:a25960ea9000c48bde1036b8d243c7f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57d76c8fbfd740f29d139001aa34139c" id="r_a57d76c8fbfd740f29d139001aa34139c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57d76c8fbfd740f29d139001aa34139c">AfficherTempsRetardTotal</a> ()</td></tr>
+<tr class="memdesc:a57d76c8fbfd740f29d139001aa34139c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le temps total de retard et la moyenne par avion.  <br /></td></tr>
+<tr class="separator:a57d76c8fbfd740f29d139001aa34139c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe pour la gestion des temps de retard et d'avance des départs d'avions. </p>
+<p>Cette classe fournit des méthodes statiques pour gérer et afficher les statistiques liées aux retards et aux avances des départs d'avions dans un aéroport. Elle permet d'ajouter des temps de retard et d'afficher le temps de retard total ainsi que la moyenne. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a57d76c8fbfd740f29d139001aa34139c" name="a57d76c8fbfd740f29d139001aa34139c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57d76c8fbfd740f29d139001aa34139c">&#9670;&#160;</a></span>AfficherTempsRetardTotal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void CGestionTemps::AfficherTempsRetardTotal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Affiche le temps total de retard et la moyenne par avion. </p>
+<p>Cette méthode calcule et affiche le temps total de retard en heures, minutes et secondes, ainsi que le temps moyen de retard par avion, et le nombre d'avions en retard ou en avance. </p>
+
+</div>
+</div>
+<a id="a25960ea9000c48bde1036b8d243c7f9c" name="a25960ea9000c48bde1036b8d243c7f9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25960ea9000c48bde1036b8d243c7f9c">&#9670;&#160;</a></span>AjouterTempsDepart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void CGestionTemps::AjouterTempsDepart </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tempsretard</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ajoute un temps de retard ou d'avance au total. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tempsretard</td><td>Temps de retard (positif) ou d'avance (négatif) en secondes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_c_gestion_temps_8h_source.html">CGestionTemps.h</a></li>
+<li><b>CEVAvionQuitteAeroport.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

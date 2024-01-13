@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: CEvenement Class Reference</title>
+<title>Simulation Aeroport: CEvenement Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Simulation Aeroport
    </div>
   </td>
  </tr>
@@ -77,39 +77,128 @@ $(function() {
   <div class="headertitle"><div class="title">CEvenement Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe de base pour la gestion des événements dans un aéroport.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_c_evenement_8h_source.html">CEvenement.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CEvenement:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_c_evenement.png" usemap="#CEvenement_map" alt=""/>
   <map id="CEvenement_map" name="CEvenement_map">
-<area href="class_c_e_v_avion_atterrit.html" alt="CEVAvionAtterrit" shape="rect" coords="167,56,324,80"/>
-<area href="class_c_e_v_avion_decolle.html" alt="CEVAvionDecolle" shape="rect" coords="167,112,324,136"/>
-<area href="class_c_e_v_avion_quitte_aeroport.html" alt="CEVAvionQuitteAeroport" shape="rect" coords="167,168,324,192"/>
-<area href="class_c_e_v_avion_quitte_gate.html" alt="CEVAvionQuitteGate" shape="rect" coords="167,224,324,248"/>
-<area href="class_c_e_v_avion_quitte_piste.html" alt="CEVAvionQuittePiste" shape="rect" coords="167,280,324,304"/>
-<area href="class_c_e_v_avion_va_gate.html" alt="CEVAvionVaGate" shape="rect" coords="167,336,324,360"/>
-<area href="class_c_e_v_avion_veut_atterrir.html" alt="CEVAvionVeutAtterrir" shape="rect" coords="167,392,324,416"/>
-<area href="class_c_e_v_avion_veut_debarquer.html" alt="CEVAvionVeutDebarquer" shape="rect" coords="167,448,324,472"/>
-<area href="class_c_e_v_avion_veut_decoller.html" alt="CEVAvionVeutDecoller" shape="rect" coords="167,504,324,528"/>
+<area href="class_c_e_v_avion_atterrit.html" title="Classe représentant un événement d&#39;atterrissage d&#39;un avion." alt="CEVAvionAtterrit" shape="rect" coords="167,56,324,80"/>
+<area href="class_c_e_v_avion_decolle.html" title="Classe représentant un événement de décollage d&#39;un avion." alt="CEVAvionDecolle" shape="rect" coords="167,112,324,136"/>
+<area href="class_c_e_v_avion_quitte_aeroport.html" title="Classe représentant l&#39;événement où un avion quitte l&#39;aéroport." alt="CEVAvionQuitteAeroport" shape="rect" coords="167,168,324,192"/>
+<area href="class_c_e_v_avion_quitte_gate.html" title="Classe représentant l&#39;événement où un avion quitte la porte d&#39;embarquement (gate)." alt="CEVAvionQuitteGate" shape="rect" coords="167,224,324,248"/>
+<area href="class_c_e_v_avion_quitte_piste.html" title="Classe représentant un événement d&#39;un avion quittant une piste d&#39;atterrissage." alt="CEVAvionQuittePiste" shape="rect" coords="167,280,324,304"/>
+<area href="class_c_e_v_avion_va_gate.html" title="Classe représentant un événement d&#39;un avion se dirigeant vers une porte d&#39;embarquement." alt="CEVAvionVaGate" shape="rect" coords="167,336,324,360"/>
+<area href="class_c_e_v_avion_veut_atterrir.html" title="Classe représentant un événement d&#39;un avion souhaitant atterrir." alt="CEVAvionVeutAtterrir" shape="rect" coords="167,392,324,416"/>
+<area href="class_c_e_v_avion_veut_debarquer.html" title="Classe représentant un événement d&#39;un avion souhaitant débarquer." alt="CEVAvionVeutDebarquer" shape="rect" coords="167,448,324,472"/>
+<area href="class_c_e_v_avion_veut_decoller.html" title="Classe représentant un événement d&#39;un avion souhaitant décoller." alt="CEVAvionVeutDecoller" shape="rect" coords="167,504,324,528"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac8d4fba7f1c0681b10676857bea22c2f" id="r_ac8d4fba7f1c0681b10676857bea22c2f"><td class="memItemLeft" align="right" valign="top"><a id="ac8d4fba7f1c0681b10676857bea22c2f" name="ac8d4fba7f1c0681b10676857bea22c2f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CEvenement</b> (<a class="el" href="class_c_evenement.html">CEvenement</a> &amp;p_evenement)</td></tr>
+<tr class="memitem:aa5a105cd31b2dfa7e351a735539d42b0" id="r_aa5a105cd31b2dfa7e351a735539d42b0"><td class="memItemLeft" align="right" valign="top"><a id="aa5a105cd31b2dfa7e351a735539d42b0" name="aa5a105cd31b2dfa7e351a735539d42b0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CEvenement</b> ()</td></tr>
+<tr class="memdesc:aa5a105cd31b2dfa7e351a735539d42b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur par défaut. <br /></td></tr>
+<tr class="separator:aa5a105cd31b2dfa7e351a735539d42b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8d4fba7f1c0681b10676857bea22c2f" id="r_ac8d4fba7f1c0681b10676857bea22c2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8d4fba7f1c0681b10676857bea22c2f">CEvenement</a> (<a class="el" href="class_c_evenement.html">CEvenement</a> &amp;p_evenement)</td></tr>
+<tr class="memdesc:ac8d4fba7f1c0681b10676857bea22c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de copie.  <br /></td></tr>
 <tr class="separator:ac8d4fba7f1c0681b10676857bea22c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc6b65300ddeede11983b91ec0358062" id="r_abc6b65300ddeede11983b91ec0358062"><td class="memItemLeft" align="right" valign="top"><a id="abc6b65300ddeede11983b91ec0358062" name="abc6b65300ddeede11983b91ec0358062"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ecrireTempsDebut</b> (time_t p_tempsDebut)</td></tr>
+<tr class="memitem:a3a57b05861f8d63e08fc25a4f17b08d7" id="r_a3a57b05861f8d63e08fc25a4f17b08d7"><td class="memItemLeft" align="right" valign="top"><a id="a3a57b05861f8d63e08fc25a4f17b08d7" name="a3a57b05861f8d63e08fc25a4f17b08d7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~CEvenement</b> ()</td></tr>
+<tr class="memdesc:a3a57b05861f8d63e08fc25a4f17b08d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur. <br /></td></tr>
+<tr class="separator:a3a57b05861f8d63e08fc25a4f17b08d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc6b65300ddeede11983b91ec0358062" id="r_abc6b65300ddeede11983b91ec0358062"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc6b65300ddeede11983b91ec0358062">ecrireTempsDebut</a> (time_t p_tempsDebut)</td></tr>
+<tr class="memdesc:abc6b65300ddeede11983b91ec0358062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Écrit le temps de début de l'événement.  <br /></td></tr>
 <tr class="separator:abc6b65300ddeede11983b91ec0358062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eebfb231d910edb791abb6774a285e6" id="r_a1eebfb231d910edb791abb6774a285e6"><td class="memItemLeft" align="right" valign="top"><a id="a1eebfb231d910edb791abb6774a285e6" name="a1eebfb231d910edb791abb6774a285e6"></a>
-time_t&#160;</td><td class="memItemRight" valign="bottom"><b>lireTempsDebut</b> ()</td></tr>
+<tr class="memitem:a1eebfb231d910edb791abb6774a285e6" id="r_a1eebfb231d910edb791abb6774a285e6"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1eebfb231d910edb791abb6774a285e6">lireTempsDebut</a> ()</td></tr>
+<tr class="memdesc:a1eebfb231d910edb791abb6774a285e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lit le temps de début de l'événement.  <br /></td></tr>
 <tr class="separator:a1eebfb231d910edb791abb6774a285e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd885745d958c8feff177b857941978c" id="r_afd885745d958c8feff177b857941978c"><td class="memItemLeft" align="right" valign="top"><a id="afd885745d958c8feff177b857941978c" name="afd885745d958c8feff177b857941978c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
+<tr class="memdesc:afd885745d958c8feff177b857941978c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exécute l'événement. Méthode à redéfinir dans les classes dérivées. <br /></td></tr>
 <tr class="separator:afd885745d958c8feff177b857941978c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Classe de base pour la gestion des événements dans un aéroport. </p>
+<p>Cette classe représente un événement général dans un aéroport. Elle est conçue pour être héritée par des classes spécifiques à chaque type d'événement (atterrissage, décollage, etc.). Elle gère le temps de début de l'événement. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac8d4fba7f1c0681b10676857bea22c2f" name="ac8d4fba7f1c0681b10676857bea22c2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8d4fba7f1c0681b10676857bea22c2f">&#9670;&#160;</a></span>CEvenement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CEvenement::CEvenement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_c_evenement.html">CEvenement</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>p_evenement</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur de copie. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_evenement</td><td>Référence à l'objet <a class="el" href="class_c_evenement.html" title="Classe de base pour la gestion des événements dans un aéroport.">CEvenement</a> à copier. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="abc6b65300ddeede11983b91ec0358062" name="abc6b65300ddeede11983b91ec0358062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc6b65300ddeede11983b91ec0358062">&#9670;&#160;</a></span>ecrireTempsDebut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CEvenement::ecrireTempsDebut </td>
+          <td>(</td>
+          <td class="paramtype">time_t</td>          <td class="paramname"><span class="paramname"><em>p_tempsDebut</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Écrit le temps de début de l'événement. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_tempsDebut</td><td>Temps de début à enregistrer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1eebfb231d910edb791abb6774a285e6" name="a1eebfb231d910edb791abb6774a285e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eebfb231d910edb791abb6774a285e6">&#9670;&#160;</a></span>lireTempsDebut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_t CEvenement::lireTempsDebut </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lit le temps de début de l'événement. </p>
+<dl class="section return"><dt>Returns</dt><dd>time_t Le temps de début de l'événement. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_c_evenement_8h_source.html">CEvenement.h</a></li>
 <li><b>CEvenement.cpp</b></li>

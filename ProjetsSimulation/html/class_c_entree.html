@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: CEntree Class Reference</title>
+<title>Simulation Aeroport: CEntree Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Simulation Aeroport
    </div>
   </td>
  </tr>
@@ -86,9 +86,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0fa0f72c5a8133c5e8abd70a6ff2a34d" id="r_a0fa0f72c5a8133c5e8abd70a6ff2a34d"><td class="memItemLeft" align="right" valign="top"><a id="a0fa0f72c5a8133c5e8abd70a6ff2a34d" name="a0fa0f72c5a8133c5e8abd70a6ff2a34d"></a>
-time_t&#160;</td><td class="memItemRight" valign="bottom"><b>stringToTimeT</b> (const std::string &amp;timeStr)</td></tr>
-<tr class="separator:a0fa0f72c5a8133c5e8abd70a6ff2a34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e34c51f8491397976a72456a8bc3b7c" id="r_a4e34c51f8491397976a72456a8bc3b7c"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e34c51f8491397976a72456a8bc3b7c">stringToTimeT</a> (const std::string &amp;tempsConvertir)</td></tr>
+<tr class="memdesc:a4e34c51f8491397976a72456a8bc3b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convertit une chaîne de caractères représentant une heure au format time_t.  <br /></td></tr>
+<tr class="separator:a4e34c51f8491397976a72456a8bc3b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e9c156b1e70130cc0a691649bb40956" id="r_a7e9c156b1e70130cc0a691649bb40956"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_c_avion.html">CAvion</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e9c156b1e70130cc0a691649bb40956">lireAvions</a> (const string &amp;nomFichier)</td></tr>
 <tr class="memdesc:a7e9c156b1e70130cc0a691649bb40956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lit les données des avions à partir d'un fichier et les stocke dans un vecteur.  <br /></td></tr>
 <tr class="separator:a7e9c156b1e70130cc0a691649bb40956"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,17 +104,63 @@ vector&lt; <a class="el" href="class_c_porte_embarquement.html">CPorteEmbarqueme
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a61228b1c2529c64efbd6e6a9a376309b" id="r_a61228b1c2529c64efbd6e6a9a376309b"><td class="memItemLeft" align="right" valign="top"><a id="a61228b1c2529c64efbd6e6a9a376309b" name="a61228b1c2529c64efbd6e6a9a376309b"></a>
-static vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>genererRetardsPoisson</b> (int moyenne, int nombre, double probaSansRetard)</td></tr>
+<tr class="memitem:a61228b1c2529c64efbd6e6a9a376309b" id="r_a61228b1c2529c64efbd6e6a9a376309b"><td class="memItemLeft" align="right" valign="top">static vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61228b1c2529c64efbd6e6a9a376309b">genererRetardsPoisson</a> (int moyenne, int nombre, double probaSansRetard)</td></tr>
+<tr class="memdesc:a61228b1c2529c64efbd6e6a9a376309b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Génère un vecteur de retards basé sur une distribution de Poisson.  <br /></td></tr>
 <tr class="separator:a61228b1c2529c64efbd6e6a9a376309b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c0a6ac59eef5c388bcd9228499b2a52" id="r_a3c0a6ac59eef5c388bcd9228499b2a52"><td class="memItemLeft" align="right" valign="top"><a id="a3c0a6ac59eef5c388bcd9228499b2a52" name="a3c0a6ac59eef5c388bcd9228499b2a52"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>printTimeT</b> (time_t time)</td></tr>
+<tr class="memitem:a3c0a6ac59eef5c388bcd9228499b2a52" id="r_a3c0a6ac59eef5c388bcd9228499b2a52"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c0a6ac59eef5c388bcd9228499b2a52">printTimeT</a> (time_t time)</td></tr>
+<tr class="memdesc:a3c0a6ac59eef5c388bcd9228499b2a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche une valeur time_t en tant qu'heure au format HH:MM.  <br /></td></tr>
 <tr class="separator:a3c0a6ac59eef5c388bcd9228499b2a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Classe pour la lecture et le traitement des données d'entrée. </p>
 <p>Cette classe est responsable de la lecture des données à partir de fichiers et de la création de vecteurs d'objets correspondants. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a61228b1c2529c64efbd6e6a9a376309b" name="a61228b1c2529c64efbd6e6a9a376309b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61228b1c2529c64efbd6e6a9a376309b">&#9670;&#160;</a></span>genererRetardsPoisson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static vector&lt; int &gt; CEntree::genererRetardsPoisson </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>moyenne</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nombre</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>probaSansRetard</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Génère un vecteur de retards basé sur une distribution de Poisson. </p>
+<p>Cette fonction crée un vecteur de retards pour un nombre donné d'événements. Chaque retard est déterminé en utilisant une distribution de Poisson. Il existe également une probabilité qu'il n'y ait aucun retard.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">moyenne</td><td>La moyenne de la distribution de Poisson. </td></tr>
+    <tr><td class="paramname">nombre</td><td>Le nombre total d'événements pour lesquels générer des retards. </td></tr>
+    <tr><td class="paramname">probaSansRetard</td><td>La probabilité qu'un événement n'ait pas de retard. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;int&gt; Un vecteur contenant les retards générés pour chaque événement. </dd></dl>
+
+</div>
+</div>
 <a id="a7e9c156b1e70130cc0a691649bb40956" name="a7e9c156b1e70130cc0a691649bb40956"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e9c156b1e70130cc0a691649bb40956">&#9670;&#160;</a></span>lireAvions()</h2>
 
@@ -232,6 +278,75 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>printTimeT</b>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a3c0a6ac59eef5c388bcd9228499b2a52" name="a3c0a6ac59eef5c388bcd9228499b2a52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c0a6ac59eef5c388bcd9228499b2a52">&#9670;&#160;</a></span>printTimeT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void CEntree::printTimeT </td>
+          <td>(</td>
+          <td class="paramtype">time_t</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Affiche une valeur time_t en tant qu'heure au format HH:MM. </p>
+<p>Cette fonction prend une valeur time_t et l'affiche sous forme d'heure au format HH:MM. Cela peut être utilisé pour afficher des heures stockées dans des structures time_t.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>La valeur time_t à afficher. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4e34c51f8491397976a72456a8bc3b7c" name="a4e34c51f8491397976a72456a8bc3b7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e34c51f8491397976a72456a8bc3b7c">&#9670;&#160;</a></span>stringToTimeT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_t CEntree::stringToTimeT </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>tempsConvertir</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convertit une chaîne de caractères représentant une heure au format time_t. </p>
+<p>Cette fonction prend une chaîne de caractères représentant une heure au format HH:MM et la convertit en une valeur time_t. La date est fixée à un point arbitraire (par exemple, le 15 janvier 1970).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tempsConvertir</td><td>La chaîne de caractères à convertir au format HH:MM. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>time_t La représentation time_t de l'heure donnée. </dd></dl>
 
 </div>
 </div>

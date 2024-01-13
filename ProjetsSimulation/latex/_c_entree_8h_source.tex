@@ -24,195 +24,196 @@
 \DoxyCodeLine{00028\ public\ :}
 \DoxyCodeLine{00029\ }
 \DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ vector<int>\ genererRetardsPoisson(\textcolor{keywordtype}{int}\ moyenne,\ \textcolor{keywordtype}{int}\ nombre,\ \textcolor{keywordtype}{double}\ probaSansRetard)\ \{}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::random\_device\ rd;}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::mt19937\ gen(rd());}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ std::poisson\_distribution<>\ d(moyenne);}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ std::uniform\_real\_distribution<>\ proba(0.0,\ 1.0);}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::vector<int>\ retards;}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ n\ =\ 0;\ n\ <\ nombre;\ ++n)\ \{}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (proba(gen)\ >\ probaSansRetard)\ \{}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Générer\ un\ retard}}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ retards.push\_back(d(gen));}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pas\ de\ retard\ ou\ retard\ minime}}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ retards.push\_back(0);}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ vector<int>\ \mbox{\hyperlink{class_c_entree_a61228b1c2529c64efbd6e6a9a376309b}{genererRetardsPoisson}}(\textcolor{keywordtype}{int}\ moyenne,\ \textcolor{keywordtype}{int}\ nombre,\ \textcolor{keywordtype}{double}\ probaSansRetard)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ random\_device\ \ aleatoire;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ mt19937\ gen(aleatoire());}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ poisson\_distribution<>\ d(moyenne);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ uniform\_real\_distribution<>\ proba(0.0,\ 1.0);}
 \DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retards;}
-\DoxyCodeLine{00051\ \ \ \ \ \}}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \ \ \ \ time\_t\ stringToTimeT(\textcolor{keyword}{const}\ std::string\&\ timeStr)\ \{}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ tm\ tm\ =\ \{\};}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ istringstream\ ss(timeStr);}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ ss\ >>\ std::get\_time(\&tm,\ \textcolor{stringliteral}{"{}\%H:\%M"{}});}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ajustement\ de\ la\ date\ à un\ point\ fixe\ (par\ exemple,\ le\ 1er\ janvier\ 1970)}}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ tm.tm\_year\ =\ 124;\ \textcolor{comment}{//\ Année depuis\ 1900}}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ tm.tm\_mon\ =\ 0;\ \ \ \textcolor{comment}{//\ Janvier}}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ tm.tm\_mday\ =\ 15;\ \ \textcolor{comment}{//Jour}}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::mktime(\&tm);}
-\DoxyCodeLine{00062\ \ \ \ \ \}}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ printTimeT(time\_t\ time)\ \{}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ tm\ tm;}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ localtime\_s(\&tm,\ \&time);}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ cout\ <<\ std::put\_time(\&tm,\ \textcolor{stringliteral}{"{}\%H:\%M"{}})\ <<\ std::endl;}
-\DoxyCodeLine{00068\ \ \ \ \ \}}
-\DoxyCodeLine{00069\ }
-\DoxyCodeLine{00076\ \ \ \ \ vector<CAvion>\ \mbox{\hyperlink{class_c_entree_a7e9c156b1e70130cc0a691649bb40956}{lireAvions}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ nomFichier)\ \{}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_entree}{CEntree}}\ entree;}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ ifstream\ fichier;}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ fichier.open(nomFichier,\ ifstream::in);}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ vector<CAvion>\ vecteurAvions;}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fichier.fail())}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauter\ la\ ligne\ d'en-\/tête}}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ getline(fichier,\ ligne);}
-\DoxyCodeLine{00086\ }
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fichier,\ ligne))\ \{}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ istringstream\ ss(ligne);}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ token;}
-\DoxyCodeLine{00090\ }
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ id;}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ arrivee,\ depart,\ etat;}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ time\_t\ tempsArrivee,\ tempsDepart;}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempsArrivee\ =\ 0;}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempsDepart\ =\ 0;}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Identifiant}}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ token,\ \textcolor{charliteral}{','});}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(stoul(token));}
-\DoxyCodeLine{00099\ }
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ arrivee,\ \textcolor{charliteral}{','});}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ depart,\ \textcolor{charliteral}{','});}
-\DoxyCodeLine{00102\ }
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempsArrivee\ =\ stringToTimeT(arrivee);}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempsDepart\ =\ stringToTimeT(depart);}
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00108\ }
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Etat\ de\ l'avion}}
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ etat,\ \textcolor{charliteral}{','});}
-\DoxyCodeLine{00111\ }
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Etat\ etat2\ =\ CAvion::stringToEnum(etat);}
-\DoxyCodeLine{00113\ }
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}\ avion;}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ avion.\mbox{\hyperlink{class_c_avion_a459c4167dc3bb85d801154b04ffa5970}{modifierIdAvion}}(\textcolor{keywordtype}{id});}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ avion.\mbox{\hyperlink{class_c_avion_a86fe2e04271652cf79cc778699185091}{modifierHeureArriveePrevue}}(tempsArrivee);}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ avion.\mbox{\hyperlink{class_c_avion_a372742eb2770511a6842e2694c40762a}{modifierHeureDepartPrevue}}(tempsDepart);}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ avion.\mbox{\hyperlink{class_c_avion_a43bd84235e995543d07ba73ded9ae535}{modifierEtat}}(etat2);}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vecteurAvions.push\_back(avion);}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ std::vector<int>\ retards;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ n\ =\ 0;\ n\ <\ nombre;\ ++n)\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (proba(gen)\ >\ probaSansRetard)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Générer\ un\ retard}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ retards.push\_back(d(gen));}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pas\ de\ retard\ ou\ retard\ minime}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ retards.push\_back(0);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ retards;}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00074\ \ \ \ \ time\_t\ \mbox{\hyperlink{class_c_entree_a4e34c51f8491397976a72456a8bc3b7c}{stringToTimeT}}(\textcolor{keyword}{const}\ std::string\&\ tempsConvertir)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ tm\ tm\ =\ \{\};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ istringstream\ ss(tempsConvertir);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ ss\ >>\ std::get\_time(\&tm,\ \textcolor{stringliteral}{"{}\%H:\%M"{}});}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ajustement\ de\ la\ date\ à un\ point\ fixe\ (par\ exemple,\ le\ 1er\ janvier\ 1970)}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ tm.tm\_year\ =\ 124;\ \textcolor{comment}{//\ Année depuis\ 1900}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ tm.tm\_mon\ =\ 0;\ \ \ \textcolor{comment}{//\ Janvier}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ tm.tm\_mday\ =\ 15;\ \ \textcolor{comment}{//Jour}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::mktime(\&tm);}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_entree_a3c0a6ac59eef5c388bcd9228499b2a52}{printTimeT}}(time\_t\ time)\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ tm\ tm;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ localtime\_s(\&tm,\ \&time);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ cout\ <<\ put\_time(\&tm,\ \textcolor{stringliteral}{"{}\%H:\%M"{}})\ <<\ endl;}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00107\ \ \ \ \ vector<CAvion>\ \mbox{\hyperlink{class_c_entree_a7e9c156b1e70130cc0a691649bb40956}{lireAvions}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ nomFichier)\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_entree}{CEntree}}\ entree;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ ifstream\ fichier;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ fichier.open(nomFichier,\ ifstream::in);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ vector<CAvion>\ vecteurAvions;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fichier.fail())}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauter\ la\ ligne\ d'en-\/tête}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ getline(fichier,\ ligne);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fichier,\ ligne))\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ istringstream\ ss(ligne);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ token;}
 \DoxyCodeLine{00121\ }
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ vecteurAvions;}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ invalid\_argument(\textcolor{stringliteral}{"{}Le\ fichier\ n'a\ pas\ pu\ être\ ouvert"{}});}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00127\ \ \ \ \ \}}
-\DoxyCodeLine{00128\ }
-\DoxyCodeLine{00135\ \ \ \ \ vector<CPisteAtterissage>\ \mbox{\hyperlink{class_c_entree_af1de34acc37cbf00b17510981c635f0f}{lirePisteAtterissage}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ nomFichier)}
-\DoxyCodeLine{00136\ \ \ \ \ \{}
-\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ ifstream\ fichier;}
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ fichier.open(nomFichier,\ ifstream::in);}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ vector<CPisteAtterissage>\ vecteurAtterissage;}
-\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fichier.fail())\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ arrivee,\ depart,\ etat;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ time\_t\ tempsArrivee,\ tempsDepart;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempsArrivee\ =\ 0;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempsDepart\ =\ 0;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Identifiant}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ token,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(stoul(token));}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ arrivee,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ depart,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempsArrivee\ =\ \mbox{\hyperlink{class_c_entree_a4e34c51f8491397976a72456a8bc3b7c}{stringToTimeT}}(arrivee);}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempsDepart\ =\ \mbox{\hyperlink{class_c_entree_a4e34c51f8491397976a72456a8bc3b7c}{stringToTimeT}}(depart);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Etat\ de\ l'avion}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ etat,\ \textcolor{charliteral}{','});}
 \DoxyCodeLine{00142\ }
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauter\ la\ ligne\ d'en-\/tête}}
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ getline(fichier,\ ligne);}
-\DoxyCodeLine{00145\ }
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fichier,\ ligne))\ \{}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ istringstream\ ss(ligne);}
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ token;}
-\DoxyCodeLine{00149\ }
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ id;}
-\DoxyCodeLine{00151\ }
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Identifiant}}
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ token,\ \textcolor{charliteral}{','});}
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(stoul(token));}
-\DoxyCodeLine{00155\ }
-\DoxyCodeLine{00156\ }
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}\ pisteAtterissage;}
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pisteAtterissage.\mbox{\hyperlink{class_c_piste_atterissage_ad158c743dae4b6b94c77a667515b08c7}{ecrireIdPisteA}}(\textcolor{keywordtype}{id});}
-\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vecteurAtterissage.push\_back(pisteAtterissage);}
-\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ vecteurAtterissage;}
-\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ invalid\_argument(\textcolor{stringliteral}{"{}Le\ fichier\ n'a\ pas\ pu\ être\ ouvert"{}});}
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00166\ \ \ \ \ \}}
-\DoxyCodeLine{00167\ }
-\DoxyCodeLine{00174\ \ \ \ \ vector<CPisteDecollage>\ \mbox{\hyperlink{class_c_entree_ab70e12db6f0efaa595cf9efc5b3c002e}{lirePisteDecollage}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ nomFichier)}
-\DoxyCodeLine{00175\ \ \ \ \ \{}
-\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ ifstream\ fichier;}
-\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ fichier.open(nomFichier,\ ifstream::in);}
-\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
-\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ vector<CPisteDecollage>\ vecteurDecollage;}
-\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fichier.fail())\ \{}
-\DoxyCodeLine{00181\ }
-\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauter\ la\ ligne\ d'en-\/tête}}
-\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ getline(fichier,\ ligne);}
-\DoxyCodeLine{00184\ }
-\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fichier,\ ligne))\ \{}
-\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ istringstream\ ss(ligne);}
-\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ token;}
-\DoxyCodeLine{00188\ }
-\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ id;}
-\DoxyCodeLine{00190\ }
-\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Identifiant}}
-\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ token,\ \textcolor{charliteral}{','});}
-\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(stoul(token));}
-\DoxyCodeLine{00194\ }
-\DoxyCodeLine{00195\ }
-\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_piste_decollage}{CPisteDecollage}}\ pisteDecollage;}
-\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pisteDecollage.\mbox{\hyperlink{class_c_piste_decollage_a478d34e1c32c0e3afb160b1d0a281cf1}{ecrireIdPisteD}}(\textcolor{keywordtype}{id});}
-\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vecteurDecollage.push\_back(pisteDecollage);}
-\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ vecteurDecollage;}
-\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ invalid\_argument(\textcolor{stringliteral}{"{}Le\ fichier\ n'a\ pas\ pu\ être\ ouvert"{}});}
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00205\ \ \ \ \ \}}
-\DoxyCodeLine{00206\ \ \ \ \ vector<CPorteEmbarquement>\ lirePorteEmbarquement(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ nomFichier)}
-\DoxyCodeLine{00207\ \ \ \ \ \{}
-\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ ifstream\ fichier;}
-\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ fichier.open(nomFichier,\ ifstream::in);}
-\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
-\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ vector<CPorteEmbarquement>\ vecteurEmbarquement;}
-\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fichier.fail())\ \{}
-\DoxyCodeLine{00213\ }
-\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauter\ la\ ligne\ d'en-\/tête}}
-\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ getline(fichier,\ ligne);}
-\DoxyCodeLine{00216\ }
-\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fichier,\ ligne))\ \{}
-\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ istringstream\ ss(ligne);}
-\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ token;}
-\DoxyCodeLine{00220\ }
-\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ id;}
-\DoxyCodeLine{00222\ }
-\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Identifiant}}
-\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ token,\ \textcolor{charliteral}{','});}
-\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(stoul(token));}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Etat\ etat2\ =\ CAvion::stringToEnum(etat);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_avion}{CAvion}}\ avion;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ avion.\mbox{\hyperlink{class_c_avion_a459c4167dc3bb85d801154b04ffa5970}{modifierIdAvion}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ avion.\mbox{\hyperlink{class_c_avion_a86fe2e04271652cf79cc778699185091}{modifierHeureArriveePrevue}}(tempsArrivee);}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ avion.\mbox{\hyperlink{class_c_avion_a372742eb2770511a6842e2694c40762a}{modifierHeureDepartPrevue}}(tempsDepart);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ avion.\mbox{\hyperlink{class_c_avion_a43bd84235e995543d07ba73ded9ae535}{modifierEtat}}(etat2);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vecteurAvions.push\_back(avion);}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ vecteurAvions;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ invalid\_argument(\textcolor{stringliteral}{"{}Le\ fichier\ n'a\ pas\ pu\ être\ ouvert"{}});}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00166\ \ \ \ \ vector<CPisteAtterissage>\ \mbox{\hyperlink{class_c_entree_af1de34acc37cbf00b17510981c635f0f}{lirePisteAtterissage}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ nomFichier)}
+\DoxyCodeLine{00167\ \ \ \ \ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ ifstream\ fichier;}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ fichier.open(nomFichier,\ ifstream::in);}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ vector<CPisteAtterissage>\ vecteurAtterissage;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fichier.fail())\ \{}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauter\ la\ ligne\ d'en-\/tête}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ getline(fichier,\ ligne);}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fichier,\ ligne))\ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ istringstream\ ss(ligne);}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ token;}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Identifiant}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ token,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(stoul(token));}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_piste_atterissage}{CPisteAtterissage}}\ pisteAtterissage;}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pisteAtterissage.\mbox{\hyperlink{class_c_piste_atterissage_ad158c743dae4b6b94c77a667515b08c7}{ecrireIdPisteA}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vecteurAtterissage.push\_back(pisteAtterissage);}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ vecteurAtterissage;}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ invalid\_argument(\textcolor{stringliteral}{"{}Le\ fichier\ n'a\ pas\ pu\ être\ ouvert"{}});}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00197\ \ \ \ \ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00205\ \ \ \ \ vector<CPisteDecollage>\ \mbox{\hyperlink{class_c_entree_ab70e12db6f0efaa595cf9efc5b3c002e}{lirePisteDecollage}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ nomFichier)}
+\DoxyCodeLine{00206\ \ \ \ \ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ ifstream\ fichier;}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ fichier.open(nomFichier,\ ifstream::in);}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ vector<CPisteDecollage>\ vecteurDecollage;}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fichier.fail())\ \{}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauter\ la\ ligne\ d'en-\/tête}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ getline(fichier,\ ligne);}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fichier,\ ligne))\ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ istringstream\ ss(ligne);}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ token;}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Identifiant}}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ token,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(stoul(token));}
+\DoxyCodeLine{00225\ }
 \DoxyCodeLine{00226\ }
-\DoxyCodeLine{00227\ }
-\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}\ porteEmbarquement;}
-\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ porteEmbarquement.\mbox{\hyperlink{class_c_porte_embarquement_a3d4281f6f4155a6c2c720b0b2a17ee48}{ecrireIdPorteE}}(\textcolor{keywordtype}{id});}
-\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vecteurEmbarquement.push\_back(porteEmbarquement);}
-\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ vecteurEmbarquement;}
-\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ invalid\_argument(\textcolor{stringliteral}{"{}erreur"{}});}
-\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00237\ \ \ \ \ \}}
-\DoxyCodeLine{00238\ \};}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_piste_decollage}{CPisteDecollage}}\ pisteDecollage;}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pisteDecollage.\mbox{\hyperlink{class_c_piste_decollage_a478d34e1c32c0e3afb160b1d0a281cf1}{ecrireIdPisteD}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vecteurDecollage.push\_back(pisteDecollage);}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ vecteurDecollage;}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ invalid\_argument(\textcolor{stringliteral}{"{}Le\ fichier\ n'a\ pas\ pu\ être\ ouvert"{}});}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00236\ \ \ \ \ \}}
+\DoxyCodeLine{00237\ \ \ \ \ vector<CPorteEmbarquement>\ lirePorteEmbarquement(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ nomFichier)}
+\DoxyCodeLine{00238\ \ \ \ \ \{}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ ifstream\ fichier;}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ fichier.open(nomFichier,\ ifstream::in);}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ vector<CPorteEmbarquement>\ vecteurEmbarquement;}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!fichier.fail())\ \{}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sauter\ la\ ligne\ d'en-\/tête}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ getline(fichier,\ ligne);}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fichier,\ ligne))\ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ istringstream\ ss(ligne);}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ token;}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Identifiant}}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ token,\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\textcolor{keyword}{>}(stoul(token));}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_porte_embarquement}{CPorteEmbarquement}}\ porteEmbarquement;}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ porteEmbarquement.\mbox{\hyperlink{class_c_porte_embarquement_a3d4281f6f4155a6c2c720b0b2a17ee48}{ecrireIdPorteE}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vecteurEmbarquement.push\_back(porteEmbarquement);}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ vecteurEmbarquement;}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ invalid\_argument(\textcolor{stringliteral}{"{}erreur"{}});}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00268\ \ \ \ \ \}}
+\DoxyCodeLine{00269\ \};}
 
 \end{DoxyCode}

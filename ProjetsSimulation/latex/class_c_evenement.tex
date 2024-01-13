@@ -1,5 +1,14 @@
 \doxysection{CEvenement Class Reference}
 \hypertarget{class_c_evenement}{}\label{class_c_evenement}\index{CEvenement@{CEvenement}}
+
+
+Classe de base pour la gestion des événements dans un aéroport.  
+
+
+
+
+{\ttfamily \#include $<$CEvenement.\+h$>$}
+
 Inheritance diagram for CEvenement\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,18 +18,75 @@ Inheritance diagram for CEvenement\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_c_evenement_ac8d4fba7f1c0681b10676857bea22c2f}\label{class_c_evenement_ac8d4fba7f1c0681b10676857bea22c2f} 
-{\bfseries CEvenement} (\mbox{\hyperlink{class_c_evenement}{CEvenement}} \&p\+\_\+evenement)
-\item 
-\Hypertarget{class_c_evenement_abc6b65300ddeede11983b91ec0358062}\label{class_c_evenement_abc6b65300ddeede11983b91ec0358062} 
-void {\bfseries ecrire\+Temps\+Debut} (time\+\_\+t p\+\_\+temps\+Debut)
-\item 
-\Hypertarget{class_c_evenement_a1eebfb231d910edb791abb6774a285e6}\label{class_c_evenement_a1eebfb231d910edb791abb6774a285e6} 
-time\+\_\+t {\bfseries lire\+Temps\+Debut} ()
-\item 
+\Hypertarget{class_c_evenement_aa5a105cd31b2dfa7e351a735539d42b0}\label{class_c_evenement_aa5a105cd31b2dfa7e351a735539d42b0} 
+{\bfseries CEvenement} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_evenement_ac8d4fba7f1c0681b10676857bea22c2f}{CEvenement}} (\mbox{\hyperlink{class_c_evenement}{CEvenement}} \&p\+\_\+evenement)
+\begin{DoxyCompactList}\small\item\em Constructeur de copie. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_evenement_a3a57b05861f8d63e08fc25a4f17b08d7}\label{class_c_evenement_a3a57b05861f8d63e08fc25a4f17b08d7} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+CEvenement} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_evenement_abc6b65300ddeede11983b91ec0358062}{ecrire\+Temps\+Debut}} (time\+\_\+t p\+\_\+temps\+Debut)
+\begin{DoxyCompactList}\small\item\em Écrit le temps de début de l\textquotesingle{}événement. \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{class_c_evenement_a1eebfb231d910edb791abb6774a285e6}{lire\+Temps\+Debut}} ()
+\begin{DoxyCompactList}\small\item\em Lit le temps de début de l\textquotesingle{}événement. \end{DoxyCompactList}\item 
 \Hypertarget{class_c_evenement_afd885745d958c8feff177b857941978c}\label{class_c_evenement_afd885745d958c8feff177b857941978c} 
 void {\bfseries run} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Exécute l\textquotesingle{}événement. Méthode à redéfinir dans les classes dérivées. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe de base pour la gestion des événements dans un aéroport. 
+
+Cette classe représente un événement général dans un aéroport. Elle est conçue pour être héritée par des classes spécifiques à chaque type d\textquotesingle{}événement (atterrissage, décollage, etc.). Elle gère le temps de début de l\textquotesingle{}événement. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_evenement_ac8d4fba7f1c0681b10676857bea22c2f}\label{class_c_evenement_ac8d4fba7f1c0681b10676857bea22c2f} 
+\index{CEvenement@{CEvenement}!CEvenement@{CEvenement}}
+\index{CEvenement@{CEvenement}!CEvenement@{CEvenement}}
+\doxysubsubsection{\texorpdfstring{CEvenement()}{CEvenement()}}
+{\footnotesize\ttfamily CEvenement\+::\+CEvenement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_evenement}{CEvenement}} \&}]{p\+\_\+evenement }\end{DoxyParamCaption})}
+
+
+
+Constructeur de copie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+evenement} & Référence à l\textquotesingle{}objet \doxylink{class_c_evenement}{CEvenement} à copier. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_evenement_abc6b65300ddeede11983b91ec0358062}\label{class_c_evenement_abc6b65300ddeede11983b91ec0358062} 
+\index{CEvenement@{CEvenement}!ecrireTempsDebut@{ecrireTempsDebut}}
+\index{ecrireTempsDebut@{ecrireTempsDebut}!CEvenement@{CEvenement}}
+\doxysubsubsection{\texorpdfstring{ecrireTempsDebut()}{ecrireTempsDebut()}}
+{\footnotesize\ttfamily void CEvenement\+::ecrire\+Temps\+Debut (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{p\+\_\+temps\+Debut }\end{DoxyParamCaption})}
+
+
+
+Écrit le temps de début de l\textquotesingle{}événement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+temps\+Debut} & Temps de début à enregistrer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_evenement_a1eebfb231d910edb791abb6774a285e6}\label{class_c_evenement_a1eebfb231d910edb791abb6774a285e6} 
+\index{CEvenement@{CEvenement}!lireTempsDebut@{lireTempsDebut}}
+\index{lireTempsDebut@{lireTempsDebut}!CEvenement@{CEvenement}}
+\doxysubsubsection{\texorpdfstring{lireTempsDebut()}{lireTempsDebut()}}
+{\footnotesize\ttfamily time\+\_\+t CEvenement\+::lire\+Temps\+Debut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lit le temps de début de l\textquotesingle{}événement. 
+
+\begin{DoxyReturn}{Returns}
+time\+\_\+t Le temps de début de l\textquotesingle{}événement. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
